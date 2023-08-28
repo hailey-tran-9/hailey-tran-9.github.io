@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Hailey Tran</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
     <main>
 
-        <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+        <nav id="navbar-main" class="navbar navbar-light bg-light px-3">
             <a class="navbar-brand" href="#">Navbar</a>
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="#scrollspyHeading1">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#scrollspyHeading2">Academics</a>
+                    <a class="nav-link" href="#scrollspyHeading2">Education</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
@@ -30,11 +30,23 @@
                 </li>
             </ul>
         </nav>
-        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-            <h4 id="scrollspyHeading1">About</h4>
-            <p>Hi! I'm Hailey; a senior at UC Berkeley.</p>
-            <h4 id="scrollspyHeading2">Academics</h4>
-            <p>...</p>
+
+        <div data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="0" class="scrollspy-example" tabindex="0" id="content">
+            <div class="row">
+                <h4 id="scrollspyHeading1">About</h4>
+                <p>Hi! I'm Hailey; a senior at UC Berkeley.</p>
+            </div>
+            
+            <div class="row">
+                <h4 id="scrollspyHeading2">Education</h4>
+                <h6>University of California, Berkeley</h6>
+                <h6>Expected Graduation: May 2024</h6>
+                <p>
+                    Major: Computer Science (B.A.)<br>
+                    Minor: Data Science (B.A.)
+                </p>
+            </div>
+            
             <h4 id="scrollspyHeading3">Projects</h4>
             <p>...</p>
             <h4 id="scrollspyHeading4">Fourth heading</h4>
@@ -43,11 +55,7 @@
             <p>...</p>
         </div>
 
-
     </main>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<script src="app.js"></script>
-
   </body>
 </html>
