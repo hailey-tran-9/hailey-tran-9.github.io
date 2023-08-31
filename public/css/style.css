@@ -43,12 +43,6 @@
     background-color: gainsboro;
 }
 
-#placeholder {
-    width: 10rem;
-    height: 15rem;
-    background-color: green;
-}
-
 #regStatBlock {
     width: 20rem;
     height: 30rem;
@@ -59,10 +53,23 @@
     left: 45%;
 }
 
-#speechBubble {
+#speechBubbleContainer {
     position: absolute;
     bottom: 20rem;
-    left: 30%;
+    left: 35%;
+
+    width: 200px;
+    height: 104px;
+    background-image: url("/imgs/SpeechBubble.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#speechBubbleText {
+    position: relative;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 /* Original Idea */
