@@ -3,8 +3,16 @@
     src: url("pixelmania.ttf");
 }
 
+.pixelmania {
+    font-family: pixelmania;
+}
+
 .fullHeight {
     height: 100%;
+}
+
+.center {
+    margin: auto;
 }
 
 #gameStartOverlay {
@@ -13,7 +21,6 @@
     width: 100%;
     height: 100%;
     background-color: white;
-    font-family: pixelmania;
     color: black;
 }
 
@@ -21,6 +28,44 @@
     margin-bottom: 2rem;
 }
 
+#characterDisplay {
+    width: auto;
+    height: 17.5rem;
+
+    position: absolute;
+    bottom: 3rem;
+    left: 25%;
+}
+
+#platform {
+    width: 15rem;
+    height: 2.5rem;
+    background-color: gainsboro;
+}
+
+#placeholder {
+    width: 10rem;
+    height: 15rem;
+    background-color: green;
+}
+
+#regStatBlock {
+    width: 20rem;
+    height: 30rem;
+    background-color: aliceblue;
+    border: gray solid 3px;
+
+    position: absolute;
+    left: 45%;
+}
+
+#speechBubble {
+    position: absolute;
+    bottom: 20rem;
+    left: 30%;
+}
+
+/* Original Idea */
 #content {
     margin: 1rem;
 }

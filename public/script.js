@@ -1,3 +1,4 @@
+progress = 0;
 gameStartOverlayOpen = !$( "#gameStartOverlay" )[0].hidden;
 
 // Handle document clicks
