@@ -14,6 +14,10 @@ $( document ).on( "keydown", function( e ) {
     console.log(e.key);
     if (e.key == "p") {
         ToggleCharProf();
+    } else if (e.key == "i") {
+        ToggleInventory();
+    } else if (e.key == "u") {
+        ToggleSkills();
     }
 } );
 
@@ -27,5 +31,31 @@ function ToggleCharProf() {
     } else {
         charStat.style.visibility = "visible";
         charStatOpen = true;
+    }
+}
+
+inventory = $( "#inventory" )[0];
+inventoryOpen = false;
+
+function ToggleInventory() {
+    if (inventoryOpen) {
+        inventory.style.visibility = "hidden";
+        inventoryOpen = false;
+    } else {
+        inventory.style.visibility = "visible";
+        inventoryOpen = true;
+    }
+}
+
+skills = $( "#skills" )[0];
+skillsOpen = false;
+
+function ToggleSkills() {
+    if (skillsOpen) {
+        skills.style.visibility = "hidden";
+        skillsOpen = false;
+    } else {
+        skills.style.visibility = "visible";
+        skillsOpen = true;
     }
 }

@@ -34,43 +34,58 @@
 
     position: absolute;
     bottom: 3rem;
-    left: 25%;
+    right: 25%;
 }
 
-#platform {
-    width: 15rem;
-    height: 2.5rem;
-    background-color: gainsboro;
-}
-
-#charStatBlock {
-    width: 20rem;
-    height: 30rem;
-    background-color: aliceblue;
-    border: gray solid 3px;
-
+.regUI {
     position: absolute;
-    left: 45%;
+    left: 15%;
+
+    width: 412px;
+    height: 612px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     visibility: hidden;
 }
 
-#speechBubbleContainer {
+#charStatBlock {
+    background-image: url("/imgs/CharStatBlock.png");
+}
+
+#inventory {
+    background-image: url("/imgs/Inventory.png");
+}
+
+#skills {
+    background-image: url("/imgs/Skills.png");
+}
+
+#speechBubble {
     position: absolute;
     bottom: 20rem;
-    left: 35%;
+    right: 15%;
 
-    width: 200px;
-    height: 104px;
+    width: 342px;
+    height: 158px;
     background-image: url("/imgs/SpeechBubble.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+}
+
+#speechBubbleContainer {
+    position: relative;
+    margin: auto;
+    width: 300px;
+    height: 100px;
 }
 
 #speechBubbleText {
     position: relative;
     padding: 1rem;
+    padding-top: 0.75rem;
     padding-bottom: 0.5rem;
 }
 
