@@ -43,7 +43,7 @@
     background-color: gainsboro;
 }
 
-#regStatBlock {
+#charStatBlock {
     width: 20rem;
     height: 30rem;
     background-color: aliceblue;
@@ -51,6 +51,8 @@
 
     position: absolute;
     left: 45%;
+
+    visibility: hidden;
 }
 
 #speechBubbleContainer {
