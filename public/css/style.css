@@ -7,6 +7,15 @@
     font-family: pixelmania;
 }
 
+@font-face {
+    font-family: depixelklein;
+    src: url("depixelklein.ttf");
+}
+
+.depixelklein {
+    font-family: depixelklein;
+}
+
 .fullHeight {
     height: 100%;
 }
@@ -34,15 +43,15 @@
 
     position: absolute;
     bottom: 3rem;
-    right: 25%;
+    right: 37.5%;
 }
 
 .regUI {
     position: absolute;
-    left: 15%;
+    left: 25%;
 
-    width: 412px;
-    height: 612px;
+    width: 362px;
+    height: 592px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -65,7 +74,7 @@
 #speechBubble {
     position: absolute;
     bottom: 20rem;
-    right: 15%;
+    right: 27.5%;
 
     width: 342px;
     height: 158px;
@@ -87,6 +96,15 @@
     padding: 1rem;
     padding-top: 0.75rem;
     padding-bottom: 0.5rem;
+}
+
+/* Char Stat Block Info */
+.pl-1 {
+    padding-left: 1rem;
+}
+
+.pl-05 {
+    padding-left: 0.5rem;
 }
 
 /* Original Idea */
