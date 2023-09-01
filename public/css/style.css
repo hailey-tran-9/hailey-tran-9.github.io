@@ -76,8 +76,8 @@
     bottom: 20rem;
     right: 27.5%;
 
-    width: 342px;
-    height: 158px;
+    width: 372px;
+    height: 188px;
     background-image: url("/imgs/SpeechBubble.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -93,7 +93,6 @@
 
 #speechBubbleText {
     position: relative;
-    padding: 1rem;
     padding-top: 0.75rem;
     padding-bottom: 0.5rem;
 }
@@ -103,8 +102,13 @@
     padding-left: 1rem;
 }
 
-.pl-05 {
-    padding-left: 0.5rem;
+.pl-2 {
+    padding-left: 2rem;
+}
+
+.plr-025 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 /* Original Idea */
