@@ -12,21 +12,23 @@ $( document ).on( "click", function() {
 // Handle keyboard shortcuts
 $( document ).on( "keydown", function( e ) {
     console.log(e.key);
-    if (e.key == "p") {
-        if (uiOpen && !charStatOpen) {
-            HideUI();
+    if (!gameStartOverlayOpen) {
+        if (e.key == "p") {
+            if (uiOpen && !charStatOpen) {
+                HideUI();
+            }
+            ToggleCharProf();
+        } else if (e.key == "i") {
+            if (uiOpen && !inventoryOpen) {
+                HideUI();
+            }
+            ToggleInventory();
+        } else if (e.key == "u") {
+            if (uiOpen && !skillsOpen) {
+                HideUI();
+            }
+            ToggleSkills();
         }
-        ToggleCharProf();
-    } else if (e.key == "i") {
-        if (uiOpen && !inventoryOpen) {
-            HideUI();
-        }
-        ToggleInventory();
-    } else if (e.key == "u") {
-        if (uiOpen && !skillsOpen) {
-            HideUI();
-        }
-        ToggleSkills();
     }
 } );
 

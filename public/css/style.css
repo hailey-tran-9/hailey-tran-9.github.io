@@ -78,11 +78,11 @@
 }
 
 #inventory {
-    background-image: url("/imgs/Inventory.png");
+    background-image: url("/imgs/InventoryItems.png");
 }
 
 #skills {
-    background-image: url("/imgs/Skills.png");
+    background-image: url("/imgs/SkillsIcons.png");
 }
 
 #speechBubble {
@@ -113,15 +113,23 @@
 
 /* SKILLS */
 #pc {
-    position: absolute;
-    left: 2rem;
-    top: 7rem;
+    position: relative;
+    left: -0.25rem;
 }
 
 #gear {
-    position: absolute;
-    left: 2.25rem;
-    top: 13.75rem;
+    position: relative;
+    left: -0.15rem;
+    top: -0.5rem;
+}
+
+#cube {
+    position: relative;
+    top: 0.25rem;
+}
+
+#other {
+    position: relative;
 }
 
 /* Original Idea */
