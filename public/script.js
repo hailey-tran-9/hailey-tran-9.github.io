@@ -18,6 +18,11 @@ $( document ).on( "keydown", function( e ) {
                 HideUI();
             }
             ToggleCharProf();
+        } else if (e.key == "o") {
+            if (uiOpen && !projectsOpen) {
+                HideUI();
+            }
+            ToggleProjects();
         } else if (e.key == "i") {
             if (uiOpen && !inventoryOpen) {
                 HideUI();
@@ -79,6 +84,21 @@ function ToggleSkills() {
     }
 }
 
+projects = $( "#projects" )[0];
+projectsOpen = false;
+
+function ToggleProjects() {
+    if (projectsOpen) {
+        projects.style.visibility = "hidden";
+        projectsOpen = false;
+        uiOpen = false;
+    } else {
+        projects.style.visibility = "visible";
+        projectsOpen = true;
+        uiOpen = true;
+    }
+}
+
 function HideUI() {
     if (charStatOpen) {
         charStat.style.visibility = "hidden";
@@ -91,6 +111,10 @@ function HideUI() {
     if (skillsOpen) {
         skills.style.visibility = "hidden";
         skillsOpen = false;
+    }
+    if (projectsOpen) {
+        projects.style.visibility = "hidden";
+        projectsOpen = false;
     }
     uiOpen = false;
 }

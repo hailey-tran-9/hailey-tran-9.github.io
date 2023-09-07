@@ -25,6 +25,10 @@
     padding-left: 2rem;
 }
 
+.pr-3 {
+    padding-right: 3rem;
+}
+
 .plr-025 {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -83,6 +87,14 @@
 
 #skills {
     background-image: url("/imgs/SkillsIcons.png");
+}
+
+#projects {
+    left: 15%;
+    width: 712px;
+    height: 492px;
+
+    background-image: url("/imgs/Projects.png");
 }
 
 #speechBubble {
