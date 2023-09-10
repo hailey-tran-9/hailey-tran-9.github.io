@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hailey Tran</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <script src="jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/src/index.css">
     </head>
     <body>
         <main>
@@ -148,13 +147,7 @@
                     </div>
                 </div>
                 <div class="ui regUI depixelklein" id="projects">
-                    <div class="container fullHeight">
-                        <div class="row" style="margin-top: 50px;">
-                            <div class="col-4"></div>
-                            <div class="col-8">
-                                <h3 class="pl-1 pr-3">[Game Title]</h3>
-                            </div>
-                        </div>
+                    <div class="container fullHeight" id="projectsContainer">
                     </div>
                 </div>
 
@@ -178,111 +171,10 @@
                 
             </div>
 
-            <!-- <nav id="navbar-main" class="navbar navbar-light bg-light px-3">
-                <a class="navbar-brand" href="#">HHYTT</a>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading1">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading2">Education</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#scrollspyHeading3">Projects</a></li>
-                            <li><a class="dropdown-item" href="#scrollspyHeading4">[ME][TA]L</a></li>
-                            <li><a class="dropdown-item" href="#scrollspyHeading5">LemmeDoIt4U</a></li>
-                            <li><a class="dropdown-item" href="#scrollspyHeading6">Morpheus' (Unpaid) Intern</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-
-            <div data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="0" class="scrollspy-example" tabindex="0" id="content">
-                <div class="row">
-                    <h4 id="scrollspyHeading1">About</h4>
-                    <p>
-                        Hi! I'm Hailey; a senior at UC Berkeley. 
-                        My interests lie in game development and software engineering.
-                    </p>
-                </div>
-
-                <br>
-                
-                <div class="row">
-                    <h4 id="scrollspyHeading2">Education</h4>
-                    <h6>University of California, Berkeley | Expected Graduation: May 2024</h6>
-                    <p>
-                        Major: Computer Science (B.A.)<br>
-                        Minor: Data Science (B.A.)
-                    </p>
-                </div>
-
-                <br>
-                
-                <div class="row">
-                    <h4 id="scrollspyHeading3">Projects</h4>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="imgs/[ME][TA]L.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="imgs/LemmeDoIt4U.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="imgs/Morpheus'(Unpaid)Intern.png" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-
-                <h4 id="scrollspyHeading4">[ME][TA]L</h4>
-                <p>
-                    [ME][TA]L is a rhythm game revolving around, you guessed it, metal! 
-                    But it's not like your average rhythm game, so be careful. >:&#41;
-                </p>
-                <p>
-                    Worked as a programmer. Time period of 2-3 months.
-                </p>
-                <h4 id="scrollspyHeading5">LemmeDoIt4U</h4>
-                <p>
-                    Fun silly little game based off of the lemme do it for you video clip that was circulating 
-                    the internet in 2022. Try to get the last Lays chip!
-                </p>
-                <p>
-                    Worked as a programmer. Time period of 3 days. Bear Jams woo!
-                </p>
-
-                <h4 id="scrollspyHeading6">Morpheus' (Unpaid) Intern</h4>
-                <p>
-                    Play as an unpaid intern of the god of dreams, running around with your trusty dreamcatcher. 
-                    Your goal is to protect a child from nightmares while also letting good dreams through. 
-                    Be careful-- if the child has too many bad dreams, you might lose your position!
-                </p>
-                <p>
-                    Worked as a programmer; UI implementation and item buffs/debuffs. Time period of 3 days.
-                </p>
-            </div> -->
-
         </main>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+        <script type="module" src="/src/main.jsx"></script>
 
     </body>
 </html>
