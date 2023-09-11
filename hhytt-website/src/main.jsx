@@ -21,7 +21,7 @@ function CreateProject(mt, gt, link, roleTime, description, tasks) {
                     <div className="row mt-5"><p className="pt-2">{roleTime}</p></div>
                 </div>
             </div>
-            <div className="row" style={{"marginTop": "3.5rem", "paddingLeft": "45px", "paddingRight": "155px", "whiteSpace": "pre-wrap"}}>
+            <div className="row" style={{"marginTop": "3.5rem", "paddingLeft": "105px", "paddingRight": "155px", "whiteSpace": "pre-wrap"}}>
                 <p>{description}</p>
                 <ul style={{"paddingLeft": "2rem"}}>
                     {tasks.map(task => (
