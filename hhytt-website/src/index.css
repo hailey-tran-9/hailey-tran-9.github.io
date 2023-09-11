@@ -72,8 +72,6 @@ li::marker {
   position: absolute;
   bottom: 3rem;
   right: 37.5%;
-
-  visibility: hidden;
 }
 
 .regUI {
@@ -131,11 +129,11 @@ li::marker {
 }
 
 #inventory {
-  background-image: url("/imgs/InventoryItems.png");
+  background-image: url("/imgs/Inventory.png");
 }
 
 #skills {
-  background-image: url("/imgs/SkillsIcons.png");
+  background-image: url("/imgs/Skills.png");
 }
 
 #projects {
@@ -157,8 +155,6 @@ li::marker {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
-  visibility: hidden;
 }
 
 #speechBubbleContainer {

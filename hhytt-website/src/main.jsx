@@ -68,30 +68,30 @@ $( document ).on( "keydown", function( e ) {
             }
             ToggleProjects();
         } else if (e.key == "o") {
-            if (uiOpen && !charStatOpen) {
+            if (uiOpen && !skillsOpen) {
                 HideUI();
             }
-            ToggleCharProf();
+            ToggleSkills();
         } else if (e.key == "i") {
             if (uiOpen && !inventoryOpen) {
                 HideUI();
             }
             ToggleInventory();
         } else if (e.key == "u") {
-            if (uiOpen && !skillsOpen) {
+            if (uiOpen && !charStatOpen) {
                 HideUI();
             }
-            ToggleSkills();
+            ToggleCharProf();
         }
     }
 } );
 
 // Handle button clicks
 $( "#regTab1" ).on( "click", function () {
-    if (uiOpen && !skillsOpen) {
+    if (uiOpen && !charStatOpen) {
         HideUI();
     }
-    ToggleSkills();
+    ToggleCharProf();
 } );
 
 $( "#regTab2" ).on( "click", function () {
@@ -102,10 +102,10 @@ $( "#regTab2" ).on( "click", function () {
 } );
 
 $( "#regTab3" ).on( "click", function () {
-    if (uiOpen && !charStatOpen) {
+    if (uiOpen && !skillsOpen) {
         HideUI();
     }
-    ToggleCharProf();
+    ToggleSkills();
 } );
 
 $( "#regTab4" ).on( "click", function () {
@@ -121,11 +121,7 @@ var charStat = $( "#charStatBlock" )[0];
 var charStatOpen = false;
 
 function ToggleCharProf() {
-    if (charStatOpen) {
-        charStat.style.visibility = "hidden";
-        charStatOpen = false;
-        uiOpen = false;
-    } else {
+    if (!charStatOpen) {
         charStat.style.visibility = "visible";
         charStatOpen = true;
         uiOpen = true;
@@ -136,11 +132,7 @@ var inventory = $( "#inventory" )[0];
 var inventoryOpen = false;
 
 function ToggleInventory() {
-    if (inventoryOpen) {
-        inventory.style.visibility = "hidden";
-        inventoryOpen = false;
-        uiOpen = false;
-    } else {
+    if (!inventoryOpen) {
         inventory.style.visibility = "visible";
         inventoryOpen = true;
         uiOpen = true;
@@ -151,11 +143,7 @@ var skills = $( "#skills" )[0];
 var skillsOpen = false;
 
 function ToggleSkills() {
-    if (skillsOpen) {
-        skills.style.visibility = "hidden";
-        skillsOpen = false;
-        uiOpen = false;
-    } else {
+    if (!skillsOpen) {
         skills.style.visibility = "visible";
         skillsOpen = true;
         uiOpen = true;
@@ -166,11 +154,7 @@ var projects = $( "#projects" )[0];
 var projectsOpen = false;
 
 function ToggleProjects() {
-    if (projectsOpen) {
-        projects.style.visibility = "hidden";
-        projectsOpen = false;
-        uiOpen = false;
-    } else {
+    if (!projectsOpen) {
         projects.style.visibility = "visible";
         projectsOpen = true;
         uiOpen = true;
