@@ -16,6 +16,12 @@
   font-family: depixelklein;
 }
 
+li::marker {
+  content: '- ';
+  font-family: depixelklein;
+  font-size: 1.2em;
+}
+
 /* Padding, Margins, Spacing */
 .pl-1 {
   padding-left: 1rem;
@@ -32,6 +38,10 @@
 .plr-025 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
 }
 
 .fullHeight {
@@ -62,6 +72,8 @@
   position: absolute;
   bottom: 3rem;
   right: 37.5%;
+
+  visibility: hidden;
 }
 
 .regUI {
@@ -108,6 +120,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  visibility: hidden;
 }
 
 #speechBubbleContainer {
