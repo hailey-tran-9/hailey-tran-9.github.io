@@ -63,15 +63,15 @@ $( document ).on( "keydown", function( e ) {
     console.log(e.key);
     if (!gameStartOverlayOpen) {
         if (e.key == "p") {
-            if (uiOpen && !charStatOpen) {
-                HideUI();
-            }
-            ToggleCharProf();
-        } else if (e.key == "o") {
             if (uiOpen && !projectsOpen) {
                 HideUI();
             }
             ToggleProjects();
+        } else if (e.key == "o") {
+            if (uiOpen && !charStatOpen) {
+                HideUI();
+            }
+            ToggleCharProf();
         } else if (e.key == "i") {
             if (uiOpen && !inventoryOpen) {
                 HideUI();
@@ -84,6 +84,35 @@ $( document ).on( "keydown", function( e ) {
             ToggleSkills();
         }
     }
+} );
+
+// Handle button clicks
+$( "#regTab1" ).on( "click", function () {
+    if (uiOpen && !skillsOpen) {
+        HideUI();
+    }
+    ToggleSkills();
+} );
+
+$( "#regTab2" ).on( "click", function () {
+    if (uiOpen && !inventoryOpen) {
+        HideUI();
+    }
+    ToggleInventory();
+} );
+
+$( "#regTab3" ).on( "click", function () {
+    if (uiOpen && !charStatOpen) {
+        HideUI();
+    }
+    ToggleCharProf();
+} );
+
+$( "#regTab4" ).on( "click", function () {
+    if (uiOpen && !projectsOpen) {
+        HideUI();
+    }
+    ToggleProjects();
 } );
 
 var uiOpen = false;
