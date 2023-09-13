@@ -180,3 +180,8 @@ function HideUI() {
     }
     uiOpen = false;
 }
+
+// Handle events when the window loads
+window.onload = (event) => {
+    ToggleCharProf();
+  };

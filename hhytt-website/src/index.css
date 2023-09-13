@@ -77,7 +77,7 @@ li::marker {
 .regUI {
   position: absolute;
 
-  top: 36px;
+  /* top: 36px; */
 
   width: 362px;
   height: 592px;
@@ -148,7 +148,8 @@ li::marker {
   left: 25%;
 
   width: 362px;
-  height: 632px;
+  /* height: 632px; */
+  height: 592px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
