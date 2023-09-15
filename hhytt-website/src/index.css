@@ -162,6 +162,7 @@ li::marker {
 #tab1:active ~ #charStatBlock { background-image: url("/imgs/CharStatBlockP.png"); }
 #tab2:active ~ #inventory { background-image: url("/imgs/InventoryP.png"); }
 #tab3:active ~ #skills { background-image: url("/imgs/SkillsP.png"); }
+#tab4:active ~ #projects { background-image: url("/imgs/ProjectsP.png"); }
 
 #charStatBlock {
   background-image: url("/imgs/CharStatBlock.png");
