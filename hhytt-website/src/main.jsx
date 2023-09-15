@@ -87,28 +87,28 @@ $( document ).on( "keydown", function( e ) {
 } );
 
 // Handle button clicks
-$( "#regTab1" ).on( "click", function () {
+$( "#tab1" ).on( "click", function () {
     if (uiOpen && !charStatOpen) {
         HideUI();
     }
     ToggleCharProf();
 } );
 
-$( "#regTab2" ).on( "click", function () {
+$( "#tab2" ).on( "click", function () {
     if (uiOpen && !inventoryOpen) {
         HideUI();
     }
     ToggleInventory();
 } );
 
-$( "#regTab3" ).on( "click", function () {
+$( "#tab3" ).on( "click", function () {
     if (uiOpen && !skillsOpen) {
         HideUI();
     }
     ToggleSkills();
 } );
 
-$( "#regTab4" ).on( "click", function () {
+$( "#tab4" ).on( "click", function () {
     if (uiOpen && !projectsOpen) {
         HideUI();
     }
