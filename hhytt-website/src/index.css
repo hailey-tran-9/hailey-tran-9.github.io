@@ -72,6 +72,13 @@ li::marker {
   position: absolute;
   bottom: 3rem;
   right: 37.5%;
+
+  visibility: hidden;
+}
+
+#regContainer {
+  position: absolute;
+  left: 25%;
 }
 
 .regUI {
@@ -143,21 +150,17 @@ li::marker {
 
 #tab2 {
   width: 82.5px;
-  left: 215px;
+  left: 97.5px;
 }
 
 #tab3 {
   width: 82.5px;
-  left: 297.5px;
+  left: 180px;
 }
 
 #tab4 {
-  left: 380px;
+  left: 262.5px;
 }
-
-/* #tab3 {
-  left: 195px;
-} */
 
 #tab1:active ~ #charStatBlock { background-image: url("/imgs/CharStatBlockP.png"); }
 #tab2:active ~ #inventory { background-image: url("/imgs/InventoryP.png"); }
@@ -177,7 +180,7 @@ li::marker {
 }
 
 #projects {
-  width: 712px;
+  width: 658px;
   height: 492px;
 
   background-image: url("/imgs/Projects.png");
@@ -194,6 +197,8 @@ li::marker {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  visibility: hidden;
 }
 
 #speechBubbleContainer {
@@ -207,36 +212,4 @@ li::marker {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.5rem;
-}
-
-/* SKILLS */
-#pc {
-  position: relative;
-  left: -0.25rem;
-}
-
-#gear {
-  position: relative;
-  left: -0.15rem;
-  top: -0.5rem;
-}
-
-#cube {
-  position: relative;
-  top: 0.25rem;
-}
-
-#other {
-  position: relative;
-}
-
-/* Original Idea */
-#content {
-  margin: 1rem;
-}
-
-#carouselExampleIndicators {
-  width: 50%;
-  height: 50%;
-  margin: auto;
 }
