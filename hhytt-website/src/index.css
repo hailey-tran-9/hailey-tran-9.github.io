@@ -167,6 +167,26 @@ li::marker {
 #tab3:active ~ #skills { background-image: url("/imgs/SkillsP.png"); }
 #tab4:active ~ #projects { background-image: url("/imgs/ProjectsP.png"); }
 
+.arrow {
+  position: absolute;
+  width: 30px;
+  height: 52px;
+  z-index: 1;
+}
+
+#arrowL {
+  left: 32px;
+  bottom: 154px;
+}
+
+#arrowR {
+  right: 32px;
+  bottom: 154px;
+}
+
+#projects:has(#arrowL:active) { background-image: url("/imgs/ProjLeft.png"); }
+#projects:has(#arrowR:active) { background-image: url("/imgs/ProjRight.png"); }
+
 #charStatBlock {
   background-image: url("/imgs/CharStatBlock.png");
 }
@@ -184,6 +204,12 @@ li::marker {
   height: 492px;
 
   background-image: url("/imgs/Projects.png");
+}
+
+#scrollable {
+  width: auto;
+  height: 174px;
+  overflow: auto;
 }
 
 #speechBubble {
