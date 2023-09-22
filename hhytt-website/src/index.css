@@ -73,7 +73,7 @@ li::marker {
   bottom: 3rem;
   right: 37.5%;
 
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 #regContainer {
@@ -224,7 +224,7 @@ li::marker {
   background-repeat: no-repeat;
   background-size: contain;
 
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 #speechBubbleContainer {

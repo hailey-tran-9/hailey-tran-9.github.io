@@ -115,6 +115,7 @@ $( "#tab1" ).on( "click", function () {
     if (uiOpen && !charStatOpen) {
         if (projectsOpen) {
             SetTabs("regular");
+            MoveChar("regular");
         }
         HideUI();
     }
@@ -125,6 +126,7 @@ $( "#tab2" ).on( "click", function () {
     if (uiOpen && !inventoryOpen) {
         if (projectsOpen) {
             SetTabs("regular");
+            MoveChar("regular");
         }
         HideUI();
     }
@@ -135,6 +137,7 @@ $( "#tab3" ).on( "click", function () {
     if (uiOpen && !skillsOpen) {
         if (projectsOpen) {
             SetTabs("regular");
+            MoveChar("regular");
         }
         HideUI();
     }
@@ -144,10 +147,24 @@ $( "#tab3" ).on( "click", function () {
 $( "#tab4" ).on( "click", function () {
     if (uiOpen && !projectsOpen) {
         SetTabs("projects");
+        MoveChar("projects");
         HideUI();
     }
     ToggleProjects();
 } );
+
+var charDisplay = $( "#characterDisplay" )[0];
+var speechBubble = $( "#speechBubble" )[0];
+
+function MoveChar(type) {
+    if (type == "regular") {
+        charDisplay.style.right = "37.5%";
+        speechBubble.style.right = "27.5%";
+    } else {
+        charDisplay.style.right = "17.5%";
+        speechBubble.style.right = "7.5%";
+    }
+}
 
 var tab1 = $( "#tab1" )[0];
 var tab2 = $( "#tab2" )[0];
