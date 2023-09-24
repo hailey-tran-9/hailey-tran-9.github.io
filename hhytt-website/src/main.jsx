@@ -7,6 +7,26 @@ import $ from 'jquery';
 import { createRoot } from 'react-dom/client';
 import { Fragment } from 'react';
 
+var charDisplay = $( "#characterDisplay" )[0];
+var speechBubble = $( "#speechBubble" )[0];
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+charDisplay.style.right = w/8 + "px";
+speechBubble.style.right = w/48 + "px";
+
+function MoveChar() {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    // console.log(w);
+    // console.log(h);
+
+    charDisplay.style.right = w/8 + "px";
+    speechBubble.style.right = w/48 + "px";
+}
+
+window.addEventListener('resize', MoveChar);
+
 function CreateProject(page, vs, mt, gt, link, roleTime, description, tasks) {
     return (
         <div id={"page-"+page} style={{"position": "absolute", "visibility": vs}}>
@@ -75,21 +95,25 @@ $( document ).on( "keydown", function( e ) {
     if (!gameStartOverlayOpen) {
         if (e.key == "p") {
             if (uiOpen && !projectsOpen) {
+                SetTabs("projects");
                 HideUI();
             }
             ToggleProjects();
         } else if (e.key == "o") {
             if (uiOpen && !skillsOpen) {
+                SetTabs("regular");
                 HideUI();
             }
             ToggleSkills();
         } else if (e.key == "i") {
             if (uiOpen && !inventoryOpen) {
+                SetTabs("regular");
                 HideUI();
             }
             ToggleInventory();
         } else if (e.key == "u") {
             if (uiOpen && !charStatOpen) {
+                SetTabs("regular");
                 HideUI();
             }
             ToggleCharProf();
@@ -115,7 +139,7 @@ $( "#tab1" ).on( "click", function () {
     if (uiOpen && !charStatOpen) {
         if (projectsOpen) {
             SetTabs("regular");
-            MoveChar("regular");
+            // MoveChar("regular");
         }
         HideUI();
     }
@@ -126,7 +150,7 @@ $( "#tab2" ).on( "click", function () {
     if (uiOpen && !inventoryOpen) {
         if (projectsOpen) {
             SetTabs("regular");
-            MoveChar("regular");
+            // MoveChar("regular");
         }
         HideUI();
     }
@@ -137,7 +161,7 @@ $( "#tab3" ).on( "click", function () {
     if (uiOpen && !skillsOpen) {
         if (projectsOpen) {
             SetTabs("regular");
-            MoveChar("regular");
+            // MoveChar("regular");
         }
         HideUI();
     }
@@ -147,24 +171,11 @@ $( "#tab3" ).on( "click", function () {
 $( "#tab4" ).on( "click", function () {
     if (uiOpen && !projectsOpen) {
         SetTabs("projects");
-        MoveChar("projects");
+        // MoveChar("projects");
         HideUI();
     }
     ToggleProjects();
 } );
-
-var charDisplay = $( "#characterDisplay" )[0];
-var speechBubble = $( "#speechBubble" )[0];
-
-function MoveChar(type) {
-    if (type == "regular") {
-        charDisplay.style.right = "37.5%";
-        speechBubble.style.right = "27.5%";
-    } else {
-        charDisplay.style.right = "17.5%";
-        speechBubble.style.right = "7.5%";
-    }
-}
 
 var tab1 = $( "#tab1" )[0];
 var tab2 = $( "#tab2" )[0];
