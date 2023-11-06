@@ -48,6 +48,10 @@ li::marker {
   height: 100%;
 }
 
+.position {
+  position: absolute;
+}
+
 .center {
   margin: auto;
 }
@@ -75,14 +79,30 @@ li::marker {
 
   /* top: 36px; */
 
-  width: 362px;
-  height: 592px;
+  /* width: 362px;
+  height: 592px; */
+  width: 400px;
+  height: 653px;
+  /* width: 25vw;
+  height: 70vh; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 
+  /* container-type: inline-size; */
+
   visibility: hidden;
 }
+
+/* @container (max-width: 375px) {
+  .regUI p {
+    font-size: 1vw;
+  }
+} */
+
+/* .regUI .row {
+  font-size: 1vw;
+} */
 
 .regTab {
   width: 90.38px;
@@ -197,7 +217,8 @@ li::marker {
 #projects:has(#arrowR:active) { background-image: url("/imgs/ProjRight.png"); }
 
 #charStatBlock {
-  background-image: url("/imgs/CharStatBlock.png");
+  /* background-image: url("/imgs/CharStatBlock.png"); */
+  background-image: url("/imgs/CharProf.png");
 }
 
 #inventory {
