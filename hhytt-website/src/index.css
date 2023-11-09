@@ -292,3 +292,24 @@ li::marker {
   right: 5.5rem;
   transform: scaleX(-1);
 }
+
+.butt {
+  width: 60px;
+  height: 24px;
+
+  position: absolute;
+
+  background-image: url("/imgs/Tab.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: transparent;
+
+  border: 0;
+}
+
+#button-row {
+  height: 45px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

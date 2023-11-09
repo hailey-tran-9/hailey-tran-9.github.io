@@ -307,3 +307,16 @@ function HideUI() {
 window.onload = (event) => {
     ToggleCharProf();
   };
+
+
+// Button toggling
+
+// Prob set up a hashmap with button:bool that shows whether not the button is active
+// If the button being clicked is the same as the one that's currently active, do nothing
+// Else update the hashmap and change the UI
+
+$(function() {
+    $( 'button.butt' ).on( "click", function(e) {
+        e.target.style.backgroundImage = "url('/imgs/TabP.png')";
+    } );
+  });
