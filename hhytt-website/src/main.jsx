@@ -311,12 +311,16 @@ window.onload = (event) => {
 
 // Button toggling
 
-// Prob set up a hashmap with button:bool that shows whether not the button is active
-// If the button being clicked is the same as the one that's currently active, do nothing
-// Else update the hashmap and change the UI
+var activeButton = "char-prof-but";
+$( "#char-prof-but" )[0].style.backgroundImage = "url('/imgs/TabP.png')";
 
 $(function() {
     $( 'button.butt' ).on( "click", function(e) {
-        e.target.style.backgroundImage = "url('/imgs/TabP.png')";
+        if (e.target.id != activeButton) {
+            $( "#" + activeButton )[0].style.backgroundImage = "url('/imgs/Tab.png')";
+            activeButton = e.target.id;
+            e.target.style.backgroundImage = "url('/imgs/TabP.png')";
+        }
+        
     } );
   });
