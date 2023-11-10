@@ -89,9 +89,22 @@ li::marker {
   background-repeat: no-repeat;
   background-size: contain;
 
+  font-size: 14px;
+
   /* container-type: inline-size; */
 
   visibility: hidden;
+}
+
+.regUI .butt {
+  font-size: 12px;
+  color: green;
+}
+
+#header {
+  color: white;
+  margin-top: 3px;
+  margin-left: 55px;
 }
 
 /* @container (max-width: 375px) {
