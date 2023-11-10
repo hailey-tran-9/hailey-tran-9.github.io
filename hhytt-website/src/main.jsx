@@ -311,6 +311,11 @@ window.onload = (event) => {
 
 // Button toggling
 
+var buttonsHaveBeenPressed = new Set();
+buttonsHaveBeenPressed.add("char-prof-but");
+
+var progressBar = $( "#progress-bar" )[0];
+
 var activeButton = "char-prof-but";
 $( "#char-prof-but" )[0].style.backgroundImage = "url('/imgs/TabP.png')";
 
@@ -320,6 +325,17 @@ $(function() {
             $( "#" + activeButton )[0].style.backgroundImage = "url('/imgs/Tab.png')";
             activeButton = e.target.id;
             e.target.style.backgroundImage = "url('/imgs/TabP.png')";
+
+            if (!buttonsHaveBeenPressed.has(e.target.id)) {
+                buttonsHaveBeenPressed.add(e.target.id);
+                // console.log(buttonsHaveBeenPressed.size);
+                // console.log(Math.floor((buttonsHaveBeenPressed.size / 4) * 100));
+                // console.log(String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100)) + "%");
+                progressBar.style.width = String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100)) + "%";
+                progressBar.ariaValueNow = String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100));
+            }
+
+            
         }
         
     } );
