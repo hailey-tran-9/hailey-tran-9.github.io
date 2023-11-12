@@ -146,6 +146,17 @@ $( "#tab1" ).on( "click", function () {
     ToggleCharProf();
 } );
 
+$( ".char-prof-but" ).on( "click", function () {
+    if (uiOpen && !charStatOpen) {
+        if (projectsOpen) {
+            SetTabs("regular");
+            // MoveChar("regular");
+        }
+        HideUI();
+    }
+    ToggleCharProf();
+} );
+
 $( "#tab2" ).on( "click", function () {
     if (uiOpen && !inventoryOpen) {
         if (projectsOpen) {
@@ -158,6 +169,17 @@ $( "#tab2" ).on( "click", function () {
 } );
 
 $( "#tab3" ).on( "click", function () {
+    if (uiOpen && !skillsOpen) {
+        if (projectsOpen) {
+            SetTabs("regular");
+            // MoveChar("regular");
+        }
+        HideUI();
+    }
+    ToggleSkills();
+} );
+
+$( ".skills-but" ).on( "click", function () {
     if (uiOpen && !skillsOpen) {
         if (projectsOpen) {
             SetTabs("regular");
@@ -317,17 +339,25 @@ buttonsHaveBeenPressed.add("char-prof-but");
 var progressBar = $( "#progress-bar" )[0];
 
 var activeButton = "char-prof-but";
-$( "#char-prof-but" )[0].style.backgroundImage = "url('/imgs/TabP.png')";
+$( ".char-prof-but" )[0].style.backgroundImage = "url('/imgs/TabP.png')";
 
 $(function() {
     $( 'button.butt' ).on( "click", function(e) {
-        if (e.target.id != activeButton) {
-            $( "#" + activeButton )[0].style.backgroundImage = "url('/imgs/Tab.png')";
-            activeButton = e.target.id;
-            e.target.style.backgroundImage = "url('/imgs/TabP.png')";
+        let butTargetName = e.target.className.split(" ")[1];
+        if (butTargetName != activeButton) {
+            // console.log($( "." + activeButton ));
+            let activeButtons = $( "." + activeButton );
+            for (let i = 0; i < activeButtons.length; i++) {
+                activeButtons[i].style.backgroundImage = "url('/imgs/Tab.png')";
+            }
+            activeButton = butTargetName;
+            // console.log($( "." + butTargetName ));
+            for (let i = 0; i < $( "." + butTargetName ).length; i++) {
+                $( "." + butTargetName )[i].style.backgroundImage = "url('/imgs/TabP.png')";
+            }
 
-            if (!buttonsHaveBeenPressed.has(e.target.id)) {
-                buttonsHaveBeenPressed.add(e.target.id);
+            if (!buttonsHaveBeenPressed.has(butTargetName)) {
+                buttonsHaveBeenPressed.add(butTargetName);
                 // console.log(buttonsHaveBeenPressed.size);
                 // console.log(Math.floor((buttonsHaveBeenPressed.size / 4) * 100));
                 // console.log(String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100)) + "%");

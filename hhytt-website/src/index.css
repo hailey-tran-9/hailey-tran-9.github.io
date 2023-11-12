@@ -322,6 +322,7 @@ li::marker {
 }
 
 #button-row {
+  width: 356px;
   height: 45px;
   margin-left: 10px;
   margin-right: 10px;
