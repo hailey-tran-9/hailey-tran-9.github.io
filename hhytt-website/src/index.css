@@ -56,6 +56,10 @@ li::marker {
   margin: auto;
 }
 
+.white {
+  color: white;
+}
+
 #gameStartOverlay {
   position: fixed;
   z-index: 2;
@@ -145,7 +149,7 @@ li::marker {
   background-repeat: no-repeat;
   background-size: contain;
 
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 #speechBubbleContainer {
@@ -168,7 +172,7 @@ li::marker {
   position: absolute;
   bottom: 3rem;
 
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 #adelie {

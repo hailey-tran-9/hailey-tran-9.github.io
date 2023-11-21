@@ -30,15 +30,37 @@ window.addEventListener('resize', MoveChar);
 function CreateProject(page, vs, mt, gt, link, roleTime, description, tasks) {
     return (
         <div id={"page-"+page} style={{"position": "absolute", "visibility": vs}}>
-            <div className="row" style={{"marginTop": mt}}>
-                <div className="col-4 d-flex justify-content-center">
-                <img src={"/imgs/"+gt.replace(/\s+/g, '')+".png"} width="143px" 
-                    height="143px" style={{"objectFit": "cover", "marginLeft": "7px"}}></img>
+            <div className="row" style={{"marginTop": mt, "marginLeft": "50px"}}>
+                <div className="row"><h4 className="pr-3 pt-1 mb-0" style={{"color":"white"}}>Projects</h4></div>
+            </div>
+            <div className="row" style={{"height": "120px", "marginTop": "60px"}}>
+                <div className="col" style={{"height": "120px", "paddingRight": "0"}}>
+                    <div className='row'>
+                        <img src={"/imgs/"+gt.replace(/\s+/g, '')+".png"} 
+                        style={{"width": "100px", "height": "100px", 
+                        "objectFit": "cover", "marginRight": "25px", 
+                        "marginTop": "8px", "marginLeft": "64px",
+                        "padding": "0"}}></img>
+                    </div>
+                    {/* <p className="pt-2">{roleTime}</p> */}
                 </div>
-                <div className="col-8" style={{"paddingLeft": "1.35rem"}}>
-                    <div className="row"><h3 className="pr-3 pt-1 mb-0">{gt}</h3></div>
-                    <div className="row"><a href={link} target="_blank">Play the game here!</a></div>
-                    <div className="row" style={{"marginTop": "2.4rem"}}><p className="pt-2">{roleTime}</p></div>
+                <div className="col-10" style={{"height": "120px", "paddingLeft": "50px"}}>
+                    <div className="row" style={{"paddingLeft": "5px", "marginTop": "10px"}}>
+                        <div className="col-1" style={{"marginRight": "5px"}}><p className='white'>Title</p></div>
+                        <div className='col-9'><h5>{gt}</h5></div>
+                    </div>
+                    <div className="row" style={{"paddingLeft": "5px", "marginTop": "-2px"}}>
+                        <div className="col-1" style={{"marginRight": "5px"}}><p className='white'>Link</p></div>
+                        <div className='col-9'><a href={link} target="_blank">Play the game here!</a></div>
+                    </div>
+                </div>
+            </div>
+            <div className="row" style={{"marginLeft": "50px", "marginTop": "1px"}}>
+                <div className='col-2' style={{"paddingRight": "0"}}>
+                    <p className='white'>Team Size</p>
+                </div>
+                <div className='col' style={{"paddingLeft": "5px"}}>
+                    <p>5</p>
                 </div>
             </div>
             <div className="row" style={{"marginTop": "2.4rem", "paddingLeft": "95px", "paddingRight": "105px", "whiteSpace": "pre-wrap"}}>
