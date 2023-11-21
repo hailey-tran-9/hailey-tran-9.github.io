@@ -29,19 +29,6 @@
                 </div>
                 
                 <div id="regContainer">
-                    <!-- <div class="tab" id="tab1">
-                        <p class="depixelklein text-center" id="tab1P">u</p>
-                    </div>
-                    <div class="tab" id="tab2">
-                        <p class="depixelklein text-center" id="tab2P">i</p>
-                    </div>
-                    <div class="tab" id="tab3">
-                        <p class="depixelklein text-center" id="tab3P">o</p>
-                    </div>
-                    <div class="tab" id="tab4">
-                        <p class="depixelklein text-center" id="tab4P">p</p>
-                    </div> -->
-
                     <div class="ui regUI depixelklein" id="charStatBlock">
                         <div class="container fullHeight position">
                             <div class="row" id="button-row">
@@ -177,11 +164,11 @@
                                 </div>
                             </div>
 
-                            <div class="row" style="margin-top: 55px;">
-                                <h4 class="pl-2"><b>INVENTORY</b></h4>
-                            </div>
-                            <div class="row" style="margin-top: 0;">
-                                <h5 class="pl-2">7/20</h5>
+                            <div class="row" style="margin-top: 30px;">
+                                <div class="col-10">
+                                    <h4 id="header">Inventory</h4>
+                                </div>
+                                <div class="col-2"></div>
                             </div>
                         </div>
                     </div>
@@ -211,7 +198,7 @@
 
                             <div class="row" style="margin-top: 21px; height:20px;">
                                 <div class="col-2"></div>
-                                <div class="col-4" style="padding-left: 10px;">
+                                <div class="col-4" style="padding-left: 0;">
                                     <div class="row">
                                         <p style="color: white;">
                                             Programming
@@ -226,7 +213,7 @@
                                 <div class="col-2"></div>
                                 <div class="col" style="padding-left: 10px;">
                                     <div class="row">
-                                        <p>
+                                        <p style="padding-right: 0;">
                                             Python, Java, C, Csharp, SQLite, HTML, CSS, React
                                         </p>
                                     </div>
@@ -235,47 +222,63 @@
                             </div>
                             <div class="row px-4" style="margin-top: 65px;">
                                 <div class="col-1"></div>
-                                <div class="col-3">
+                                <div class="col-2" style="padding-left: 10px; margin-right: 10px; padding-top: 8px;">
                                     <p style="color: white">Game Engines</p>
                                 </div>
-                                <div class="col">
+                                <div class="col" style="padding-right: 0; margin-top: 10px;">
                                     <p>Unity Engine</p>
                                 </div>
+                                <div class="col-2"></div>
                             </div>
                             <div class="row px-4" style="margin-top: 27.5px;">
                                 <div class="col-1"></div>
-                                <div class="col-3">
-                                    <p style="color: white">3D Web Dev</p>
+                                <div class="col-2" style="padding-left: 10px; margin-right: 10px;">
+                                    <p style="color: white; width: 60px">3D Web Dev</p>
                                 </div>
-                                <div class="col">
+                                <div class="col" style="padding-right: 0;">
                                     <p>three.js, React Three Fiber</p>
                                 </div>
-                            </div>
-                            <div class="row px-4" style="margin-top: 30px;">
                                 <div class="col-2"></div>
-                                <div class="col-10">
-                                    <p class="pl-1">
-                                        <b>Other Libraries</b>
-                                        <br>
-                                        Numpy, Matplotlib
-                                    </p>
-                                </div>
                             </div>
-                            <div class="row px-4" style="margin-top: 28px;">
+                            <div class="row" style="margin-top: 21px; height:20px;">
                                 <div class="col-2"></div>
-                                <div class="col-10">
-                                    <p class="pl-1">
-                                        <b>Pandas</b>
-                                        <br>
-                                        *chews*
-                                    </p>
+                                <div class="col-4" style="padding-left: 0;">
+                                    <div class="row">
+                                        <p style="color: white;">
+                                            Other Libraries
+                                        </p>
+                                    </div>
                                 </div>
+                                <div class="col"></div>
+                            </div>
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-2"></div>
+                                <div class="col" style="padding-left: 10px;">
+                                    <div class="row">
+                                        <p style="padding-right: 0;">
+                                            Numpy, Torch, Matplotlib, Pandas
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-2"></div>
                             </div>
                         </div>
                     </div>
                     <div class="ui regUI depixelklein" id="projects">
-                        <div class="arrow" id="arrowL"></div>
-                        <div class="arrow" id="arrowR"></div>
+                        <div class="row" id="button-row" style="margin-left: 20px;">
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <button type="button" class="butt char-prof-but">u</button>
+                            </div>
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <button type="button" class="butt inventory-but">i</button>
+                            </div>
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <button type="button" class="butt skills-but">o</button>
+                            </div>
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <button type="button" class="butt projects-but">p</button>
+                            </div>
+                        </div>
                         <div class="container fullHeight" id="projectsContainer">
                         </div>
                     </div>

@@ -57,7 +57,7 @@ function CreateProject(page, vs, mt, gt, link, roleTime, description, tasks) {
 }
 
 var projectDivs = [];
-projectDivs.push(CreateProject(0, "hidden", "82px", "[ME][TA]L", "https://penguinies.itch.io/metal", "Programmer | 2 months",
+projectDivs.push(CreateProject(0, "hidden", "30px", "[ME][TA]L", "https://penguinies.itch.io/metal", "Programmer | 2 months",
     "[ME][TA]L is a metal-themed rhythm game. Its unique feature is the burst note, which requires you to type the words on the screen in a limited time frame!",
     ["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial"]));
 
@@ -95,34 +95,27 @@ $( document ).on( "keydown", function( e ) {
     if (!gameStartOverlayOpen) {
         if (e.key == "p") {
             if (uiOpen && !projectsOpen) {
-                SetTabs("projects");
                 HideUI();
             }
             ToggleProjects();
         } else if (e.key == "o") {
             if (uiOpen && !skillsOpen) {
-                SetTabs("regular");
                 HideUI();
             }
             ToggleSkills();
         } else if (e.key == "i") {
             if (uiOpen && !inventoryOpen) {
-                SetTabs("regular");
                 HideUI();
             }
             ToggleInventory();
         } else if (e.key == "u") {
             if (uiOpen && !charStatOpen) {
-                SetTabs("regular");
                 HideUI();
             }
             ToggleCharProf();
         }
     }
 } );
-
-var arrL = $( "#arrowL" )[0];
-var arrR = $( "#arrowR" )[0];
 
 // Handle button clicks
 $( "#arrowL" ).on( "click", function () {
@@ -135,21 +128,9 @@ $( "#arrowR" ).on( "click", function () {
     ScrollRight();
 } );
 
-$( "#tab1" ).on( "click", function () {
-    if (uiOpen && !charStatOpen) {
-        if (projectsOpen) {
-            SetTabs("regular");
-            // MoveChar("regular");
-        }
-        HideUI();
-    }
-    ToggleCharProf();
-} );
-
 $( ".char-prof-but" ).on( "click", function () {
     if (uiOpen && !charStatOpen) {
         if (projectsOpen) {
-            SetTabs("regular");
             // MoveChar("regular");
         }
         HideUI();
@@ -157,10 +138,9 @@ $( ".char-prof-but" ).on( "click", function () {
     ToggleCharProf();
 } );
 
-$( "#tab2" ).on( "click", function () {
+$( ".inventory-but" ).on( "click", function () {
     if (uiOpen && !inventoryOpen) {
         if (projectsOpen) {
-            SetTabs("regular");
             // MoveChar("regular");
         }
         HideUI();
@@ -168,21 +148,9 @@ $( "#tab2" ).on( "click", function () {
     ToggleInventory();
 } );
 
-$( "#tab3" ).on( "click", function () {
-    if (uiOpen && !skillsOpen) {
-        if (projectsOpen) {
-            SetTabs("regular");
-            // MoveChar("regular");
-        }
-        HideUI();
-    }
-    ToggleSkills();
-} );
-
 $( ".skills-but" ).on( "click", function () {
     if (uiOpen && !skillsOpen) {
         if (projectsOpen) {
-            SetTabs("regular");
             // MoveChar("regular");
         }
         HideUI();
@@ -192,37 +160,19 @@ $( ".skills-but" ).on( "click", function () {
 
 $( "#tab4" ).on( "click", function () {
     if (uiOpen && !projectsOpen) {
-        SetTabs("projects");
         // MoveChar("projects");
         HideUI();
     }
     ToggleProjects();
 } );
 
-var tab1 = $( "#tab1" )[0];
-var tab2 = $( "#tab2" )[0];
-var tab3 = $( "#tab3" )[0];
-var tab4 = $( "#tab4" )[0];
-
-function SetTabs(type) {
-    if (type == "regular") {
-        tab1.style.width = "97.5px";
-        tab2.style.width = "82.5px";
-        tab2.style.left = "97.5px";
-        tab3.style.width = "82.5px";
-        tab3.style.left = "180px";
-        tab4.style.width = "97.5px";
-        tab4.style.left = "262.5px";
-    } else {
-        tab1.style.width = "107.5px";
-        tab2.style.width = "92.5px";
-        tab2.style.left = "107.5px";
-        tab3.style.width = "92.5px";
-        tab3.style.left = "200px";
-        tab4.style.width = "107.5px";
-        tab4.style.left = "292.5px";
+$( ".projects-but" ).on( "click", function () {
+    if (uiOpen && !projectsOpen) {
+        // MoveChar("projects");
+        HideUI();
     }
-}
+    ToggleProjects();
+} );
 
 var uiOpen = false;
 

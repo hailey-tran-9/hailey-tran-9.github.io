@@ -76,22 +76,14 @@ li::marker {
 
 .regUI {
   position: absolute;
-
-  /* top: 36px; */
-
-  /* width: 362px;
-  height: 592px; */
   width: 400px;
   height: 653px;
-  /* width: 25vw;
-  height: 70vh; */
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 
   font-size: 14px;
-
-  /* container-type: inline-size; */
 
   visibility: hidden;
 }
@@ -117,120 +109,7 @@ li::marker {
   font-size: 1vw;
 } */
 
-.regTab {
-  width: 90.38px;
-  height: 45px;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  z-index: 1;
-}
-
-.regTab:active {
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-#regTab1 {
-  background-image: url("/imgs/RegTab1.png");
-}
-
-#regTab1:active {
-  background-image: url("/imgs/RegTabP1.png");
-}
-
-#regTab2 {
-  background-image: url("/imgs/RegTab2.png");
-}
-
-#regTab2:active {
-  background-image: url("/imgs/RegTabP2.png");
-}
-
-#regTab3 {
-  background-image: url("/imgs/RegTab3.png");
-}
-
-#regTab3:active {
-  background-image: url("/imgs/RegTabP3.png");
-}
-
-#regTab4 {
-  background-image: url("/imgs/RegTab4.png");
-}
-
-#regTab4:active {
-  background-image: url("/imgs/RegTabP4.png");
-}
-
-.tab {
-  position: absolute;
-  width: 97.5px;
-  height: 45px;
-  z-index: 1;
-}
-
-#tab2 {
-  width: 82.5px;
-  left: 97.5px;
-}
-
-#tab3 {
-  width: 82.5px;
-  left: 180px;
-}
-
-#tab4 {
-  left: 262.5px;
-}
-
-#tab1:active ~ #charStatBlock { background-image: url("/imgs/CharStatBlockP.png"); }
-#tab2:active ~ #inventory { background-image: url("/imgs/InventoryP.png"); }
-#tab3:active ~ #skills { background-image: url("/imgs/SkillsP.png"); }
-#tab4:active ~ #projects { background-image: url("/imgs/ProjectsP.png"); }
-
-.tab p {
-  color: gray;
-}
-
-#tab1 p {
-  padding-top: 10%;
-  padding-left: 35%;
-  padding-right: 20%;
-}
-
-#tab2 p, #tab3 p {
-  padding-top: 13%;
-}
-
-#tab4 p {
-  padding-top: 10%;
-  padding-left: 20%;
-  padding-right: 25%;
-}
-
-.arrow {
-  position: absolute;
-  width: 30px;
-  height: 52px;
-  z-index: 1;
-}
-
-#arrowL {
-  left: 32px;
-  bottom: 154px;
-}
-
-#arrowR {
-  right: 32px;
-  bottom: 154px;
-}
-
-#projects:has(#arrowL:active) { background-image: url("/imgs/ProjLeft.png"); }
-#projects:has(#arrowR:active) { background-image: url("/imgs/ProjRight.png"); }
-
 #charStatBlock {
-  /* background-image: url("/imgs/CharStatBlock.png"); */
   background-image: url("/imgs/CharProf.png");
 }
 
@@ -243,8 +122,8 @@ li::marker {
 }
 
 #projects {
-  width: 658px;
-  height: 492px;
+  width: 790px;
+  height: 653px;
 
   background-image: url("/imgs/Projects.png");
 }
