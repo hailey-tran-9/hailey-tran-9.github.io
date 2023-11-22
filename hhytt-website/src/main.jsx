@@ -27,7 +27,7 @@ function MoveChar() {
 
 window.addEventListener('resize', MoveChar);
 
-function CreateProject(page, vs, mt, gt, link, roleTime, description, tasks) {
+function CreateProject(page, vs, mt, gt, link, team, role, duration, description, tasks) {
     return (
         <div id={"page-"+page} style={{"position": "absolute", "visibility": vs}}>
             <div className="row" style={{"marginTop": mt, "marginLeft": "50px"}}>
@@ -39,13 +39,12 @@ function CreateProject(page, vs, mt, gt, link, roleTime, description, tasks) {
                         <img src={"/imgs/"+gt.replace(/\s+/g, '')+".png"} 
                         style={{"width": "100px", "height": "100px", 
                         "objectFit": "cover", "marginRight": "25px", 
-                        "marginTop": "8px", "marginLeft": "64px",
+                        "marginTop": "5px", "marginLeft": "64px",
                         "padding": "0"}}></img>
                     </div>
-                    {/* <p className="pt-2">{roleTime}</p> */}
                 </div>
-                <div className="col-10" style={{"height": "120px", "paddingLeft": "50px"}}>
-                    <div className="row" style={{"paddingLeft": "5px", "marginTop": "10px"}}>
+                <div className="col-10" style={{"height": "120px", "paddingLeft": "58px"}}>
+                    <div className="row" style={{"paddingLeft": "5px", "marginTop": "8px"}}>
                         <div className="col-1" style={{"marginRight": "5px"}}><p className='white'>Title</p></div>
                         <div className='col-9'><h5>{gt}</h5></div>
                     </div>
@@ -59,18 +58,42 @@ function CreateProject(page, vs, mt, gt, link, roleTime, description, tasks) {
                 <div className='col-2' style={{"paddingRight": "0"}}>
                     <p className='white'>Team Size</p>
                 </div>
-                <div className='col' style={{"paddingLeft": "5px"}}>
-                    <p>5</p>
+                <div className='col-1' style={{"width":"20px", "paddingLeft": "5px", "paddingRight": "0"}}>
+                    <p>{team}</p>
+                </div>
+                <div className='col-1' style={{"paddingLeft": "37px", "paddingRight": "0"}}>
+                    <p className='white'>Role</p>
+                </div>
+                <div className='col-3' style={{"paddingLeft": "25px"}}>
+                    <p>{role}</p>
+                </div>
+                <div className='col-1' style={{"width":"100px", "paddingLeft": "45px", "paddingRight": "0"}}>
+                    <p className='white'>Duration</p>
+                </div>
+                <div className='col-2' style={{"paddingLeft": "32px"}}>
+                    <p>{duration}</p>
                 </div>
             </div>
-            <div className="row" style={{"marginTop": "2.4rem", "paddingLeft": "95px", "paddingRight": "105px", "whiteSpace": "pre-wrap"}}>
-                <div id="scrollable">
-                    <p style={{"paddingTop": "0.5rem"}}>{description}</p>
-                    <ul style={{"paddingLeft": "2rem"}}>
-                        {tasks.map(task => (
-                            <li key={task}>{task}</li>
-                        ))}
-                    </ul>
+            <div className="row" style={{"marginLeft": "50px", "marginTop": "5px"}}>
+                <div className='col-3' style={{"width": "240px", "height": "250px"}}>
+                    <div className='row' style={{"height": "20px", "marginBottom": "10px"}}>
+                        <p className='white'>Description</p>
+                    </div>
+                    <div className='row plr-1'>
+                        {description}
+                    </div>
+                </div>
+                <div className='col-7' style={{"height": "250px", "paddingLeft": "42px"}}>
+                    <div className='row' style={{"height": "20px", "marginBottom": "10px"}}>
+                        <p className='white'>Contribution</p>
+                    </div>
+                    <div className='row plr-1'>
+                        <ul style={{"paddingLeft": "1rem"}}>
+                            {tasks.map(task => (
+                                <li key={task}>{task}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,15 +102,15 @@ function CreateProject(page, vs, mt, gt, link, roleTime, description, tasks) {
 }
 
 var projectDivs = [];
-projectDivs.push(CreateProject(0, "hidden", "30px", "[ME][TA]L", "https://penguinies.itch.io/metal", "Programmer | 2 months",
+projectDivs.push(CreateProject(0, "hidden", "30px", "[ME][TA]L", "https://penguinies.itch.io/metal", "5", "Programmer", "2 months",
     "[ME][TA]L is a metal-themed rhythm game. Its unique feature is the burst note, which requires you to type the words on the screen in a limited time frame!",
     ["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial"]));
 
-projectDivs.push(CreateProject(1, "hidden", "82px", "LemmeDoIt4U", "https://zenuriken.itch.io/lemmedoit4u", "Programmer | 2 days",
+projectDivs.push(CreateProject(1, "hidden", "82px", "LemmeDoIt4U", "https://zenuriken.itch.io/lemmedoit4u", "4", "Programmer", "2 days",
     "LemmeDoIt4U is a short game about a dog sticking its nose into a can to get the last pringle chip for its owner while dodging alien chips! The theme of the game jam was 'Into the Unknown.'",
     ["Implemented UI and meme popup functionality", "Set up audio and buff timers"]));
 
-projectDivs.push(CreateProject(2, "hidden", "82px", "Morpheus' (Unpaid) Intern", "https://weest.itch.io/morpheus-intern-unpaid", "Programmer | 2 days",
+projectDivs.push(CreateProject(2, "hidden", "82px", "Morpheus' (Unpaid) Intern", "4", "https://weest.itch.io/morpheus-intern-unpaid", "Programmer", "2 days",
     "Morpheus' (Unpaid) Intern is a bullet-hell, where you play as the new intern of the god of dreams. Protect the sleeping child from nightmares!",
     ["Implemented UI functionality", "Created buff/debuff spawner and effects"]));
 

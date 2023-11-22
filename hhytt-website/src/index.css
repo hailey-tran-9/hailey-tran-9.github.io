@@ -40,6 +40,11 @@ li::marker {
   padding-right: 0.25rem;
 }
 
+.plr-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pt-1 {
   padding-top: 1rem;
 }
