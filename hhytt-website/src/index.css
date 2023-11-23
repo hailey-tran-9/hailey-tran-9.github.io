@@ -215,3 +215,44 @@ li::marker {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.inv-but {
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: transparent;
+
+  border: 0;
+}
+
+#linkedin-but {
+  width: 54px;
+  height: 54px;
+  background-image: url("/imgs/LinkedIn.png");
+}
+
+#gmail-but {
+  width: 54px;
+  height: 40px;
+  background-image: url("/imgs/Gmail.png");
+}
+
+#github-but {
+  width: 63px;
+  height: 62px;
+  background-image: url("/imgs/GitHub.png");
+}
+
+#itch-but {
+  width: 54px;
+  height: 54px;
+  background-image: url("/imgs/Itch.png");
+}
+
+#gdd-but {
+  width: 54px;
+  height: 55px;
+  background-image: url("/imgs/GDD.png");
+}
