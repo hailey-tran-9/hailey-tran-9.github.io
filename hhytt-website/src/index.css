@@ -256,3 +256,27 @@ li::marker {
   height: 55px;
   background-image: url("/imgs/GDD.png");
 }
+
+#projects-dropdown {
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 60px;
+  z-index: 1;
+}
+
+#projects-dropdown-but {
+  width: 688px;
+  height: 18px;
+
+  background-image: url("/imgs/Dropdown.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: transparent;
+
+  border: 0;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
