@@ -364,4 +364,33 @@ $(function() {
         }
         
     } );
-  });
+});
+
+// Inventory anchor hovering
+let linkedIn = document.getElementById("linkedin-hover");
+let gmail = document.getElementById("gmail-hover");
+let github = document.getElementById("github-hover");
+let itch = document.getElementById("itch-hover");
+let gdd = document.getElementById("gdd-hover");
+
+function getHover(id) {
+    if (id == "linkedin-but") {
+        return linkedIn;
+    } else if (id == "gmail-but") {
+        return gmail;
+    } else if (id == "github-but") {
+        return github;
+    } else if (id == "itch-but") {
+        return itch;
+    } else if (id == "gdd-but") {
+        return gdd;
+    } 
+}
+
+$( ".inv-but" ).hover(
+    function(e) {
+        getHover(e.currentTarget.id).style.visibility = "visible";
+    }, function(e) {
+        getHover(e.currentTarget.id).style.visibility = "hidden";
+    }
+);

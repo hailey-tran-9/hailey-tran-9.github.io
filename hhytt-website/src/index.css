@@ -137,6 +137,11 @@ li::marker {
   background-image: url("/imgs/Projects.png");
 }
 
+#projectsContainer {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 #scrollable {
   width: auto;
   height: 174px;
@@ -280,3 +285,43 @@ li::marker {
 .dropdown-toggle::after {
   content: none;
 }
+
+.hover {
+  position: absolute;
+  width: 135px;
+  height: 65px;
+  background-image: url("/imgs/Hover.png");
+  z-index: 2;
+  pointer-events: none;
+}
+
+#linkedin-hover {
+  left: 110px;
+  top: 100px;
+  visibility: hidden;
+}
+
+#gmail-hover {
+  left: 210px;
+  top: 100px;
+  visibility: hidden;
+}
+
+#github-hover {
+  left: 310px;
+  top: 100px;
+  visibility: hidden;
+}
+
+#itch-hover {
+  left: 110px;
+  top: 200px;
+  visibility: hidden;
+}
+
+#gdd-hover {
+  left: 210px;
+  top: 200px;
+  visibility: hidden;
+}
+
