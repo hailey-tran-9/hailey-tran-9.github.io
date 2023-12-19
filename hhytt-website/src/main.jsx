@@ -7,6 +7,7 @@ import $ from 'jquery';
 import { createRoot } from 'react-dom/client';
 import { Fragment } from 'react';
 
+// ---------------------------------------------------- Character ----------------------------------------------------
 var charDisplay = $( "#characterDisplay" )[0];
 var speechBubble = $( "#speechBubble" )[0];
 
@@ -27,6 +28,8 @@ function MoveChar() {
 
 window.addEventListener('resize', MoveChar);
 
+// ---------------------------------------------------- Project Generation ----------------------------------------------------
+// Create project DOMs
 function CreateProject(page, vs, mt, gt, link, team, role, duration, description, tasks) {
     return (
         <div id={"page-"+page} style={{"position": "absolute", "visibility": vs}}>
@@ -101,6 +104,7 @@ function CreateProject(page, vs, mt, gt, link, team, role, duration, description
     )
 }
 
+// Render projects
 var projectDivs = [];
 projectDivs.push(CreateProject(0, "hidden", "30px", "[ME][TA]L", "https://penguinies.itch.io/metal", "5", "Programmer", "2 months",
     "[ME][TA]L is a metal-themed rhythm game. Its unique feature is the burst note, which requires you to type the words on the screen in a limited time frame!",
@@ -123,6 +127,7 @@ function RenderProjects() {
 const projectsRoot = createRoot(document.getElementById( "projectsContainer" ));
 projectsRoot.render(RenderProjects());
 
+// ---------------------------------------------------- Tab Toggling ----------------------------------------------------
 var gameStartOverlayOpen = !$( "#gameStartOverlay" )[0].hidden;
 
 // Handle document clicks
@@ -325,8 +330,7 @@ window.onload = (event) => {
   };
 
 
-// Button toggling
-
+// ---------------------------------------------------- Button Toggling ----------------------------------------------------
 var buttonsHaveBeenPressed = new Set();
 buttonsHaveBeenPressed.add("char-prof-but");
 
@@ -365,7 +369,8 @@ $(function() {
     } );
 });
 
-// Inventory anchor hovering
+// ---------------------------------------------------- Inventory Anchor Hovering ----------------------------------------------------
+// Create hover DOMs
 function CreateHover(name, left, top, description) {
     return (
         <div className="hover" id={name+"-hover"} style={{"left": left + "px", "top": top + "px", "visibility": "hidden"}}>
@@ -380,6 +385,7 @@ function CreateHover(name, left, top, description) {
     )
 }
 
+// Render hovers
 var hoverDivs = [];
 hoverDivs.push(CreateHover("linkedin", 120, 60, "Connect with me on LinkedIn"));
 hoverDivs.push(CreateHover("gmail", 220, 40, "Contact me at this email"));
@@ -396,6 +402,7 @@ function RenderHovers() {
 const hoverRoot = createRoot(document.getElementById( "hover-container" ));
 hoverRoot.render(RenderHovers());
 
+// Open/close hovers
 let linkedIn;
 let gmail;
 let github;
