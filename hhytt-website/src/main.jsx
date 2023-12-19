@@ -130,39 +130,11 @@ projectsRoot.render(RenderProjects());
 // ---------------------------------------------------- Tab Toggling ----------------------------------------------------
 var gameStartOverlayOpen = !$( "#gameStartOverlay" )[0].hidden;
 
-// Handle document clicks
+// Handle 1st document click
 $( document ).on( "click", function() {
     if (gameStartOverlayOpen) {
         $( "#gameStartOverlay" ).hide();
         gameStartOverlayOpen = false;
-    }
-} );
-
-// Handle keyboard shortcuts
-$( document ).on( "keydown", function( e ) {
-    console.log(e.key);
-    if (!gameStartOverlayOpen) {
-        if (e.key == "p") {
-            if (uiOpen && !projectsOpen) {
-                HideUI();
-            }
-            ToggleProjects();
-        } else if (e.key == "o") {
-            if (uiOpen && !skillsOpen) {
-                HideUI();
-            }
-            ToggleSkills();
-        } else if (e.key == "i") {
-            if (uiOpen && !inventoryOpen) {
-                HideUI();
-            }
-            ToggleInventory();
-        } else if (e.key == "u") {
-            if (uiOpen && !charStatOpen) {
-                HideUI();
-            }
-            ToggleCharProf();
-        }
     }
 } );
 
@@ -325,10 +297,9 @@ function HideUI() {
 }
 
 // Handle events when the window loads
-window.onload = (event) => {
+window.onload = (e) => {
     ToggleCharProf();
-  };
-
+};
 
 // ---------------------------------------------------- Button Toggling ----------------------------------------------------
 var buttonsHaveBeenPressed = new Set();
@@ -339,35 +310,67 @@ var progressBar = $( "#progress-bar" )[0];
 var activeButton = "char-prof-but";
 $( ".char-prof-but" )[0].style.backgroundImage = "url('/imgs/TabP.png')";
 
+// Update the button sprites and website progress bar
+function ButtonPress(targetName) {
+    if (targetName != activeButton) {
+        // console.log($( "." + activeButton ));
+        let activeButtons = $( "." + activeButton );
+        for (let i = 0; i < activeButtons.length; i++) {
+            activeButtons[i].style.backgroundImage = "url('/imgs/Tab.png')";
+        }
+        activeButton = targetName;
+        // console.log($( "." + targetName ));
+        for (let i = 0; i < $( "." + targetName ).length; i++) {
+            $( "." + targetName )[i].style.backgroundImage = "url('/imgs/TabP.png')";
+        }
+
+        if (!buttonsHaveBeenPressed.has(targetName)) {
+            buttonsHaveBeenPressed.add(targetName);
+            progressBar.style.width = String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100)) + "%";
+            progressBar.ariaValueNow = String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100));
+        }
+    }
+}
+
+// Handle physical button clicks
 $(function() {
     $( 'button.butt' ).on( "click", function(e) {
         let butTargetName = e.target.className.split(" ")[1];
-        if (butTargetName != activeButton) {
-            // console.log($( "." + activeButton ));
-            let activeButtons = $( "." + activeButton );
-            for (let i = 0; i < activeButtons.length; i++) {
-                activeButtons[i].style.backgroundImage = "url('/imgs/Tab.png')";
-            }
-            activeButton = butTargetName;
-            // console.log($( "." + butTargetName ));
-            for (let i = 0; i < $( "." + butTargetName ).length; i++) {
-                $( "." + butTargetName )[i].style.backgroundImage = "url('/imgs/TabP.png')";
-            }
-
-            if (!buttonsHaveBeenPressed.has(butTargetName)) {
-                buttonsHaveBeenPressed.add(butTargetName);
-                // console.log(buttonsHaveBeenPressed.size);
-                // console.log(Math.floor((buttonsHaveBeenPressed.size / 4) * 100));
-                // console.log(String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100)) + "%");
-                progressBar.style.width = String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100)) + "%";
-                progressBar.ariaValueNow = String(Math.floor((buttonsHaveBeenPressed.size / 4) * 100));
-            }
-
-            
-        }
-        
+        ButtonPress(butTargetName);
     } );
 });
+
+// Handle keyboard shortcuts
+$( document ).on( "keydown", function( e ) {
+    console.log(e.key);
+    if (!gameStartOverlayOpen) {
+        if (e.key == "p") {
+            if (uiOpen && !projectsOpen) {
+                HideUI();
+            }
+            ToggleProjects();
+            ButtonPress("projects-but");
+        } else if (e.key == "o") {
+            if (uiOpen && !skillsOpen) {
+                HideUI();
+            }
+            ToggleSkills();
+            ButtonPress("skills-but");
+        } else if (e.key == "i") {
+            if (uiOpen && !inventoryOpen) {
+                HideUI();
+            }
+            ToggleInventory();
+            ButtonPress("inventory-but");
+        } else if (e.key == "u") {
+            if (uiOpen && !charStatOpen) {
+                HideUI();
+            }
+            ToggleCharProf();
+            ButtonPress("char-prof-but");
+        }
+    }
+} );
 
 // ---------------------------------------------------- Inventory Anchor Hovering ----------------------------------------------------
 // Create hover DOMs
