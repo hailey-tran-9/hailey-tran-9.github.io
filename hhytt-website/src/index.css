@@ -306,33 +306,16 @@ li::marker {
   pointer-events: none;
 }
 
-/* #linkedin-hover {
-  left: 120px;
-  top: 60px;
-  visibility: hidden;
+.dropdown-menu {
+  font-size: 12px;
 }
 
-#gmail-hover {
-  left: 220px;
-  top: 40px;
-  visibility: hidden;
+.dropdown-menu li {
+  list-style-type: none;
 }
 
-#github-hover {
-  left: 320px;
-  top: 60px;
-  visibility: hidden;
+.dropdown-item {
+  width: 692px;
+  height: 19px;
+  background-image: url("/imgs/Games.png");
 }
-
-#itch-hover {
-  left: 120px;
-  top: 140px;
-  visibility: hidden;
-}
-
-#gdd-hover {
-  left: 220px;
-  top: 140px;
-  visibility: hidden;
-} */
-

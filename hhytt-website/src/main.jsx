@@ -406,11 +406,11 @@ const hoverRoot = createRoot(document.getElementById( "hover-container" ));
 hoverRoot.render(RenderHovers());
 
 // Open/close hovers
-let linkedIn;
-let gmail;
-let github;
-let itch;
-let gdd;
+var linkedIn;
+var gmail;
+var github;
+var itch;
+var gdd;
 
 $( function() {
     linkedIn = document.getElementById("linkedin-hover");
