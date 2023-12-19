@@ -123,7 +123,6 @@ function RenderProjects() {
 const projectsRoot = createRoot(document.getElementById( "projectsContainer" ));
 projectsRoot.render(RenderProjects());
 
-var progress = 0;
 var gameStartOverlayOpen = !$( "#gameStartOverlay" )[0].hidden;
 
 // Handle document clicks
@@ -367,11 +366,49 @@ $(function() {
 });
 
 // Inventory anchor hovering
-let linkedIn = document.getElementById("linkedin-hover");
-let gmail = document.getElementById("gmail-hover");
-let github = document.getElementById("github-hover");
-let itch = document.getElementById("itch-hover");
-let gdd = document.getElementById("gdd-hover");
+function CreateHover(name, left, top, description) {
+    return (
+        <div className="hover" id={name+"-hover"} style={{"left": left + "px", "top": top + "px", "visibility": "hidden"}}>
+            <div className="container fullHeight d-flex">
+                <div className="row d-flex align-self-center">
+                    <div className="col">
+                        <p className="plr-05" style={{"marginBottom": "0.25rem"}}>{description}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+var hoverDivs = [];
+hoverDivs.push(CreateHover("linkedin", 120, 60, "Connect with me on LinkedIn"));
+hoverDivs.push(CreateHover("gmail", 220, 40, "Contact me at this email"));
+hoverDivs.push(CreateHover("github", 320, 60, "Check out the codebase for all of my public projects here"));
+hoverDivs.push(CreateHover("itch", 120, 140, "Play my games on itch.io"));
+hoverDivs.push(CreateHover("gdd", 220, 140, "Learn more about Game Design and Development at Berkeley (GDD)"));
+
+function RenderHovers() {
+    return hoverDivs.map((hover, i) =>
+        <Fragment key={i}>{hover}</Fragment>
+    );
+}
+
+const hoverRoot = createRoot(document.getElementById( "hover-container" ));
+hoverRoot.render(RenderHovers());
+
+let linkedIn;
+let gmail;
+let github;
+let itch;
+let gdd;
+
+$( function() {
+    linkedIn = document.getElementById("linkedin-hover");
+    gmail = document.getElementById("gmail-hover");
+    github = document.getElementById("github-hover");
+    itch = document.getElementById("itch-hover");
+    gdd = document.getElementById("gdd-hover");
+});
 
 function getHover(id) {
     if (id == "linkedin-but") {

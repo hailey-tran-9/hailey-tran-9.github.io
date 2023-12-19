@@ -40,6 +40,11 @@ li::marker {
   padding-right: 0.25rem;
 }
 
+.plr-05 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .plr-1 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -59,6 +64,10 @@ li::marker {
 
 .center {
   margin: auto;
+}
+
+.center-pad {
+  padding: auto;
 }
 
 .white {
@@ -288,40 +297,42 @@ li::marker {
 
 .hover {
   position: absolute;
-  width: 135px;
-  height: 65px;
+  width: 240px;
+  height: 119px;
   background-image: url("/imgs/Hover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 2;
   pointer-events: none;
 }
 
-#linkedin-hover {
-  left: 110px;
-  top: 100px;
+/* #linkedin-hover {
+  left: 120px;
+  top: 60px;
   visibility: hidden;
 }
 
 #gmail-hover {
-  left: 210px;
-  top: 100px;
+  left: 220px;
+  top: 40px;
   visibility: hidden;
 }
 
 #github-hover {
-  left: 310px;
-  top: 100px;
+  left: 320px;
+  top: 60px;
   visibility: hidden;
 }
 
 #itch-hover {
-  left: 110px;
-  top: 200px;
+  left: 120px;
+  top: 140px;
   visibility: hidden;
 }
 
 #gdd-hover {
-  left: 210px;
-  top: 200px;
+  left: 220px;
+  top: 140px;
   visibility: hidden;
-}
+} */
 
