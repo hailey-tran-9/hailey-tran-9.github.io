@@ -30,7 +30,7 @@ window.addEventListener('resize', MoveChar);
 
 // ---------------------------------------------------- Project Generation ----------------------------------------------------
 // Create project DOMs
-function CreateProject(page, vs, mt, gt, link, team, role, duration, description, tasks) {
+function CreateProject(page, vs, mt, gt, link, team, role, duration, description, tasks, padding) {
     return (
         <div id={"page-"+page} style={{"position": "absolute", "visibility": vs}}>
             <div className="row" style={{"marginTop": mt, "marginLeft": "50px"}}>
@@ -46,13 +46,13 @@ function CreateProject(page, vs, mt, gt, link, team, role, duration, description
                         "padding": "0"}}></img>
                     </div>
                 </div>
-                <div className="col-10" style={{"height": "120px", "paddingLeft": "58px"}}>
+                <div className="col-10" style={{"height": "120px", "paddingLeft": padding[0]}}>
                     <div className="row" style={{"paddingLeft": "5px", "marginTop": "8px"}}>
-                        <div className="col-1" style={{"marginRight": "5px"}}><p className='white'>Title</p></div>
+                        <div className="col-1" style={{"marginRight": padding[1]}}><p className='white'>Title</p></div>
                         <div className='col-9'><h5>{gt}</h5></div>
                     </div>
                     <div className="row" style={{"paddingLeft": "5px", "marginTop": "-2px"}}>
-                        <div className="col-1" style={{"marginRight": "5px"}}><p className='white'>Link</p></div>
+                        <div className="col-1" style={{"marginRight": padding[1]}}><p className='white'>Link</p></div>
                         <div className='col-9'><a href={link} target="_blank">Play the game here!</a></div>
                     </div>
                 </div>
@@ -61,19 +61,19 @@ function CreateProject(page, vs, mt, gt, link, team, role, duration, description
                 <div className='col-2' style={{"paddingRight": "0"}}>
                     <p className='white'>Team Size</p>
                 </div>
-                <div className='col-1' style={{"width":"20px", "paddingLeft": "5px", "paddingRight": "0"}}>
+                <div className='col-1' style={{"width":"20px", "paddingLeft": padding[2], "paddingRight": "0"}}>
                     <p>{team}</p>
                 </div>
-                <div className='col-1' style={{"paddingLeft": "37px", "paddingRight": "0"}}>
+                <div className='col-1' style={{"paddingLeft": padding[3], "paddingRight": "0"}}>
                     <p className='white'>Role</p>
                 </div>
-                <div className='col-3' style={{"paddingLeft": "25px"}}>
+                <div className='col-3' style={{"paddingLeft": padding[4]}}>
                     <p>{role}</p>
                 </div>
-                <div className='col-1' style={{"width":"100px", "paddingLeft": "45px", "paddingRight": "0"}}>
+                <div className='col-1' style={{"width":"100px", "paddingLeft": padding[5], "paddingRight": "0"}}>
                     <p className='white'>Duration</p>
                 </div>
-                <div className='col-2' style={{"paddingLeft": "32px"}}>
+                <div className='col-3' style={{"paddingLeft": padding[6]}}>
                     <p>{duration}</p>
                 </div>
             </div>
@@ -108,15 +108,18 @@ function CreateProject(page, vs, mt, gt, link, team, role, duration, description
 var projectDivs = [];
 projectDivs.push(CreateProject(0, "hidden", "30px", "[ME][TA]L", "https://penguinies.itch.io/metal", "5", "Programmer", "2 months",
     "[ME][TA]L is a metal-themed rhythm game. Its unique feature is the burst note, which requires you to type the words on the screen in a limited time frame!",
-    ["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial"]));
+    ["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial"], 
+    ["58px", "5px", "5px", "37px", "25px", "45px", "32px"]));
 
-projectDivs.push(CreateProject(1, "hidden", "82px", "LemmeDoIt4U", "https://zenuriken.itch.io/lemmedoit4u", "4", "Programmer", "2 days",
+projectDivs.push(CreateProject(1, "hidden", "30px", "LemmeDoIt4U", "https://zenuriken.itch.io/lemmedoit4u", "4", "Programmer", "2 days",
     "LemmeDoIt4U is a short game about a dog sticking its nose into a can to get the last pringle chip for its owner while dodging alien chips! The theme of the game jam was 'Into the Unknown.'",
-    ["Implemented UI and meme popup functionality", "Set up audio and buff timers"]));
+    ["Implemented UI and meme popup functionality", "Set up audio and buff timers"], 
+    ["64px", "8px", "10px", "42px", "33px", "61px", "48px"]));
 
-projectDivs.push(CreateProject(2, "hidden", "82px", "Morpheus' (Unpaid) Intern", "4", "https://weest.itch.io/morpheus-intern-unpaid", "Programmer", "2 days",
+projectDivs.push(CreateProject(2, "hidden", "30px", "Morpheus' (Unpaid) Intern", "https://weest.itch.io/morpheus-intern-unpaid", "4", "Programmer", "2 days",
     "Morpheus' (Unpaid) Intern is a bullet-hell, where you play as the new intern of the god of dreams. Protect the sleeping child from nightmares!",
-    ["Implemented UI functionality", "Created buff/debuff spawner and effects"]));
+    ["Implemented UI functionality", "Created buff/debuff spawner and effects"], 
+    ["70px", "10px", "16px", "48px", "42px", "79px", "66px"]));
 
 function RenderProjects() {
     return projectDivs.map((project, i) =>
@@ -136,17 +139,6 @@ $( document ).on( "click", function() {
         $( "#gameStartOverlay" ).hide();
         gameStartOverlayOpen = false;
     }
-} );
-
-// Handle button clicks
-$( "#arrowL" ).on( "click", function () {
-    // console.log("left arrow");
-    ScrollLeft();
-} );
-
-$( "#arrowR" ).on( "click", function () {
-    // console.log("right arrow");
-    ScrollRight();
 } );
 
 $( ".char-prof-but" ).on( "click", function () {
@@ -177,14 +169,6 @@ $( ".skills-but" ).on( "click", function () {
         HideUI();
     }
     ToggleSkills();
-} );
-
-$( "#tab4" ).on( "click", function () {
-    if (uiOpen && !projectsOpen) {
-        // MoveChar("projects");
-        HideUI();
-    }
-    ToggleProjects();
 } );
 
 $( ".projects-but" ).on( "click", function () {
@@ -245,32 +229,16 @@ function ToggleProjects() {
     }
 }
 
-function ScrollLeft() {
-    let proj = $( "#page-"+lastOpenedProjIndex )[0];
-    proj.style.visibility = "hidden";
+function SwitchProject(to) {
+    let projInt = parseInt(to.id.split("-")[1]);
+    if (projInt != lastOpenedProjIndex) {
+        let proj = $( "#page-"+lastOpenedProjIndex )[0];
+        proj.style.visibility = "hidden";
 
-    if (lastOpenedProjIndex == 0) {
-        lastOpenedProjIndex = projectDivs.length - 1;
-    } else {
-        lastOpenedProjIndex -= 1;
+        proj = $( "#page-"+projInt )[0];
+        proj.style.visibility = "visible";
     }
-
-    proj = $( "#page-"+lastOpenedProjIndex )[0];
-    proj.style.visibility = "visible";
-}
-
-function ScrollRight() {
-    let proj = $( "#page-"+lastOpenedProjIndex )[0];
-    proj.style.visibility = "hidden";
-
-    if (lastOpenedProjIndex == projectDivs.length - 1) {
-        lastOpenedProjIndex = 0;
-    } else {
-        lastOpenedProjIndex += 1;
-    }
-
-    proj = $( "#page-"+lastOpenedProjIndex )[0];
-    proj.style.visibility = "visible";
+    lastOpenedProjIndex = projInt;
 }
 
 function HideUI() {
@@ -300,6 +268,12 @@ function HideUI() {
 window.onload = (e) => {
     ToggleCharProf();
 };
+
+$(function() {
+    $( '.proj-but' ).on( "click", function(e) {
+        SwitchProject(e.currentTarget);
+    } );
+});
 
 // ---------------------------------------------------- Button Toggling ----------------------------------------------------
 var buttonsHaveBeenPressed = new Set();

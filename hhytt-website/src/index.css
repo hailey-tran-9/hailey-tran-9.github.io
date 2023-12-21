@@ -307,11 +307,17 @@ li::marker {
 }
 
 .dropdown-menu {
-  font-size: 12px;
+  font-size: 11px;
 }
 
-.dropdown-menu li {
-  list-style-type: none;
+.dropdown-menu button {
+  background-color: transparent;
+}
+
+.dropdown-menu.show {
+  height: 57px;
+  background-color: transparent;
+  padding: 0;
 }
 
 .dropdown-item {
