@@ -323,5 +323,18 @@ li::marker {
 .dropdown-item {
   width: 692px;
   height: 19px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.dropdown-games {
   background-image: url("/imgs/Games.png");
+}
+
+.dropdown-code {
+  background-image: url("/imgs/Code.png");
+}
+
+.dropdown-last {
+  background-image: url("/imgs/Last.png");
 }

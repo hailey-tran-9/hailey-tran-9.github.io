@@ -28,9 +28,41 @@ function MoveChar() {
 
 window.addEventListener('resize', MoveChar);
 
-// ---------------------------------------------------- Project Generation ----------------------------------------------------
+// ---------------------------------------------------- Hover/Project Generation ----------------------------------------------------
+// Create hover DOMs
+function CreateHover(name, left, top, description) {
+    return (
+        <div className="hover" id={name+"-hover"} style={{"left": left + "px", "top": top + "px", "visibility": "hidden"}}>
+            <div className="container fullHeight d-flex">
+                <div className="row d-flex align-self-center">
+                    <div className="col">
+                        <p className="plr-05" style={{"marginBottom": "0.25rem"}}>{description}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+// Render hovers
+var hoverDivs = [];
+hoverDivs.push(CreateHover("linkedin", 120, 60, "Connect with me on LinkedIn"));
+hoverDivs.push(CreateHover("gmail", 220, 40, "Contact me at this email"));
+hoverDivs.push(CreateHover("github", 320, 60, "Check out the codebase for all of my public projects here"));
+hoverDivs.push(CreateHover("itch", 120, 140, "Play my games on itch.io"));
+hoverDivs.push(CreateHover("gdd", 220, 140, "Learn more about Game Design and Development at Berkeley (GDD)"));
+
+function RenderHovers() {
+    return hoverDivs.map((hover, i) =>
+        <Fragment key={i}>{hover}</Fragment>
+    );
+}
+
+const hoverRoot = createRoot(document.getElementById( "hover-container" ));
+hoverRoot.render(RenderHovers());
+
 // Create project DOMs
-function CreateProject(page, vs, mt, gt, link, team, role, duration, description, tasks, padding) {
+function CreateProject(page, vs, mt, pic, gt, link, team, role, duration, description, tasks, padding) {
     return (
         <div id={"page-"+page} style={{"position": "absolute", "visibility": vs}}>
             <div className="row" style={{"marginTop": mt, "marginLeft": "50px"}}>
@@ -39,7 +71,7 @@ function CreateProject(page, vs, mt, gt, link, team, role, duration, description
             <div className="row" style={{"height": "120px", "marginTop": "60px"}}>
                 <div className="col" style={{"height": "120px", "paddingRight": "0"}}>
                     <div className='row'>
-                        <img src={"/imgs/"+gt.replace(/\s+/g, '')+".png"} 
+                        <img src={"/imgs/"+pic.replace(/\s+/g, '')+".png"} 
                         style={{"width": "100px", "height": "100px", 
                         "objectFit": "cover", "marginRight": "25px", 
                         "marginTop": "5px", "marginLeft": "64px",
@@ -53,7 +85,7 @@ function CreateProject(page, vs, mt, gt, link, team, role, duration, description
                     </div>
                     <div className="row" style={{"paddingLeft": "5px", "marginTop": "-2px"}}>
                         <div className="col-1" style={{"marginRight": padding[1]}}><p className='white'>Link</p></div>
-                        <div className='col-9'><a href={link} target="_blank">Play the game here!</a></div>
+                        <div className='col-9'><a href={link} target="_blank">View the project here!</a></div>
                     </div>
                 </div>
             </div>
@@ -73,7 +105,7 @@ function CreateProject(page, vs, mt, gt, link, team, role, duration, description
                 <div className='col-1' style={{"width":"100px", "paddingLeft": padding[5], "paddingRight": "0"}}>
                     <p className='white'>Duration</p>
                 </div>
-                <div className='col-3' style={{"paddingLeft": padding[6]}}>
+                <div className='col-3' style={{"paddingLeft": padding[6], "paddingRight": 0}}>
                     <p>{duration}</p>
                 </div>
             </div>
@@ -106,20 +138,41 @@ function CreateProject(page, vs, mt, gt, link, team, role, duration, description
 
 // Render projects
 var projectDivs = [];
-projectDivs.push(CreateProject(0, "hidden", "30px", "[ME][TA]L", "https://penguinies.itch.io/metal", "5", "Programmer", "2 months",
+projectDivs.push(CreateProject(0, "hidden", "30px", "[ME][TA]L", "[ME][TA]L", "https://penguinies.itch.io/metal", "5", "Programmer", "2 months",
     "[ME][TA]L is a metal-themed rhythm game. Its unique feature is the burst note, which requires you to type the words on the screen in a limited time frame!",
-    ["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial"], 
+    ["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial", "Mapped songs", "Managed audio system"], 
     ["58px", "5px", "5px", "37px", "25px", "45px", "32px"]));
 
-projectDivs.push(CreateProject(1, "hidden", "30px", "LemmeDoIt4U", "https://zenuriken.itch.io/lemmedoit4u", "4", "Programmer", "2 days",
+projectDivs.push(CreateProject(1, "hidden", "30px", "LemmeDoIt4U", "LemmeDoIt4U", "https://zenuriken.itch.io/lemmedoit4u", "4", "Programmer", "2 days",
     "LemmeDoIt4U is a short game about a dog sticking its nose into a can to get the last pringle chip for its owner while dodging alien chips! The theme of the game jam was 'Into the Unknown.'",
     ["Implemented UI and meme popup functionality", "Set up audio and buff timers"], 
     ["64px", "8px", "10px", "42px", "33px", "61px", "48px"]));
 
-projectDivs.push(CreateProject(2, "hidden", "30px", "Morpheus' (Unpaid) Intern", "https://weest.itch.io/morpheus-intern-unpaid", "4", "Programmer", "2 days",
+projectDivs.push(CreateProject(2, "hidden", "30px", "Morpheus' (Unpaid) Intern", "Morpheus' (Unpaid) Intern", "https://weest.itch.io/morpheus-intern-unpaid", "4", "Programmer", "2 days",
     "Morpheus' (Unpaid) Intern is a bullet-hell, where you play as the new intern of the god of dreams. Protect the sleeping child from nightmares!",
     ["Implemented UI functionality", "Created buff/debuff spawner and effects"], 
     ["70px", "10px", "16px", "48px", "42px", "79px", "66px"]));
+
+projectDivs.push(CreateProject(3, "hidden", "30px", "Transparent", "Gitlet", "", "1", "Programmer", "2 weeks",
+    "A simplified version of the popular collaborative file system program Github.",
+    ["Implemented git add, commit, push, pull", "Merge functionality"], 
+    ["70px", "10px", "16px", "48px", "42px", "79px", "66px"]));
+
+projectDivs.push(CreateProject(4, "hidden", "30px", "Transparent", "GDD 3D Showroom", "", "4", "Programmer", "2 weeks",
+    "An informational website that helps users learn more about the Game Design and Development at Berkeley (GDD) organization. By clicking on interactable \
+    objects and navigating through the 3D space, we tried to emulate a more game-like experience.",
+    ["Implemented UI functionality", "Created helper functions for object loading", "Implemented keyboard re-mapping"], 
+    ["70px", "7px", "16px", "45px", "42px", "72px", "60px"]));
+
+projectDivs.push(CreateProject(5, "hidden", "30px", "Transparent", "Multi-Agent Search", "", "2", "Programmer", "2 weeks",
+    "Implemented different search algorithms for a simiplifed version of Pacman.",
+    ["A* Search", "Other utility functions"], 
+    ["80px", "10px", "25px", "50px", "45px", "95px", "84px"]));
+
+projectDivs.push(CreateProject(6, "hidden", "30px", "Transparent", "Encrypted File Sharing System", "", "2", "Programmer", "1 month",
+    "Created an encrypted file system.",
+    ["Symmetric key encryption", "HMAC encoding", "Random key generation using SHA-156", "Implemented user authentication, file storage/retrieval, file sharing, file revocation, and efficient writes"], 
+    ["50px", "5px", "3px", "30px", "15px", "25px", "15px"]));
 
 function RenderProjects() {
     return projectDivs.map((project, i) =>
@@ -347,38 +400,6 @@ $( document ).on( "keydown", function( e ) {
 } );
 
 // ---------------------------------------------------- Inventory Anchor Hovering ----------------------------------------------------
-// Create hover DOMs
-function CreateHover(name, left, top, description) {
-    return (
-        <div className="hover" id={name+"-hover"} style={{"left": left + "px", "top": top + "px", "visibility": "hidden"}}>
-            <div className="container fullHeight d-flex">
-                <div className="row d-flex align-self-center">
-                    <div className="col">
-                        <p className="plr-05" style={{"marginBottom": "0.25rem"}}>{description}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
-
-// Render hovers
-var hoverDivs = [];
-hoverDivs.push(CreateHover("linkedin", 120, 60, "Connect with me on LinkedIn"));
-hoverDivs.push(CreateHover("gmail", 220, 40, "Contact me at this email"));
-hoverDivs.push(CreateHover("github", 320, 60, "Check out the codebase for all of my public projects here"));
-hoverDivs.push(CreateHover("itch", 120, 140, "Play my games on itch.io"));
-hoverDivs.push(CreateHover("gdd", 220, 140, "Learn more about Game Design and Development at Berkeley (GDD)"));
-
-function RenderHovers() {
-    return hoverDivs.map((hover, i) =>
-        <Fragment key={i}>{hover}</Fragment>
-    );
-}
-
-const hoverRoot = createRoot(document.getElementById( "hover-container" ));
-hoverRoot.render(RenderHovers());
-
 // Open/close hovers
 var linkedIn;
 var gmail;
