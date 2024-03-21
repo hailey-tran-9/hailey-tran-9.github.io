@@ -436,3 +436,25 @@ $( ".inv-but" ).hover(
         getHover(e.currentTarget.id).style.visibility = "hidden";
     }
 );
+
+// ---------------------------------------------------- Chat Box ----------------------------------------------------
+var qa = {"What's your favorite game?": ["Monster Hunter: World! I've been a huge fan of the franchise ever since \
+    Monster Hunter 2, which I played on the PSP.", "It's so satisfying to complete weapon and armor loadouts and \
+    learn the moveset of these insanely awesome monsters.", "But the aspect of MHW that really drew me in was the \
+    interactivity with the environment. For the player and the monsters!"],
+    "Rhythm games?": ["Rythm games!! I absolutely love playing rhythm games (both arcade and pc/console)! \
+    You can find me on weekends at Round 1 playing DDR or DanceRush Stardom.", "I even tried to make a rhythm game \
+    myself!"], 
+    "TTRPGs?": ["I also play D&D 5E. I enjoy playing spellcasters and using my character's unique \
+    abilities to explore the world."], 
+    "Hobbies?": ["Besides gaming, my hobbies are watching anime, reading manga, playing music (piano/guitar), and \
+    photography.", "You can check out some of the photos I've taken ____."],
+    "Game Design and Development at Berkeley (GDD)": ["Throughout my time in the club, I've been the President, Decal \
+    Facilitator, and Public Relations officer.", "Being part of the staff has allowed me to improve my \
+    teamwork and communication skills.", "I also got to meet more people and become better friends with my \
+    peers!"],
+    "GDD Decal": ["UC Berkeley doesn't have an officially endorsed game development course under the College \
+    of Engineering, so I took GDD's Decal instead.", "It was helpful learning with a structured course and \
+    having a group committed to finishing a project.", "So I decided to become a Facilitator and help others \
+    do the same!", "The 2 groups I've mentored are 'A Home For Anderson' and 'Catching Fire'."]
+};
