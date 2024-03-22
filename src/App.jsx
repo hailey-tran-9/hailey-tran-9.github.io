@@ -101,10 +101,10 @@ hoverRoot.render(RenderHovers());
 function CreateProject(page, vs, mt, pic, gt, link, team, role, duration, description, tasks, padding) {
     return (
         <div id={"page-"+page} style={{"position": "absolute", "visibility": vs}}>
-            <div className="row" style={{"marginTop": mt, "marginLeft": "5vh"}}>
+            <div className="row" style={{"marginTop": mt, "marginLeft": "3.6vw"}}>
                 <div className="row"><h4 className="pr-3 pt-1 mb-0" style={{"color":"white"}}>Projects</h4></div>
             </div>
-            <div className="row" style={{"height": "120px", "marginTop": "6.9vh"}}>
+            <div className="row" style={{"height": "120px", "marginTop": "6.6vh"}}>
                 <div className="col" style={{"height": "120px", "paddingRight": "0"}}>
                     <div className='row'>
                         <img src={"/imgs/"+pic.replace(/\s+/g, '')+".png"} 
