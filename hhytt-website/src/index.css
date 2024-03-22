@@ -1,3 +1,9 @@
+html, body, main {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
 @font-face {
   font-family: pixelmania;
   src: url("pixelmania.ttf");
@@ -75,7 +81,8 @@ li::marker {
 }
 
 #gameStartOverlay {
-  position: fixed;
+  position: absolute;
+  left: 0;
   z-index: 2;
   width: 100%;
   height: 100%;
@@ -88,8 +95,11 @@ li::marker {
 }
 
 #regContainer {
-  position: absolute;
-  left: 5%;
+  /* position: absolute;
+  left: 3.5%; */
+
+  position: relative;
+  top: 10%;
 }
 
 .regUI {
@@ -116,16 +126,6 @@ li::marker {
   margin-top: 3px;
   margin-left: 55px;
 }
-
-/* @container (max-width: 375px) {
-  .regUI p {
-    font-size: 1vw;
-  }
-} */
-
-/* .regUI .row {
-  font-size: 1vw;
-} */
 
 #charStatBlock {
   background-image: url("/imgs/CharProf.png");
@@ -273,6 +273,7 @@ li::marker {
 
 #projects-dropdown {
   position: absolute;
+  height: 200px;
   margin-top: 88px;
   margin-left: 60px;
   z-index: 1;
@@ -318,6 +319,7 @@ li::marker {
   height: 57px;
   background-color: transparent;
   padding: 0;
+  border: 0;
 }
 
 .dropdown-item {
@@ -325,6 +327,9 @@ li::marker {
   height: 19px;
   padding-top: 2px;
   padding-bottom: 2px;
+
+  position: relative;
+  left: 16.8vw;
 }
 
 .dropdown-games {

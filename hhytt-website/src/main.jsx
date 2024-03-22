@@ -68,7 +68,7 @@ function CreateProject(page, vs, mt, pic, gt, link, team, role, duration, descri
             <div className="row" style={{"marginTop": mt, "marginLeft": "50px"}}>
                 <div className="row"><h4 className="pr-3 pt-1 mb-0" style={{"color":"white"}}>Projects</h4></div>
             </div>
-            <div className="row" style={{"height": "120px", "marginTop": "60px"}}>
+            <div className="row" style={{"height": "120px", "marginTop": "63px"}}>
                 <div className="col" style={{"height": "120px", "paddingRight": "0"}}>
                     <div className='row'>
                         <img src={"/imgs/"+pic.replace(/\s+/g, '')+".png"} 
