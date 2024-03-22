@@ -128,22 +128,22 @@ li::marker {
 }
 
 #charStatBlock {
-  background-image: url("/imgs/CharProf.png");
+  background-image: url("/src/assets/imgs/CharProf.png");
 }
 
 #inventory {
-  background-image: url("/imgs/Inventory.png");
+  background-image: url("/src/assets/imgs/Inventory.png");
 }
 
 #skills {
-  background-image: url("/imgs/Skills.png");
+  background-image: url("/src/assets/imgs/Skills.png");
 }
 
 #projects {
   width: 790px;
   height: 653px;
 
-  background-image: url("/imgs/Projects.png");
+  background-image: url("/src/assets/imgs/Projects.png");
 }
 
 #projectsContainer {
@@ -163,7 +163,7 @@ li::marker {
 
   width: 372px;
   height: 188px;
-  background-image: url("/imgs/SpeechBubble.png");
+  background-image: url("/src/assets/imgs/SpeechBubble.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -214,7 +214,7 @@ li::marker {
 
   position: absolute;
 
-  background-image: url("/imgs/Tab.png");
+  background-image: url("/src/assets/imgs/Tab.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -244,31 +244,31 @@ li::marker {
 #linkedin-but {
   width: 54px;
   height: 54px;
-  background-image: url("/imgs/LinkedIn.png");
+  background-image: url("/src/assets/imgs/LinkedIn.png");
 }
 
 #gmail-but {
   width: 54px;
   height: 40px;
-  background-image: url("/imgs/Gmail.png");
+  background-image: url("/src/assets/imgs/Gmail.png");
 }
 
 #github-but {
   width: 63px;
   height: 62px;
-  background-image: url("/imgs/GitHub.png");
+  background-image: url("/src/assets/imgs/GitHub.png");
 }
 
 #itch-but {
   width: 54px;
   height: 54px;
-  background-image: url("/imgs/Itch.png");
+  background-image: url("/src/assets/imgs/Itch.png");
 }
 
 #gdd-but {
   width: 54px;
   height: 55px;
-  background-image: url("/imgs/GDD.png");
+  background-image: url("/src/assets/imgs/GDD.png");
 }
 
 #projects-dropdown {
@@ -283,7 +283,7 @@ li::marker {
   width: 688px;
   height: 18px;
 
-  background-image: url("/imgs/Dropdown.png");
+  background-image: url("/src/assets/imgs/Dropdown.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -300,7 +300,7 @@ li::marker {
   position: absolute;
   width: 240px;
   height: 119px;
-  background-image: url("/imgs/Hover.png");
+  background-image: url("/src/assets/imgs/Hover.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
@@ -333,13 +333,13 @@ li::marker {
 }
 
 .dropdown-games {
-  background-image: url("/imgs/Games.png");
+  background-image: url("/src/assets/imgs/Games.png");
 }
 
 .dropdown-code {
-  background-image: url("/imgs/Code.png");
+  background-image: url("/src/assets/imgs/Code.png");
 }
 
 .dropdown-last {
-  background-image: url("/imgs/Last.png");
+  background-image: url("/src/assets/imgs/Last.png");
 }
