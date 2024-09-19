@@ -1,0 +1,19 @@
+body {
+    /* shape */
+    /* overflow: hidden; */
+    /* aesthetic */
+    background-color: #9CF4C1;
+}
+
+/* fonts */
+.lalezarRegular {
+    font-family: "Lalezar", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.makoRegular {
+    font-family: "Mako", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
