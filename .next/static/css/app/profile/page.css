@@ -1,4 +1,63 @@
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/profile/profile.module.css ***!
   \**************************************************************************************************************************************************************************************************************************************************************************/
+#profile_content__flQFt {
+    width: 85vw;
+    margin: 7.5vw;
+    margin-top: 4rem;
+    padding: 0;
+}
 
+#profile_profilePic__9dlKF {
+    /* shape */
+    width: 180.25px;
+    height: 250px;
+
+    /* aesthetic */
+    background-color: white;
+}
+
+.profile_header__aM6VL {
+    width: 438px;
+    height: 92px;
+
+    background-image: url('/images/profileHeaderDesktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #profile_bgDecal__zIX44 {
+        /* shape */
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    
+        /* aesthetic */
+        background-image: url('/images/profileBgDecalDesktop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        pointer-events: none;
+    }
+
+    #profile_mainRow__Gj_VI {
+        margin-top: 10rem;
+    }
+
+    #profile_profilePic__9dlKF {
+        /* shape */
+        width: 500px;
+        height: 750px;
+    
+        /* aesthetic */
+        background-color: white;
+    }
+
+    .profile_header__aM6VL {
+        width: 876px;
+        height: 184px;
+    }
+}

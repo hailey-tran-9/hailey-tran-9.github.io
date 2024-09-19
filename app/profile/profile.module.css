@@ -1,0 +1,60 @@
+#content {
+    width: 85vw;
+    margin: 7.5vw;
+    margin-top: 4rem;
+    padding: 0;
+}
+
+#profilePic {
+    /* shape */
+    width: 180.25px;
+    height: 250px;
+
+    /* aesthetic */
+    background-color: white;
+}
+
+.header {
+    width: 438px;
+    height: 92px;
+
+    background-image: url('/images/profileHeaderDesktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #bgDecal {
+        /* shape */
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    
+        /* aesthetic */
+        background-image: url('/images/profileBgDecalDesktop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        pointer-events: none;
+    }
+
+    #mainRow {
+        margin-top: 10rem;
+    }
+
+    #profilePic {
+        /* shape */
+        width: 500px;
+        height: 750px;
+    
+        /* aesthetic */
+        background-color: white;
+    }
+
+    .header {
+        width: 876px;
+        height: 184px;
+    }
+}
