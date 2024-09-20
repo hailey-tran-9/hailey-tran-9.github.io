@@ -2,13 +2,12 @@
     width: 85vw;
     margin: 7.5vw;
     margin-top: 4rem;
-    padding: 0;
 }
 
 #profilePic {
     /* shape */
-    width: 180.25px;
-    height: 250px;
+    width: 150px;
+    height: 200px;
 
     /* aesthetic */
     background-color: white;
@@ -21,6 +20,39 @@
     background-image: url('/images/profileHeaderDesktop.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#name {
+    /* shape */
+    width: 180px;
+    height: 45px;
+
+    /* aesthetic */
+    background-color: #404040;
+    color: white;
+    font-size: 25px;
+}
+
+#position {
+    /* shape */
+    width: 180px;
+    height: 45px;
+
+    /* aesthetic */
+    background-color: #69A882;
+    color: white;
+    font-size: 25px;
+}
+
+.textbox {
+    /* shape */
+
+    /* aesthetic */
+    background-color: white;
+
+    /* spacing */
+    margin-top: 25px;
+    margin-right: 25px;
 }
 
 /* X-Large devices (large desktops, 1200px and up) */

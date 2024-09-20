@@ -1,32 +1,59 @@
 import profile from './profile.module.css'
 import Image from '../../node_modules/next/image'
 
+{/* <div id={profile.bgDecal}></div> */}
+
 export default function Page() {
     return <>
-        <div id={profile.bgDecal}></div>
-        <div className={profile.header}></div>
-        <div className='container' id={profile.content}>
-            <div className='row'>
-                <div className='col'>
+        <div className='container'>
+            <div className='row' style={{marginBottom:'2rem'}}>
+                <div className={profile.header}></div>
+            </div>
 
+            <div className='row' style={{marginLeft:'1rem', marginRight:'1rem'}}>
+                <div className='col-auto'>
+                    <div id={profile.profilePic}></div>
+                </div>
+                <div className='col-auto' style={{margin:'auto', marginTop:0}}>
+                    <div className='row' style={{marginBottom:'0.5rem'}}>
+                        <div className='lalezarRegular d-flex align-items-center' id={profile.name}>
+                            <p style={{margin:0, paddingTop:'5px'}}>Hailey Tran</p>
+                        </div>
+                    </div>
                     <div className='row'>
-                        <div className='col'>
-                            <div id={profile.profilePic}></div>
-                        </div>
-                        <div className='col'>
-                            <p>2 headers will be here</p>
+                        <div className='lalezarRegular d-flex align-items-center' id={profile.position}>
+                            <p style={{margin:0, paddingTop:'5px'}}>UCB Grad</p>
                         </div>
                     </div>
-
-                    <div className='row text-center p-2' style={{marginTop:'2rem'}}>
-                        <p>descrip</p>
-                    </div>
-                    <div className='row text-center p-2'>
-                        <p>degrees</p>
-                    </div>
-                    
                 </div>
             </div>
+
+            <div className='row justify-content-center p-2' style={{marginTop:'2rem'}}>
+                {CreateTextbox('350px', '175px', '25px', '20px', "Hi! I'm Hailey, a recent UCB graduate who's interested in SWE and game dev. Thanks for visiting my website!", false)}
+            </div>
+            <div className='row justify-content-center p-2' style={{marginTop:'1rem'}}>
+                {CreateTextbox('350px', '140px', '25px', '20px', "Bachelor of Arts in Computer Science\nMinor in Data Science", true)}
+            </div>
+        </div>
+    </>
+}
+
+function CreateTextbox(w, h, offset, fontSize, descrip, isList) {
+    let shadowStr = ['0px -', offset, ' #EFEFEF, ', offset, ' -', offset, ' #EFEFEF'].join('');
+    // console.log("shadowStr: " + shadowStr);
+    let inner;
+    if (isList) {
+        let lines = descrip.split('\n');
+        let listItems = lines.map(ele => <li key={crypto.randomUUID()}>{ele}</li>);
+        inner = <ul className='makoRegular' style={{margin:0}}>{listItems}</ul>;
+    } else {
+        inner = <p className='makoRegular' style={{margin:0}}>{descrip}</p>
+    }
+
+    return <>
+        <div className={[profile.textbox, 'd-flex', 'align-items-center'].join(' ')} 
+        style={{width:w, height:h, boxShadow:shadowStr, fontSize:fontSize, padding:'2rem'}}>
+            {inner}
         </div>
     </>
 }
