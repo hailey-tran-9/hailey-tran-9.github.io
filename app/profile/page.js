@@ -5,12 +5,13 @@ import Image from '../../node_modules/next/image'
 
 export default function Page() {
     return <>
-        <div className='container'>
+        <div className='container' style={{width:"100%", height:"100%"}}>
+            <div id={profile.bgDecal}></div>
             <div className='row' style={{marginBottom:'2rem'}}>
                 <div className={profile.header}></div>
             </div>
 
-            <div className='row' style={{marginLeft:'1rem', marginRight:'1rem'}}>
+            <div className='row d-md-flex' style={{paddingLeft:'1rem', paddingRight:'1rem'}}>
                 <div className='col-auto'>
                     <div id={profile.profilePic}></div>
                 </div>

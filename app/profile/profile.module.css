@@ -55,19 +55,34 @@
     margin-right: 25px;
 }
 
+#bgDecal {
+    /* shape */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+
+    /* aesthetic */
+    background-image: url('/images/profileBgDecalMobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    pointer-events: none;
+}
+
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     #bgDecal {
         /* shape */
         position: absolute;
-        width: 100vw;
-        height: 100vh;
         z-index: -1;
     
         /* aesthetic */
         background-image: url('/images/profileBgDecalDesktop.png');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center top;
     
         pointer-events: none;
     }
