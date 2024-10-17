@@ -1,24 +1,19 @@
-#content {
-    width: 85vw;
-    margin: 7.5vw;
-    margin-top: 4rem;
-}
+/* -------------------- Background -------------------- */
+#bgDecal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    z-index: -1;
 
-#profilePic {
-    /* shape */
-    width: 9rem;
-    height: 12rem;
+    background-image: url('/images/profileBgDecalMobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    margin: auto;
-
-    /* aesthetic */
-    background-color: white;
+    pointer-events: none;
 }
 
 .header {
-    /* width: 438px;
-    height: 92px; */
-
     width: 100vw;
     height: 5rem;
 
@@ -27,63 +22,70 @@
     background-size: cover;
 }
 
+/* -------------------- Media -------------------- */
+#profilePic {
+    width: 9rem;
+    height: 12rem;
+    margin: auto;
+
+    background-color: white;
+}
+
+/* -------------------- Textboxes -------------------- */
+.textbox {
+    margin-top: 25px;
+    margin-right: 25px;
+
+    background-color: white;
+}
+
 #name {
-    /* shape */
     width: 180px;
     height: 45px;
+    margin-left: auto;
+    margin-right:auto;
 
-    /* aesthetic */
     background-color: #404040;
     color: white;
     font-size: 25px;
 }
 
 #position {
-    /* shape */
     width: 180px;
     height: 45px;
+    margin-left: auto;
+    margin-right:auto;
 
-    /* aesthetic */
     background-color: #69A882;
     color: white;
     font-size: 25px;
 }
 
-.textbox {
-    /* shape */
+#descrip {
+    width: 20rem;
+    height: 12.5rem;
+    margin-left: auto;
+    margin-right: auto;
 
-    /* aesthetic */
-    background-color: white;
-
-    /* spacing */
-    margin-top: 25px;
-    margin-right: 25px;
+    font-size: 1.25em;
 }
 
-#bgDecal {
-    /* shape */
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    z-index: -1;
+#degrees {
+    width: 20rem;
+    height: 9rem;
+    margin-left: auto;
+    margin-right: auto;
 
-    /* aesthetic */
-    background-image: url('/images/profileBgDecalMobile.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    pointer-events: none;
+    font-size: 1.25em;
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    /* -------------------- Background/Headers -------------------- */
     #bgDecal {
-        /* shape */
         position: absolute;
         z-index: -1;
     
-        /* aesthetic */
         background-image: url('/images/profileBgDecalDesktop.png');
         background-repeat: no-repeat;
         background-size: cover;
@@ -92,21 +94,55 @@
         pointer-events: none;
     }
 
-    #mainRow {
-        margin-top: 10rem;
-    }
-
-    #profilePic {
-        /* shape */
-        width: 500px;
-        height: 750px;
-    
-        /* aesthetic */
-        background-color: white;
-    }
-
     .header {
         width: 876px;
         height: 184px;
+    }
+
+    /* -------------------- Media -------------------- */
+    #profilePic {
+        width: 500px;
+        height: 750px;
+    
+        background-color: white;
+    }
+
+    /* -------------------- Textboxes -------------------- */
+    #name {
+        width: 75rem;
+        height: 5rem;
+        padding-left: 3rem;
+        margin-left: 2rem;
+        margin-right: None;
+    
+        font-size: 2em;
+    }
+    
+    #position {
+        width: 75rem;
+        height: 5rem;
+        padding-left: 3rem;
+        margin-left: 2rem;
+        margin-right: None;
+    
+        font-size: 2em;
+    }
+
+    #descrip {
+        width: 50rem;
+        height: 15rem;
+        margin-top: 3rem;
+        margin-left: 2rem;
+
+        font-size: 1.75em;
+    }
+
+    #degrees {
+        width: 50rem;
+        height: 10rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+
+        font-size: 1.75em;
     }
 }
