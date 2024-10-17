@@ -27,24 +27,24 @@
 
 #profile_name__tb9Rx {
     /* shape */
-    width: 180px;
-    height: 45px;
+    width: 100%;
+    height: 4rem;
 
     /* aesthetic */
     background-color: #404040;
     color: white;
-    font-size: 25px;
+    font-size: 2em;
 }
 
 #profile_position__v890W {
     /* shape */
-    width: 180px;
-    height: 45px;
+    width: 100%;
+    height: 4rem;
 
     /* aesthetic */
     background-color: #69A882;
     color: white;
-    font-size: 25px;
+    font-size: 2em;
 }
 
 .profile_textbox__WpS_b {
