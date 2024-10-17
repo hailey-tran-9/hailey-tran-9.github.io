@@ -9,16 +9,21 @@
 
 #profile_profilePic__9dlKF {
     /* shape */
-    width: 150px;
-    height: 200px;
+    width: 9rem;
+    height: 12rem;
+
+    margin: auto;
 
     /* aesthetic */
     background-color: white;
 }
 
 .profile_header__aM6VL {
-    width: 438px;
-    height: 92px;
+    /* width: 438px;
+    height: 92px; */
+
+    width: 100vw;
+    height: 5rem;
 
     background-image: url('/images/profileHeaderDesktop.png');
     background-repeat: no-repeat;
@@ -61,8 +66,8 @@
 #profile_bgDecal__zIX44 {
     /* shape */
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     left: 0;
     z-index: -1;
 
