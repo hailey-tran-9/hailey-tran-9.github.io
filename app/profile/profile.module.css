@@ -17,7 +17,7 @@
     width: 100vw;
     height: 5rem;
 
-    background-image: url('/images/profileHeaderDesktop.png');
+    background-image: url('/images/profileHeaderMobile.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -209,6 +209,8 @@
     .header {
         width: 876px;
         height: 184px;
+
+        background-image: url('/images/profileHeaderDesktop.png');
     }
 
     /* -------------------- Textboxes -------------------- */
@@ -404,6 +406,7 @@
     }
 }
 
+/* Even BIGGER monitors */
 @media (min-width: 1850px) {
     /* -------------------- Textboxes -------------------- */
     #name {

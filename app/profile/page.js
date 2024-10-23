@@ -1,7 +1,7 @@
 import profile from './profile.module.css'
 import Image from '../../node_modules/next/image'
+import {ESC} from '../esc'
 
-{/* <div id={profile.bgDecal}></div> */}
 
 export default function Page() {
     return <>
@@ -11,7 +11,10 @@ export default function Page() {
 
             <div className='flex-column'>
 
-                <div className='flex-row'><div className={profile.header}></div></div>
+                <div className='d-flex flex-lg-col flex-row'>
+                    <div className={`${profile.header}`}></div>
+                    <ESC />
+                </div>
 
                 <div className='flex-sm-column flex-md-row' id={profile.content} style={{width:'100vw'}}>
 
