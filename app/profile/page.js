@@ -11,7 +11,7 @@ export default function Page() {
 
             <div className='flex-column'>
 
-                <div className='d-flex flex-lg-col flex-row'>
+                <div className='d-flex flex-lg-col flex-row flex-wrap'>
                     <div className={`${profile.header}`}></div>
                     <ESC />
                 </div>
