@@ -1,0 +1,8 @@
+.header {
+    width: 876px;
+    height: 184px;
+
+    background-image: url('/images/profileHeaderDesktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

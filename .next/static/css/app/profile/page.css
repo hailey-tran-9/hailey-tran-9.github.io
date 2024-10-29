@@ -4,8 +4,8 @@
 /* -------------------- Background -------------------- */
 #profile_bgDecal__zIX44 {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     left: 0;
     z-index: -1;
 
@@ -56,6 +56,10 @@
 
     background-color: #69A882;
     color: white;
+}
+
+#profile_degrees__PmL6x {
+    margin-bottom: 2rem;
 }
 
 /* Phones w/ height less than 700px */
