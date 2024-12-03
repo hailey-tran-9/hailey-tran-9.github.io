@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "name":"[ME][TA]L",
+            "link":"https://penguinies.itch.io/metal",
+            "role":"Programmer",
+            "duration":"2 months",
+            "description":"[ME][TA]L is a metal-themed rhythm game. Its unique feature is the burst note, which requires you to type the words on the screen in a limited time frame!",
+            "tasks":["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial"]
+        },
+        {
+            "name": "LemmeDoIt4U",
+            "link": "https://zenuriken.itch.io/lemmedoit4u",
+            "role": "Programmer",
+            "duration": "2 days",
+            "description": "LemmeDoIt4U is a short game about a dog sticking its nose into a can to get the last pringle chip for its owner while dodging alien chips! The theme of the game jam was 'Into the Unknown.'",
+            "tasks": ["Implemented UI and meme popup functionality", "Set up audio and buff timers"]
+        },
+        {
+            "name": "Morpheus' (Unpaid) Intern",
+            "link": "https://weest.itch.io/morpheus-intern-unpaid",
+            "role": "Programmer",
+            "duration": "2 days",
+            "description": "Morpheus' (Unpaid) Intern is a bullet-hell, where you play as the new intern of the god of dreams. Protect the sleeping child from nightmares!",
+            "tasks": ["Implemented UI functionality", "Created buff/debuff spawner and effects"]
+        }
+    ]
+}
