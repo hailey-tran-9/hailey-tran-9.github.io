@@ -31,8 +31,8 @@ function MainMenuButton({name, descrip, routeSeg}) {
     return <>
         <Link href={routeSeg} style={{width:'100%'}}>
             <button className={mainMenu.mainButton}>
-                <p className={[mainMenu.mainButtonName, 'lalezarRegular'].join(' ')}>{name}</p>
-                <p className={[mainMenu.mainButtonDescrip, 'makoRegular'].join(' ')}>{descrip}</p>
+                <p className={`${mainMenu.mainButtonName} lalezarRegular`}>{name}</p>
+                <p className={`${mainMenu.mainButtonDescrip} makoRegular`}>{descrip}</p>
             </button>
         </Link>
     </>

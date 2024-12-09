@@ -1,10 +1,9 @@
-.header {
-    width: 876px;
-    height: 184px;
+/* Project List */
+#projectsList {
+    height: 85.5vh;
 
-    background-image: url('/images/profileHeaderDesktop.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Project Information */
@@ -38,19 +37,32 @@
 
 /* Project Tab */
 .tab {
-    width: 20rem;
-    height: 7rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    width: 25rem;
+    height: 8rem;
+    padding: 0;
+    margin-bottom: 0.5rem;
+
+    border-radius: 2px;
+    border-bottom-left-radius: 0;
 
     background-color: #395D47;
     color: white;
     font-size: 2em;
+    text-align: left;
+}
+
+.tabName {
+    margin-bottom: 0.2rem;
+    padding: 0.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0;
+    padding-bottom: 0.75rem;
 }
 
 .tabStripe {
-    width: 20rem;
-    height: 1.5rem;
+    width: 100%;
+    height: 2rem;
 
     background-color: #69A882;
 }

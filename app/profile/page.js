@@ -1,7 +1,6 @@
 import profile from './profile.module.css'
 import Image from '../../node_modules/next/image'
-import {ESC} from '../esc'
-
+import { Navbar } from '../navbar';
 
 export default function Page() {
     return <>
@@ -11,10 +10,7 @@ export default function Page() {
 
             <div className='flex-column'>
 
-                <div className='d-flex flex-lg-col flex-row flex-wrap'>
-                    <div className={`${profile.header}`}></div>
-                    <ESC />
-                </div>
+                <Navbar name="Profile" />
 
                 <div className='flex-sm-column flex-md-row' id={profile.content} style={{width:'100vw'}}>
 
@@ -37,10 +33,18 @@ export default function Page() {
                             </div>
 
                             <div className='flex-row' style={{paddingTop:'1rem', paddingBottom:0}}>
-                                {CreateTextbox(profile.descrip, '1.75rem', "Hi! I'm Hailey, a recent UCB graduate who's interested in SWE and game dev. Thanks for visiting my website!", false)}
+                                <Textbox 
+                                    id={profile.descrip}
+                                    description={"Hi! I'm Hailey, a recent UCB graduate who's interested in SWE and game dev. Thanks for visiting my website!"}
+                                    isList={false}
+                                />
                             </div>
                             <div className='flex-row' style={{paddingTop:'1rem', paddingBottom:0}}>
-                                {CreateTextbox(profile.degrees, '1.75rem', "Bachelor of Arts in Computer Science\nMinor in Data Science", true)}
+                                <Textbox 
+                                    id={profile.degrees}
+                                    description={"Bachelor of Arts in Computer Science\nMinor in Data Science"}
+                                    isList={true}
+                                />
                             </div>
 
                         </div>
@@ -55,20 +59,20 @@ export default function Page() {
     </>
 }
 
-function CreateTextbox(id, offset, descrip, isList) {
+function Textbox({ id, description, isList }) {
     // let shadowStr = ['0px -', offset, ' #EFEFEF, ', offset, ' -', offset, ' #EFEFEF'].join('');
     // console.log("shadowStr: " + shadowStr);
     let inner;
     if (isList) {
-        let lines = descrip.split('\n');
+        let lines = description.split('\n');
         let listItems = lines.map(ele => <li key={crypto.randomUUID()}>{ele}</li>);
         inner = <ul className='makoRegular' style={{margin:0}}>{listItems}</ul>;
     } else {
-        inner = <p className='makoRegular' style={{margin:0}}>{descrip}</p>
+        inner = <p className='makoRegular' style={{margin:0}}>{description}</p>
     }
 
     return <>
-        <div className={[profile.textbox, 'd-flex', 'align-items-center'].join(' ')} id={id} style={{padding:'2rem'}}>
+        <div className={`${profile.textbox} d-flex align-items-center`} id={id} style={{padding:'2rem'}}>
             {inner}
         </div>
     </>

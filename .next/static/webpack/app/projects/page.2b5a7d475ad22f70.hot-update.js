@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/projects/page",{
+
+/***/ "(app-pages-browser)/./public/projects/data.json":
+/*!***********************************!*\
+  !*** ./public/projects/data.json ***!
+  \***********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"projects":[{"name":"[ME][TA]L","link":"https://penguinies.itch.io/metal","role":"Programmer","duration":"2 months","description":"[ME][TA]L is a metal-themed rhythm game. Its unique feature is the burst note, which requires you to type the words on the screen in a limited time frame!","tasks":["Implemented UI functionality","Aligned note recordings to our parser\'s structure","Created the tutorial"]},{"name":"LemmeDoIt4U","link":"https://zenuriken.itch.io/lemmedoit4u","role":"Programmer","duration":"2 days","description":"LemmeDoIt4U is a short game about a dog sticking its nose into a can to get the last pringle chip for its owner while dodging alien chips! The theme of the game jam was \'Into the Unknown.\'","tasks":["Implemented UI and meme popup functionality","Set up audio and buff timers"]},{"name":"Morpheus\' (Unpaid) Intern","link":"https://weest.itch.io/morpheus-intern-unpaid","role":"Programmer","duration":"2 days","description":"Morpheus\' (Unpaid) Intern is a bullet-hell, where you play as the new intern of the god of dreams. Protect the sleeping child from nightmares!","tasks":["Implemented UI functionality","Created buff/debuff spawner and effects"]},{"name":"1","link":"","role":"","duration":"","description":"","tasks":[]},{"name":"2","link":"","role":"","duration":"","description":"","tasks":[]},{"name":"3","link":"","role":"","duration":"","description":"","tasks":[]},{"name":"4","link":"","role":"","duration":"","description":"","tasks":[]},{"name":"5","link":"","role":"","duration":"","description":"","tasks":[]},{"name":"6","link":"","role":"","duration":"","description":"","tasks":[]},{"name":"7","link":"","role":"","duration":"","description":"","tasks":[]}]}');
+
+/***/ })
+
+});

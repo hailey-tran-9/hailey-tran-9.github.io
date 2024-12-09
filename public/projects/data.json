@@ -23,6 +23,62 @@
             "duration": "2 days",
             "description": "Morpheus' (Unpaid) Intern is a bullet-hell, where you play as the new intern of the god of dreams. Protect the sleeping child from nightmares!",
             "tasks": ["Implemented UI functionality", "Created buff/debuff spawner and effects"]
+        },
+        {
+            "name": "1",
+            "link": "",
+            "role": "",
+            "duration": "",
+            "description": "",
+            "tasks": []
+        },
+        {
+            "name": "2",
+            "link": "",
+            "role": "",
+            "duration": "",
+            "description": "",
+            "tasks": []
+        },
+        {
+            "name": "3",
+            "link": "",
+            "role": "",
+            "duration": "",
+            "description": "",
+            "tasks": []
+        },
+        {
+            "name": "4",
+            "link": "",
+            "role": "",
+            "duration": "",
+            "description": "",
+            "tasks": []
+        },
+        {
+            "name": "5",
+            "link": "",
+            "role": "",
+            "duration": "",
+            "description": "",
+            "tasks": []
+        },
+        {
+            "name": "6",
+            "link": "",
+            "role": "",
+            "duration": "",
+            "description": "",
+            "tasks": []
+        },
+        {
+            "name": "7",
+            "link": "",
+            "role": "",
+            "duration": "",
+            "description": "",
+            "tasks": []
         }
     ]
 }
