@@ -2,7 +2,8 @@
 
 import projects from './projects.module.css'
 import Image from '../../node_modules/next/image'
-import { useState } from 'react'
+import Link from '../../node_modules/next/link'
+import { useState, useEffect } from 'react'
 import { Textfit } from 'react-textfit';
 import { Navbar } from '../navbar';
 
@@ -11,11 +12,13 @@ const projectData = require('../../public/projects/data.json').projects;
 // console.log(projectData);
 
 // ------------------------------ COMPONENTS ------------------------------
-function ProjectInfo({ name, role, duration, description }) {
+function ProjectInfo({ name, link, role, duration, description }) {
     return <>
-        <div id={'project-info'}>
+        <div id={projects.projectInfo}>
             <div className={`${projects.title}` + ' lalezarRegular align-items-center'}>
-                <p style={{paddingLeft:'3rem', paddingTop:'0.75rem', paddingBottom:'auto'}}>{name}</p>
+                <Link href={link} target="_blank" style={{color:"white", textDecoration:"none"}}>
+                    <p style={{paddingLeft:'3rem', paddingTop:'0.75rem', paddingBottom:'auto'}}>{name}</p>
+                </Link>
             </div>
             <div className={`${projects.roleDur}` + ' lalezarRegular align-items-center'}>
                 <div className='d-flex'>
@@ -23,8 +26,11 @@ function ProjectInfo({ name, role, duration, description }) {
                     <p style={{paddingLeft:'3rem', paddingRight:'3rem', paddingTop:'0.75rem', paddingBottom:'auto'}}>Duration: {duration}</p>
                 </div>
             </div>
-            <div className={projects.descrip}>
-                <p style={{padding:'3rem'}}>{description}</p>
+            <div className={`${projects.descrip} position-relative`}>
+                <p>{description}</p>
+                <Link href={link} target="_blank" className="position-absolute bottom-0 start-2" style={{marginBottom:"2rem"}}>
+                    <p className="align-text-bottom">Play the game here!</p>
+                </Link>
             </div>
         </div>
     </>
@@ -34,7 +40,7 @@ function ProjectTab({proj, index, onProjectTabClick}) {
     return (
         <div id={`${proj}` + '-tab-' + `${index}`}>
             <button type="button" 
-            className={`${projects.tab}` + ' makoRegular align-items-center' + ' btn btn-success' + ' prj-btn'}
+            className={`${projects.tab} makoRegular align-items-center`}
             onClick={onProjectTabClick}>
                 <Textfit 
                     className={`${projects.tabName}`}
@@ -51,19 +57,56 @@ function ProjectTab({proj, index, onProjectTabClick}) {
 // ------------------------------ PROJECTS PAGE ------------------------------
 export default function Page() {
     const [focusedProject, setFocusedProject] = useState(0);
+    const [focusedBtn, setFocusedBtn] = useState(null);
     const [name, setName] = useState(projectData[focusedProject].name);
+    const [link, setLink] = useState(projectData[focusedProject].link);
     const [role, setRole] = useState(projectData[focusedProject].role);
     const [duration, setDuration] = useState(projectData[focusedProject].duration);
     const [description, setDescription] = useState(projectData[focusedProject].description);
 
-    function handleClick(index) {
+    useEffect(() => {
+        // Code to run after component has loaded
+        require("../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js");
+
+        if (focusedBtn == null) {
+            let firstProjectBtn = document.querySelector(`#${projects.projectsList}`).children[0].children[0];
+            setFocusedBtn(firstProjectBtn);
+            SelectTab(firstProjectBtn);
+        }
+    }, []);
+
+    function SelectTab(btn) {
+        btn.style.backgroundColor = "white";
+        btn.style.color = "#404040";
+        btn.style.marginTop = "15px";
+        btn.style.boxShadow = "-15px -15px #EFEFEF";
+        btn.children[1].style.backgroundColor = "#404040";
+    }
+
+    function UnselectTab() {
+        focusedBtn.style.backgroundColor = "#395D47";
+        focusedBtn.style.color = "white";
+        focusedBtn.style.marginTop = "0px";
+        focusedBtn.style.boxShadow = "none";
+        focusedBtn.children[1].style.backgroundColor = "#69A882";
+    }
+    
+    function handleClick(event, index) {
         if (index !== focusedProject) {
+            // Unselect the previously selected button
+            UnselectTab();
+            // Select this button
+            let clickedBtn = event.target;
+            SelectTab(clickedBtn);
+
             let data = projectData[index];
             setName(data.name);
+            setLink(data.link);
             setRole(data.role);
             setDuration(data.duration);
             setDescription(data.description);
             setFocusedProject(index);
+            setFocusedBtn(clickedBtn);
         }
     }
 
@@ -74,22 +117,48 @@ export default function Page() {
                 <Navbar name="Projects" />
 
                 <div 
-                    className='d-flex justify-content-between'
-                    style={{margin:'5rem', marginTop:0, marginLeft:0}}>
+                    className='d-flex'
+                    style={{margin:'5rem', marginTop:0, marginLeft:0, overflow:"visible"}}>
                     <div id={`${projects.projectsList}`}>
                         {projectData.map((p, index) => 
                             <ProjectTab 
                                 proj={p.name} 
                                 index={index} 
                                 key={p.name + index.toString()}
-                                onProjectTabClick={() => handleClick(index)} />
+                                onProjectTabClick={(e) => handleClick(e, index)} />
                         )}
                     </div>
                     
-                    <p>filter</p>
+                    <div className="flex-column me-auto ms-5">
+                        <div className="row">
+                            <div className={`btn-group ${projects.btnGroup}`} id={projects.sortBy}>
+                                <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                    Sort
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="#">Type</a></li>
+                                    <li><a className="dropdown-item" href="#">Date</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div className="row">
+                            <div className={`btn-group ${projects.btnGroup}`}>
+                                <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                    Filter
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="#">SWE</a></li>
+                                    <li><a className="dropdown-item" href="#">Game</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        
+                    </div>
                     
-                    <div>
-                        <ProjectInfo name={name} role={role} duration={duration} description={description} />
+                    <div className="ms-5">
+                        <ProjectInfo name={name} link={link} role={role} duration={duration} description={description} />
                     </div>
                     
                 </div>

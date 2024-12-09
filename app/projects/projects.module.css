@@ -1,14 +1,57 @@
 /* Project List */
 #projectsList {
     height: 85.5vh;
+    padding-right: 1rem;
 
     overflow-x: hidden;
     overflow-y: auto;
+
+    scrollbar-color: #FFFFFF #395D47;
+    scrollbar-width: auto;
+}
+
+/* Sorting/Filtering */
+.btnGroup button {
+    width: 15rem;
+
+    background-color: #F1F7F4;
+    color: #404040;
+    border: none;
+    border-radius: 2px;
+}
+
+.btnGroup button:hover {
+    background-color: #d1d3d2;
+}
+
+.btnGroup button:active {
+    background-color: #d1d3d2;
+}
+
+.btnGroup button:focus {
+    background-color: #d1d3d2;
+}
+
+.btnGroup ul {
+    width: 100%;
+    background-color: #F1F7F4;
+
+    border: none;
+    border-radius: 2px;
+}
+
+#sortBy {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
 }
 
 /* Project Information */
+#projectInfo {
+    margin-top: 3rem;
+}
+
 .title {
-    width: 50rem;
+    width: 50vw;
     height: 5rem;
     margin-bottom: 0.5rem;
 
@@ -18,7 +61,7 @@
 }
 
 .roleDur {
-    width: 50rem;
+    width: 50vw;
     height: 4rem;
     margin-bottom: 1.5rem;
 
@@ -28,8 +71,9 @@
 }
 
 .descrip {
-    width: 50rem;
-    height: 35rem;
+    width: 50vw;
+    height: 60vh;
+    padding: 3rem;
 
     background-color: #F1F7F4;
     font-size: 1.25em;
@@ -49,6 +93,14 @@
     color: white;
     font-size: 2em;
     text-align: left;
+
+    border: none;
+}
+
+.tab:active {
+    box-shadow: -15px -15px #EFEFEF;
+    background-color: white;
+    color: #404040;
 }
 
 .tabName {
@@ -58,6 +110,8 @@
     padding-right: 2rem;
     padding-top: 0;
     padding-bottom: 0.75rem;
+
+    pointer-events: none;
 }
 
 .tabStripe {
@@ -65,4 +119,10 @@
     height: 2rem;
 
     background-color: #69A882;
+
+    pointer-events: none;
+}
+
+.tab:active .tabStripe {
+    background-color: #404040;
 }
