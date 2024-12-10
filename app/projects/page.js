@@ -1,9 +1,9 @@
 "use client";
 
-import projects from './projects.module.css'
-import Image from '../../node_modules/next/image'
-import Link from '../../node_modules/next/link'
-import { useState, useEffect } from 'react'
+import projects from './projects.module.css';
+import Image from '../../node_modules/next/image';
+import Link from '../../node_modules/next/link';
+import { useState, useEffect } from 'react';
 import { Textfit } from 'react-textfit';
 import { Navbar } from '../navbar';
 

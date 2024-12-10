@@ -1,12 +1,17 @@
-import skills from './skills.module.css'
-import Image from '../../node_modules/next/image'
+import skills from './skills.module.css';
+import Image from '../../node_modules/next/image';
 import { Navbar } from '../navbar';
+import { Fragment } from 'react';
+import { CategoryBody } from './categoryBody';
 
-function Category({ category }) {
+function Category({ category, body }) {
     return (<>
         <div className={skills.category} id={`${category}-container`}>
             <div className={`${skills.categoryHeader} lalezarRegular`}>
                 <p>{category}</p>
+            </div>
+            <div className={`${skills.categoryBody} makoRegular`}>
+                <CategoryBody category={category} body={body} />
             </div>
         </div>
     </>);
@@ -23,9 +28,15 @@ export default function Page() {
                 <div className='d-flex' id={skills.content}>
 
                     <div id={skills.categoryContainer}>
-                        <Category category={"Programming Languages"} />
-                        <Category category={"Web Design"} />
-                        <Category category={"Game Development"} />
+                        <Category 
+                            category={"Programming Languages"}
+                            body={["Python", "Java", "C#", "C++"]} />
+                        <Category 
+                            category={"Web Design"} 
+                            body={["HTML", "CSS", "Javascript", "React"]} />
+                        <Category 
+                            category={"Game Development"}
+                            body={["Unity Engine"]} />
                     </div>
 
                     <div id={skills.correlationContainer}>
