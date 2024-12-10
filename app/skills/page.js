@@ -1,21 +1,6 @@
 import skills from './skills.module.css';
-import Image from '../../node_modules/next/image';
 import { Navbar } from '../navbar';
-import { Fragment } from 'react';
-import { CategoryBody } from './categoryBody';
-
-function Category({ category, body }) {
-    return (<>
-        <div className={skills.category} id={`${category}-container`}>
-            <div className={`${skills.categoryHeader} lalezarRegular`}>
-                <p>{category}</p>
-            </div>
-            <div className={`${skills.categoryBody} makoRegular`}>
-                <CategoryBody category={category} body={body} />
-            </div>
-        </div>
-    </>);
-}
+import { Category } from './categories';
 
 export default function Page() {
     return <>
@@ -37,6 +22,13 @@ export default function Page() {
                         <Category 
                             category={"Game Development"}
                             body={["Unity Engine"]} />
+
+                        {/* <Categories 
+                            info={
+                                [{category:"Programming Languages", bulletpoints:["Python", "Java", "C#", "C++"]},
+                                {category:"Web Design", bulletpoints:["HTML", "CSS", "Javascript", "React"]},
+                                {category:"Game Development", bulletpoints:["Unity Engine"]}]
+                            }/> */}
                     </div>
 
                     <div id={skills.correlationContainer}>
