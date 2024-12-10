@@ -12,8 +12,10 @@ const projectData = require('../../public/projects/data.json').projects;
 // console.log(projectData);
 
 // ------------------------------ COMPONENTS ------------------------------
-function ProjectInfo({ name, link, role, duration, description }) {
+function ProjectInfo({ name, link, role, duration, description, tasks }) {
     return <>
+    {/* <div id={projects.projectInfoMask}></div> */}
+        <div id={projects.projectInfoBuffer}></div>
         <div id={projects.projectInfo}>
             <div className={`${projects.title}` + ' lalezarRegular align-items-center'}>
                 <Link href={link} target="_blank" style={{color:"white", textDecoration:"none"}}>
@@ -21,13 +23,22 @@ function ProjectInfo({ name, link, role, duration, description }) {
                 </Link>
             </div>
             <div className={`${projects.roleDur}` + ' lalezarRegular align-items-center'}>
-                <div className='d-flex'>
+                <div className="d-inline-flex">
                     <p className='flex-grow-1' style={{paddingLeft:'3rem', paddingTop:'0.75rem', paddingBottom:'auto'}}>Role: {role}</p>
                     <p style={{paddingLeft:'3rem', paddingRight:'3rem', paddingTop:'0.75rem', paddingBottom:'auto'}}>Duration: {duration}</p>
                 </div>
             </div>
-            <div className={`${projects.descrip} position-relative`}>
+            <div className={`${projects.descrip} position-relative text-end`}>
                 <p>{description}</p>
+                <h4>Accomplishments</h4>
+                <ul>
+                    {tasks.map((task, index) => <li key={`${name}-task-${index}`}>{task}</li>)}
+                </ul>
+                <h4>More Details</h4>
+                <h5>Subsection</h5>
+                <ul>
+                    <li></li>
+                </ul>
                 <Link href={link} target="_blank" className="position-absolute bottom-0 start-2" style={{marginBottom:"2rem"}}>
                     <p className="align-text-bottom">Play the game here!</p>
                 </Link>
@@ -63,6 +74,7 @@ export default function Page() {
     const [role, setRole] = useState(projectData[focusedProject].role);
     const [duration, setDuration] = useState(projectData[focusedProject].duration);
     const [description, setDescription] = useState(projectData[focusedProject].description);
+    const [tasks, setTasks] = useState(projectData[focusedProject].tasks);
 
     useEffect(() => {
         // Code to run after component has loaded
@@ -105,6 +117,7 @@ export default function Page() {
             setRole(data.role);
             setDuration(data.duration);
             setDescription(data.description);
+            setTasks(data.tasks);
             setFocusedProject(index);
             setFocusedBtn(clickedBtn);
         }
@@ -113,6 +126,8 @@ export default function Page() {
     return <>
         <div className='d-flex' style={{width:'100vw', height:'100vh'}}>
             <div className='flex-column' style={{width:'100vw', height:'100vh'}}>
+
+                <div className={projects.bgPolygon}></div>
 
                 <Navbar name="Projects" />
 
@@ -158,7 +173,7 @@ export default function Page() {
                     </div>
                     
                     <div className="ms-5">
-                        <ProjectInfo name={name} link={link} role={role} duration={duration} description={description} />
+                        <ProjectInfo name={name} link={link} role={role} duration={duration} description={description} tasks={tasks} />
                     </div>
                     
                 </div>
