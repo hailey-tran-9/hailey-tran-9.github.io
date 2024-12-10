@@ -1,0 +1,69 @@
+#bgPolygon {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+
+    background-color: white;
+    clip-path: polygon(
+        0 0,
+        50% 0,
+        50% 100%,
+        0 100%
+    );
+}
+
+#content {
+    margin-top: 5rem;
+}
+
+#categoryContainer {
+    width: 40vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.category {
+    width: 40vw;
+    height: 20vh;
+    margin-bottom: 2rem;
+
+    background-color: #F1F7F4;
+}
+
+.categoryHeader {
+    background-color: #404040;
+    color: white;
+}
+
+.categoryHeader p {
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    font-size: 2em;
+}
+
+#correlationContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#correlatedImg {
+    width: 40vw;
+    height: 40vh;
+    margin-bottom: 2rem;
+
+    background-color: #F1F7F4;
+}
+
+#correlatedDescription {
+    width: 40vw;
+    height: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #F1F7F4;
+}

@@ -14,18 +14,17 @@ const projectData = require('../../public/projects/data.json').projects;
 // ------------------------------ COMPONENTS ------------------------------
 function ProjectInfo({ name, link, role, duration, description, tasks }) {
     return <>
-    {/* <div id={projects.projectInfoMask}></div> */}
         <div id={projects.projectInfoBuffer}></div>
         <div id={projects.projectInfo}>
-            <div className={`${projects.title}` + ' lalezarRegular align-items-center'}>
+            <div className={`${projects.title} lalezarRegular text-end`}>
                 <Link href={link} target="_blank" style={{color:"white", textDecoration:"none"}}>
-                    <p style={{paddingLeft:'3rem', paddingTop:'0.75rem', paddingBottom:'auto'}}>{name}</p>
+                    <p style={{paddingTop:'0.75rem', paddingBottom:'auto'}}>{name}</p>
                 </Link>
             </div>
-            <div className={`${projects.roleDur}` + ' lalezarRegular align-items-center'}>
-                <div className="d-inline-flex">
-                    <p className='flex-grow-1' style={{paddingLeft:'3rem', paddingTop:'0.75rem', paddingBottom:'auto'}}>Role: {role}</p>
-                    <p style={{paddingLeft:'3rem', paddingRight:'3rem', paddingTop:'0.75rem', paddingBottom:'auto'}}>Duration: {duration}</p>
+            <div className={`${projects.roleDur} lalezarRegular`}>
+                <div className="d-flex">
+                    <p>Role: {role}</p>
+                    <p className="ms-auto">Duration: {duration}</p>
                 </div>
             </div>
             <div className={`${projects.descrip} position-relative text-end`}>
@@ -39,7 +38,7 @@ function ProjectInfo({ name, link, role, duration, description, tasks }) {
                 <ul>
                     <li></li>
                 </ul>
-                <Link href={link} target="_blank" className="position-absolute bottom-0 start-2" style={{marginBottom:"2rem"}}>
+                <Link href={link} target="_blank">
                     <p className="align-text-bottom">Play the game here!</p>
                 </Link>
             </div>

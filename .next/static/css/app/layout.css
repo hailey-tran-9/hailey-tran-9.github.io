@@ -12010,14 +12010,28 @@ body {
     font-weight: 700;
     font-style: normal;
 }
-  
-.page-header {
-    width: 876px;
-    height: 184px;
 
-    background-image: url('/images/profileHeaderDesktop.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+.page-header {
+    width: 35vw;
+    height: 15vh;
+
+    background-color: #404040;
+    -webkit-clip-path: polygon(
+        0 0,
+        100% 0,
+        98% 45%,
+        87.5% 47.5%,
+        77.5% 100%,
+        0 100%
+    );
+            clip-path: polygon(
+        0 0,
+        100% 0,
+        98% 45%,
+        87.5% 47.5%,
+        77.5% 100%,
+        0 100%
+    );
 
     color: white;
 }

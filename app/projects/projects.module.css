@@ -10,7 +10,7 @@
     background-color: white;
     clip-path: polygon(
         100% 0,
-        25% 0,
+        28% 0,
         0 100%,
         100% 100%
     );
@@ -82,7 +82,7 @@
     margin-top: 3rem;
 
     float: left;
-    background-color: aqua;
+    /* background-color: aqua; */
     clip-path: polygon(
         100% 0,
         0 100%,
@@ -92,21 +92,6 @@
         100% 0,
         0 100%,
         0 0
-    );
-}
-
-#projectInfoMask {
-    width: 75vw;
-    height: 100vh;
-
-    margin-right: 3rem;
-
-    background-color: aqua;
-    clip-path: polygon(
-        100% 0,
-        42.5% 0,
-        25% 70%,
-        100% 70%
     );
 }
 
@@ -120,14 +105,26 @@
     font-size: 2.5em;
 }
 
+.title p {
+    padding-right: 3rem;
+    margin-bottom: 0;
+}
+
 .roleDur {
     width: 100%;
     height: 4rem;
+    padding-right: 3rem;
     margin-bottom: 1.5rem;
 
     background-color: #395D47;
     color: white;
     font-size: 1.75em;
+}
+
+.roleDur p {
+    padding-left: 3rem;
+    padding-top: 0.75rem;
+    padding-bottom: auto;
 }
 
 .descrip {
