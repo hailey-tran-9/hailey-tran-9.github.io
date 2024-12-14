@@ -16,28 +16,42 @@ function ProjectInfo({ name, link, role, duration, description, tasks }) {
     return <>
         <div id={projects.projectInfoBuffer}></div>
         <div id={projects.projectInfo}>
-            <div className={`${projects.title} lalezarRegular text-end`}>
+            <div className={`${projects.title} lalezarRegular`}>
                 <Link href={link} target="_blank" style={{color:"white", textDecoration:"none"}}>
-                    <p style={{paddingTop:'0.75rem', paddingBottom:'auto'}}>{name}</p>
+                    <p>{name}</p>
                 </Link>
             </div>
             <div className={`${projects.roleDur} lalezarRegular`}>
-                <div className="d-flex">
+                <div className="d-flex" id={projects.roleDurFlex}>
                     <p>Role: {role}</p>
                     <p className="ms-auto">Duration: {duration}</p>
                 </div>
             </div>
-            <div className={`${projects.descrip} position-relative text-end`}>
+            <div className={`${projects.descrip} position-relative`}>
                 <p>{description}</p>
-                <h4>Accomplishments</h4>
-                <ul>
-                    {tasks.map((task, index) => <li key={`${name}-task-${index}`}>{task}</li>)}
-                </ul>
-                <h4>More Details</h4>
-                <h5>Subsection</h5>
-                <ul>
-                    <li></li>
-                </ul>
+                <div>
+                    <div className={`${projects.accomplishments} row`}>
+                        <h4>Accomplishments</h4>
+                    </div>
+                    <div className={`${projects.accomplishments} row`}>
+                        <ul>
+                            {tasks.map((task, index) => <li key={`${name}-task-${index}`}>{task}</li>)}
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div className={`${projects.moreDetails} row`}>
+                        <h4>More Details</h4>
+                    </div>
+                    <div className={`${projects.moreDetails} row`}>
+                        <h5>Subsection</h5>
+                    </div>
+                    <div className={`${projects.moreDetails} row`}>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
                 <Link href={link} target="_blank">
                     <p className="align-text-bottom">Play the game here!</p>
                 </Link>
@@ -127,12 +141,13 @@ export default function Page() {
             <div className='flex-column' style={{width:'100vw', height:'100vh'}}>
 
                 <div className={projects.bgPolygon}></div>
+                <div id={projects.projectsListBg}></div>
 
                 <Navbar name="Projects" />
 
                 <div 
                     className='d-flex'
-                    style={{margin:'5rem', marginTop:0, marginLeft:0, overflow:"visible"}}>
+                    style={{margin:'5rem', marginTop:0, marginLeft:0, marginBottom:0, overflow:"visible"}}>
                     <div id={`${projects.projectsList}`}>
                         {projectData.map((p, index) => 
                             <ProjectTab 

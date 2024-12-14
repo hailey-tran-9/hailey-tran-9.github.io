@@ -10,15 +10,32 @@
     background-color: white;
     clip-path: polygon(
         100% 0,
-        28% 0,
+        30% 0,
         0 100%,
         100% 100%
     );
 }
 
+#projectsListBg {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    width: 26rem;
+    height: 100vh;
+    background-color: #8f8f8f8c;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+
 /* Project List */
 #projectsList {
-    height: 85.5vh;
+    height: 85vh;
     padding-right: 1rem;
 
     overflow-x: hidden;
@@ -77,19 +94,21 @@
 }
 
 #projectInfoBuffer {
-    width: 20vw;
+    width: 18.5vw;
     height: 74vh;
     margin-top: 3rem;
-
     float: left;
+
     /* background-color: aqua; */
-    clip-path: polygon(
+    /* clip-path: polygon(
         100% 0,
+        5% 100%,
         0 100%,
         0 0
-    );
+    ); */
     shape-outside: polygon(
         100% 0,
+        5% 100%,
         0 100%,
         0 0
     );
@@ -97,43 +116,64 @@
 
 .title {
     width: 100%;
-    height: 5rem;
+    height: 7rem;
     margin-bottom: 0.5rem;
 
     background-color: #404040;
     color: white;
-    font-size: 2.5em;
+    font-size: 3.5em;
 }
 
 .title p {
+    padding-top: 1rem;
     padding-right: 3rem;
     margin-bottom: 0;
 }
 
 .roleDur {
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     padding-right: 3rem;
     margin-bottom: 1.5rem;
 
     background-color: #395D47;
     color: white;
-    font-size: 1.75em;
+    font-size: 2.5em;
 }
 
 .roleDur p {
     padding-left: 3rem;
-    padding-top: 0.75rem;
+    padding-top: 1rem;
     padding-bottom: auto;
+}
+
+#roleDurFlex {
+    position: relative;
+    left: -7rem;
 }
 
 .descrip {
     width: 100%;
-    height: 60vh;
+    height: 55vh;
     padding: 3rem;
 
     background-color: #F1F7F4;
     font-size: 1.25em;
+}
+
+.descrip ul {
+    list-style-position: inside;
+    /* direction: rtl; */
+}
+
+.accomplishments {
+    position: relative;
+    left: -12rem;
+}
+
+.moreDetails {
+    position: relative;
+    left: -16rem;
 }
 
 /* Project Tab */

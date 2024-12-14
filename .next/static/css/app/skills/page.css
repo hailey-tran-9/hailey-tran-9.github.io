@@ -11,14 +11,14 @@
     background-color: white;
     -webkit-clip-path: polygon(
         0 0,
-        50% 0,
-        50% 100%,
+        40% 0,
+        40% 100%,
         0 100%
     );
             clip-path: polygon(
         0 0,
-        50% 0,
-        50% 100%,
+        40% 0,
+        40% 100%,
         0 100%
     );
 }
@@ -28,13 +28,13 @@
 }
 
 #skills_categoryContainer__pXpAp {
-    width: 40vw;
+    width: 30vw;
     margin-left: 5vw;
     margin-right: 5vw;
 }
 
 .skills_category__5Wd8U {
-    width: 40vw;
+    width: 30vw;
     height: 20vh;
     margin-bottom: 2rem;
 
@@ -57,8 +57,8 @@
 
 .skills_categoryBody__MoprN {
     padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 
     color: #395D47;
     font-size: 1.8em;

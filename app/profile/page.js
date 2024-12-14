@@ -6,7 +6,9 @@ export default function Page() {
     return <>
         <div className='d-flex' style={{width:'100vw', height:'100vh'}}>
 
-            <div id={profile.bgDecal}></div>
+            <div id={profile.bgPolygonBL}></div>
+            <div id={profile.bgPolygonTR}></div>
+            <div id={profile.bgPolygonTR2}></div>
 
             <div className='flex-column'>
 

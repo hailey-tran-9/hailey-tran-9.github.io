@@ -1,16 +1,48 @@
 /* -------------------- Background -------------------- */
-#bgDecal {
+#bgPolygonBL {
     position: absolute;
-    width: 100%;
-    min-height: 100vh;
-    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
-
-    background-image: url('/images/profileBgDecalMobile.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-
     pointer-events: none;
+
+    background-color: #395D47;
+    clip-path: polygon(
+        0 20%,
+        0 100%,
+        40% 100%
+    );
+}
+
+#bgPolygonTR {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+
+    background-color: white;
+    clip-path: polygon(
+        100% 0,
+        100% 58%,
+        57.5% 0
+    );
+}
+
+#bgPolygonTR2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+
+    background-color: white;
+    clip-path: polygon(
+        55% 0,
+        100% 62.5%,
+        100% 70%,
+        50% 0
+    );
 }
 
 .header {
