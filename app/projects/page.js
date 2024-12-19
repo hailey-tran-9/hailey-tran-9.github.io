@@ -17,8 +17,11 @@ function ProjectInfo({ name, link, role, duration, description, tasks }) {
         <div id={projects.projectInfoBuffer}></div>
         <div id={projects.projectInfo}>
             <div className={`${projects.title} lalezarRegular`}>
-                <Link href={link} target="_blank" style={{color:"white", textDecoration:"none"}}>
-                    <p>{name}</p>
+                <Link 
+                    href={link}
+                    target="_blank"
+                    className="align-middle">
+                        {name}
                 </Link>
             </div>
             <div className={`${projects.roleDur} lalezarRegular`}>
@@ -27,34 +30,54 @@ function ProjectInfo({ name, link, role, duration, description, tasks }) {
                     <p className="ms-auto">Duration: {duration}</p>
                 </div>
             </div>
-            <div className={`${projects.descrip} position-relative`}>
+            <div className={`${projects.descrip}`}>
+
                 <p>{description}</p>
-                <div>
-                    <div className={`${projects.accomplishments} row`}>
-                        <h4>Accomplishments</h4>
-                    </div>
-                    <div className={`${projects.accomplishments} row`}>
-                        <ul>
-                            {tasks.map((task, index) => <li key={`${name}-task-${index}`}>{task}</li>)}
-                        </ul>
-                    </div>
+                <div className="d-inline-flex flex-row">
+                    <h4>Accomplishments</h4>
+                    <ul>
+                        {tasks.map((task, index) => <li key={`${name}-task-${index}`}>{task}</li>)}
+                    </ul>
                 </div>
                 <div>
-                    <div className={`${projects.moreDetails} row`}>
+                    <div className="d-inline-flex flex-column">
                         <h4>More Details</h4>
-                    </div>
-                    <div className={`${projects.moreDetails} row`}>
-                        <h5>Subsection</h5>
-                    </div>
-                    <div className={`${projects.moreDetails} row`}>
-                        <ul>
-                            <li></li>
-                        </ul>
+                        <div className="d-inline-flex flex-row gap-5">
+                            <div className="flex-column">
+                                <h5>Subsection</h5>
+                                <ul>
+                                    <li></li>
+                                    {/* <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li>
+                                    <li>Overflow</li> */}
+                                </ul>
+                            </div>
+                            <div className="flex-column">
+                                <h5>Subsection 2</h5>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <Link href={link} target="_blank">
-                    <p className="align-text-bottom">Play the game here!</p>
+                <Link href={link} target="_blank" className="align-self-end align-text-bottom">
+                    Play the game here!
                 </Link>
+
             </div>
         </div>
     </>
@@ -141,7 +164,6 @@ export default function Page() {
             <div className='flex-column' style={{width:'100vw', height:'100vh'}}>
 
                 <div className={projects.bgPolygon}></div>
-                <div id={projects.projectsListBg}></div>
 
                 <Navbar name="Projects" />
 

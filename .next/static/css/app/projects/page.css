@@ -25,29 +25,6 @@
     );
 }
 
-#projects_projectsListBg___hV9B {
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    width: 26rem;
-    height: 100vh;
-    background-color: #8f8f8f8c;
-    -webkit-clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 100%,
-        0 100%
-    );
-            clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 100%,
-        0 100%
-    );
-}
-
 /* Project List */
 #projects_projectsList__HNtil {
     height: 85vh;
@@ -58,6 +35,8 @@
 
     scrollbar-color: #FFFFFF #395D47;
     scrollbar-width: auto;
+
+    background-color: #8f8f8f8c;
 }
 
 /* Sorting/Filtering */
@@ -121,8 +100,8 @@
     margin-top: 3rem;
     float: left;
 
-    /* background-color: aqua; */
-    /* clip-path: polygon(
+    /* background-color: aqua;
+    clip-path: polygon(
         100% 0,
         5% 100%,
         0 100%,
@@ -139,6 +118,7 @@
 .projects_title__qiES_ {
     width: 100%;
     height: 7rem;
+    padding-top: 0.5rem;
     margin-bottom: 0.5rem;
 
     background-color: #404040;
@@ -146,10 +126,9 @@
     font-size: 3.5em;
 }
 
-.projects_title__qiES_ p {
-    padding-top: 1rem;
-    padding-right: 3rem;
-    margin-bottom: 0;
+.projects_title__qiES_ a {
+    color: white;
+    text-decoration: none;
 }
 
 .projects_roleDur___ezfF {
@@ -178,6 +157,7 @@
     width: 100%;
     height: 55vh;
     padding: 3rem;
+    padding-right: 0;
 
     background-color: #F1F7F4;
     font-size: 1.25em;
@@ -186,16 +166,6 @@
 .projects_descrip__dsJht ul {
     list-style-position: inside;
     /* direction: rtl; */
-}
-
-.projects_accomplishments__3J3Qr {
-    position: relative;
-    left: -12rem;
-}
-
-.projects_moreDetails__H8Z6M {
-    position: relative;
-    left: -16rem;
 }
 
 /* Project Tab */
