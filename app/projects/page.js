@@ -4,7 +4,6 @@ import projects from './projects.module.css';
 import Image from '../../node_modules/next/image';
 import Link from '../../node_modules/next/link';
 import { useState, useEffect } from 'react';
-import { Textfit } from 'react-textfit';
 import { Navbar } from '../navbar';
 
 // Load in project data
@@ -12,10 +11,10 @@ const projectData = require('../../public/projects/data.json').projects;
 // console.log(projectData);
 
 // ------------------------------ COMPONENTS ------------------------------
-function ProjectInfo({ name, link, role, duration, description, tasks }) {
+function ProjectInfo({ name, link, role, duration, description, tasks, subsections }) {
     return <>
         <div id={projects.projectInfoBuffer}></div>
-        <div id={projects.projectInfo}>
+        <div id={`${projects.projectInfo}`}>
             <div className={`${projects.title} lalezarRegular`}>
                 <Link 
                     href={link}
@@ -35,49 +34,34 @@ function ProjectInfo({ name, link, role, duration, description, tasks }) {
                 <p>{description}</p>
                 <div className="d-inline-flex flex-row">
                     <h4>Accomplishments</h4>
-                    <ul>
+                    <ul className={projects.taskList}>
                         {tasks.map((task, index) => <li key={`${name}-task-${index}`}>{task}</li>)}
                     </ul>
                 </div>
-                <div>
-                    <div className="d-inline-flex flex-column">
-                        <h4>More Details</h4>
-                        <div className="d-inline-flex flex-row gap-5">
-                            <div className="flex-column">
-                                <h5>Subsection</h5>
-                                <ul>
-                                    <li></li>
-                                    {/* <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li>
-                                    <li>Overflow</li> */}
-                                </ul>
-                            </div>
-                            <div className="flex-column">
-                                <h5>Subsection 2</h5>
-                                <ul>
-                                    <li></li>
-                                </ul>
+                {subsections.length > 0 ?
+                    <div>
+                        <div className="d-inline-flex flex-column">
+                            <h4>More Details</h4>
+                            <div className="d-inline-flex flex-row gap-5">
+                                {subsections.map((subsec, index) => 
+                                    <div className="flex-column" key={`${name}-subsec-${index}`}>
+                                        <h5>{subsec[0]}</h5>
+                                        <ul>
+                                            {subsec[1].map((ele) => 
+                                                <li key={ele}>{ele}</li>
+                                            )}
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
                         </div>
-                    </div>
+                    </div> : <></>
+                }
+                <div className="flex-column">
+                    <Link href={link} target="_blank" className="align-self-end align-text-bottom">
+                        Check out the project here!
+                    </Link>
                 </div>
-                <Link href={link} target="_blank" className="align-self-end align-text-bottom">
-                    Play the game here!
-                </Link>
-
             </div>
         </div>
     </>
@@ -89,12 +73,7 @@ function ProjectTab({proj, index, onProjectTabClick}) {
             <button type="button" 
             className={`${projects.tab} makoRegular align-items-center`}
             onClick={onProjectTabClick}>
-                <Textfit 
-                    className={`${projects.tabName}`}
-                    mode="single"
-                    max={32}>
-                        {proj}
-                </Textfit>
+                    <p>{proj}</p>
                 <div className={projects.tabStripe}></div>
             </button>
         </div>
@@ -111,11 +90,28 @@ export default function Page() {
     const [duration, setDuration] = useState(projectData[focusedProject].duration);
     const [description, setDescription] = useState(projectData[focusedProject].description);
     const [tasks, setTasks] = useState(projectData[focusedProject].tasks);
+    const [subsections, setSubsections] = useState(projectData[focusedProject].subsections);
+
+    const [testData, setTestData] = useState(null);
 
     useEffect(() => {
         // Code to run after component has loaded
         require("../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js");
 
+        async function test() {
+
+            const res = await fetch("http://localhost:3000/api");
+            const data = await res.json();
+
+            if (testData == null) {
+                console.log("DATA");
+                console.log(data);
+                setTestData(data);
+            }
+
+        }
+        test();
+        
         if (focusedBtn == null) {
             let firstProjectBtn = document.querySelector(`#${projects.projectsList}`).children[0].children[0];
             setFocusedBtn(firstProjectBtn);
@@ -154,6 +150,7 @@ export default function Page() {
             setDuration(data.duration);
             setDescription(data.description);
             setTasks(data.tasks);
+            setSubsections(data.subsections);
             setFocusedProject(index);
             setFocusedBtn(clickedBtn);
         }
@@ -183,7 +180,12 @@ export default function Page() {
                     <div className="flex-column me-auto ms-5">
                         <div className="row">
                             <div className={`btn-group ${projects.btnGroup}`} id={projects.sortBy}>
-                                <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                <button 
+                                    className="btn dropdown-toggle"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    data-bs-auto-close="true"
+                                    aria-expanded="false">
                                     Sort
                                 </button>
                                 <ul className="dropdown-menu">
@@ -209,7 +211,14 @@ export default function Page() {
                     </div>
                     
                     <div className="ms-5">
-                        <ProjectInfo name={name} link={link} role={role} duration={duration} description={description} tasks={tasks} />
+                        <ProjectInfo 
+                            name={name}
+                            link={link}
+                            role={role}
+                            duration={duration}
+                            description={description}
+                            tasks={tasks}
+                            subsections={subsections}/>
                     </div>
                     
                 </div>

@@ -6,7 +6,18 @@
             "role":"Programmer",
             "duration":"2 months",
             "description":"[ME][TA]L is a metal-themed rhythm game. Its unique feature is the burst note, which requires you to type the words on the screen in a limited time frame!",
-            "tasks":["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial"]
+            "tasks":["Implemented UI functionality", "Aligned note recordings to our parser's structure", "Created the tutorial"],
+            "subsections":[["Creating Notes", ["Used Audacity to generate timestamps every time we'd want to place notes", "Created the syntax to parse the number of notes and which notes"]],
+            ["Song Selection", ["Set up the difficulty selection"]]]
+        },
+        {
+            "name": "Weathering the Report",
+            "link": "https://penguinies.itch.io/weathering-the-report",
+            "role": "Programmer",
+            "duration": "2 days",
+            "description": "Weathering the Report is a short unsimulator game, where you follow CDawgVA's instructions to display the weather forecast! This game was made during Monkey Jam 2024, and it placed in the Top 20 by popular vote.",
+            "tasks": ["Implemented scaling dialogue and the corresponding UI", "Implemented weather report instruction functionality"],
+            "subsections":[["Connor's Review", ["https://clips.twitch.tv/LovelyDistinctTireTheThing-O1Fv0o5f8apu9WDe"]], ["Scaling Dialogue", ["Phrases appear and move based on the time elasped"]]]
         },
         {
             "name": "LemmeDoIt4U",
@@ -14,7 +25,8 @@
             "role": "Programmer",
             "duration": "2 days",
             "description": "LemmeDoIt4U is a short game about a dog sticking its nose into a can to get the last pringle chip for its owner while dodging alien chips! The theme of the game jam was 'Into the Unknown.'",
-            "tasks": ["Implemented UI and meme popup functionality", "Set up audio and buff timers"]
+            "tasks": ["Implemented UI and meme popup functionality", "Set up audio and buff timers"],
+            "subsections":[]
         },
         {
             "name": "Morpheus' (Unpaid) Intern",
@@ -22,39 +34,35 @@
             "role": "Programmer",
             "duration": "2 days",
             "description": "Morpheus' (Unpaid) Intern is a bullet-hell, where you play as the new intern of the god of dreams. Protect the sleeping child from nightmares!",
-            "tasks": ["Implemented UI functionality", "Created buff/debuff spawner and effects"]
+            "tasks": ["Implemented UI functionality", "Created buff/debuff spawner and effects"],
+            "subsections":[]
         },
         {
-            "name": "1",
-            "link": "",
-            "role": "",
-            "duration": "",
-            "description": "",
-            "tasks": []
+            "name": "GDD Club Website",
+            "link": "https://gamedesign.studentorg.berkeley.edu/",
+            "role": "Programmer",
+            "duration": "3 weeks",
+            "description": "I helped overhaul the old GDD website by configuring components and using various libraries.",
+            "tasks": ["Restructured the layout of the website by translating a Figma design to frontend/backend code", "Created components to display all staff member information", "Uploaded and reformatted new pictures"],
+            "subsections":[["Learned Skills", ["Familiarized myself with the Hugo framework", "Configured responsive breakpoints"]]]
         },
         {
-            "name": "2",
-            "link": "",
-            "role": "",
-            "duration": "",
-            "description": "",
-            "tasks": []
+            "name": "Physics-Based Rendering",
+            "link": "https://cal-cs184-student.github.io/hw-webpages-sp24-hailey-tran-9/hw3/index.html",
+            "role": "Programmer",
+            "duration": "2-3 weeks",
+            "description": "A physics-based rendering of 3D scenes using different lighting techniques.",
+            "tasks": ["Implement ray collision with primitive shapes", "Implemented BVH Acceleration", "Implemented direct uniform hemisphere lighting and importance lighting"],
+            "subsections":[["Raycasting", ["Detected collisions between a ray, triangles, circles, and planes"]]]
         },
         {
-            "name": "3",
-            "link": "",
-            "role": "",
-            "duration": "",
-            "description": "",
-            "tasks": []
-        },
-        {
-            "name": "4",
-            "link": "",
-            "role": "",
-            "duration": "",
-            "description": "",
-            "tasks": []
+            "name": "Cloth Sim",
+            "link": "https://cal-cs184-student.github.io/hw-webpages-sp24-hailey-tran-9/hw4/index.html",
+            "role": "Programmer",
+            "duration": "2 weeks",
+            "description": "A simulation of a piece of cloth",
+            "tasks": ["Simulated falling, bending, creasing of a piece of cloth based on properties like density, ks, and damping", "Added basic diffuse, blinn-phong, texture mapping, bump & displacement mapping, and environment-mapped reflections"],
+            "subsections":[]
         },
         {
             "name": "5",
@@ -62,7 +70,8 @@
             "role": "",
             "duration": "",
             "description": "",
-            "tasks": []
+            "tasks": [],
+            "subsections":[]
         },
         {
             "name": "6",
@@ -70,7 +79,8 @@
             "role": "",
             "duration": "",
             "description": "",
-            "tasks": []
+            "tasks": [],
+            "subsections":[]
         },
         {
             "name": "7",
@@ -78,7 +88,8 @@
             "role": "",
             "duration": "",
             "description": "",
-            "tasks": []
+            "tasks": [],
+            "subsections":[]
         }
     ]
 }

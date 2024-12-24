@@ -84,19 +84,19 @@
     margin-top: 3rem;
     float: left;
 
-    /* background-color: aqua;
+    /* background-color: aqua; */
     clip-path: polygon(
         100% 0,
         5% 100%,
-        0 100%,
         0 0
-    ); */
+    );
     shape-outside: polygon(
         100% 0,
         5% 100%,
-        0 100%,
         0 0
     );
+
+    shape-margin: 0;
 }
 
 .title {
@@ -143,6 +143,11 @@
     padding: 3rem;
     padding-right: 0;
 
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+
+    overflow: clip;
+
     background-color: #F1F7F4;
     font-size: 1.25em;
 }
@@ -168,6 +173,11 @@
     text-align: left;
 
     border: none;
+}
+
+.tab p {
+    padding-left: 1rem;
+    pointer-events: none;
 }
 
 .tab:active {
@@ -198,4 +208,8 @@
 
 .tab:active .tabStripe {
     background-color: #404040;
+}
+
+.taskList {
+    text-wrap: wrap;
 }
