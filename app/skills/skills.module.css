@@ -21,23 +21,6 @@
             0 100%
         );
     }
-
-    #correlatedImg {
-        width: 40vw;
-        height: 40vh;
-        margin-bottom: 2rem;
-    
-        background-color: #F1F7F4;
-    }
-    
-    #correlatedDescription {
-        width: 40vw;
-        height: 15vh;
-        margin-left: auto;
-        margin-right: auto;
-    
-        background-color: #F1F7F4;
-    }
 }
 
 #bgPolygon {
@@ -56,12 +39,40 @@
     );
 }
 
-#content {
-    margin-top: 5rem;
+#bgPolygon2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+
+    background-color: #9CF4C1;
+    clip-path: polygon(
+        39% 0,
+        40.5% 0,
+        40.5% 100%,
+        39% 100%
+    );
+}
+
+#bgPolygon3 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+
+    background-color: #9CF4C1;
+    clip-path: polygon(
+        41.5% 0,
+        42% 0,
+        42% 100%,
+        41.5% 100%
+    );
 }
 
 #categoryContainer {
-    width: 30vw;
+    width: 32.5vw;
     margin-left: 5vw;
     margin-right: 5vw;
 }
@@ -100,24 +111,11 @@
     margin-bottom: 0;
 }
 
-#correlationContainer {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#correlatedImg {
+#gddText {
     width: 35vw;
-    height: 40vh;
-    margin-bottom: 2rem;
+    padding: 0.5rem;
+    padding-top: 1rem;
 
-    background-color: #F1F7F4;
-}
-
-#correlatedDescription {
-    width: 35vw;
-    height: 15vh;
-    margin-left: auto;
-    margin-right: auto;
-
-    background-color: #F1F7F4;
+    background-color: white;
+    border-radius: 0.2rem;
 }

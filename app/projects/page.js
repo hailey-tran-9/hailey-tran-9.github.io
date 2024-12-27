@@ -212,7 +212,7 @@ export default function Page() {
                         
                     </div>
                     
-                    <div className="ms-5">
+                    <div>
                         <ProjectInfo 
                             name={name}
                             link={link}

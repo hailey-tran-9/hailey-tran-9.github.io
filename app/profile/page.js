@@ -60,7 +60,14 @@ export default function Page() {
 
                 <div className="mainContent">
                     <div className="d-flex flex-row justify-content-center gap-5 mx-auto">
-                        <div className="align-self-center" id={profile.pic}></div>
+                        {/* <div className="align-self-center" id={profile.pic}></div> */}
+                        <Image
+                            src="/images/grad.jpg"
+                            width={400}
+                            height={575}
+                            alt="Hailey's graduation picture"
+                            className="align-self-center">
+                        </Image>
                         <div className="d-flex flex-column gap-2" id={profile.textContent}>
                             <div className="d-flex align-items-center lalezarRegular" id={profile.name}>
                                 <p>Hailey Tran</p>

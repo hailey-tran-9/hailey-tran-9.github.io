@@ -170,7 +170,7 @@
     #profile_name__tb9Rx {
         width: 15rem;
         height: 2.5rem;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
 
         font-size: 1.5em;
     }
@@ -218,7 +218,7 @@
     #profile_name__tb9Rx {
         width: 17.5rem;
         height: 3rem;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
 
         font-size: 1.6em;
     }
@@ -473,12 +473,10 @@
 @media (min-width: 1850px) {
     /* -------------------- Textboxes -------------------- */
     #profile_name__tb9Rx {
-        margin-left: 2rem;
         margin-right: None;
     }
 
     #profile_position__v890W {
-        margin-left: 2rem;
         margin-right: None;
     }
 

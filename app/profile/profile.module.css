@@ -151,7 +151,7 @@
     #name {
         width: 15rem;
         height: 2.5rem;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
 
         font-size: 1.5em;
     }
@@ -199,7 +199,7 @@
     #name {
         width: 17.5rem;
         height: 3rem;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
 
         font-size: 1.6em;
     }
@@ -454,12 +454,10 @@
 @media (min-width: 1850px) {
     /* -------------------- Textboxes -------------------- */
     #name {
-        margin-left: 2rem;
         margin-right: None;
     }
 
     #position {
-        margin-left: 2rem;
         margin-right: None;
     }
 

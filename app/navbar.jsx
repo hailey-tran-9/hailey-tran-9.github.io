@@ -15,7 +15,7 @@ function ESC() {
         <Link href={'/'}>
             <button
                 type="button"
-                className="btn btn-light escButton">
+                className="btn btn-light escButton palanquin-dark-semibold">
                     ESC
             </button>
         </Link>
