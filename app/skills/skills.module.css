@@ -1,3 +1,45 @@
+@media (min-height: 1080px) {
+    .categoryBody {
+        padding: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        font-size: 1.8em;
+    }
+
+    #bgPolygon {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        pointer-events: none;
+    
+        background-color: white;
+        clip-path: polygon(
+            0 0,
+            40% 0,
+            40% 100%,
+            0 100%
+        );
+    }
+
+    #correlatedImg {
+        width: 40vw;
+        height: 40vh;
+        margin-bottom: 2rem;
+    
+        background-color: #F1F7F4;
+    }
+    
+    #correlatedDescription {
+        width: 40vw;
+        height: 15vh;
+        margin-left: auto;
+        margin-right: auto;
+    
+        background-color: #F1F7F4;
+    }
+}
+
 #bgPolygon {
     position: absolute;
     width: 100vw;
@@ -8,8 +50,8 @@
     background-color: white;
     clip-path: polygon(
         0 0,
-        40% 0,
-        40% 100%,
+        42.5% 0,
+        42.5% 100%,
         0 100%
     );
 }
@@ -47,12 +89,15 @@
 }
 
 .categoryBody {
-    padding: 1rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     color: #395D47;
-    font-size: 1.8em;
+    font-size: 1.2em;
+}
+
+.categoryBody ul {
+    margin-bottom: 0;
 }
 
 #correlationContainer {
@@ -61,7 +106,7 @@
 }
 
 #correlatedImg {
-    width: 40vw;
+    width: 35vw;
     height: 40vh;
     margin-bottom: 2rem;
 
@@ -69,7 +114,7 @@
 }
 
 #correlatedDescription {
-    width: 40vw;
+    width: 35vw;
     height: 15vh;
     margin-left: auto;
     margin-right: auto;

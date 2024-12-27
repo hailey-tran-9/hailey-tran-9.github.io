@@ -1,0 +1,21 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/profile/page",{
+
+/***/ "(app-pages-browser)/./app/profile/profile.module.css":
+/*!****************************************!*\
+  !*** ./app/profile/profile.module.css ***!
+  \****************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+eval(__webpack_require__.ts("// extracted by mini-css-extract-plugin\nmodule.exports = {\"bgPolygonBL\":\"profile_bgPolygonBL__B2ggG\",\"bgPolygonTR\":\"profile_bgPolygonTR__k2Wwc\",\"bgPolygonTR2\":\"profile_bgPolygonTR2__T0ZJz\",\"header\":\"profile_header__aM6VL\",\"profilePic\":\"profile_profilePic__9dlKF\",\"textbox\":\"profile_textbox__WpS_b\",\"name\":\"profile_name__tb9Rx\",\"position\":\"profile_position__v890W\",\"degrees\":\"profile_degrees__PmL6x\",\"descrip\":\"profile_descrip__KTqQw\",\"bgDecal\":\"profile_bgDecal__zIX44\",\"textContent\":\"profile_textContent__shMQp\",\"textboxTest\":\"profile_textboxTest__p97ol\",\"nameTest\":\"profile_nameTest__5GPkw\",\"posTest\":\"profile_posTest__1_kcQ\",\"pic\":\"profile_pic__fjEP4\"};\n    if(true) {\n      // 1735272406168\n      var cssReload = __webpack_require__(/*! ./node_modules/next/dist/compiled/mini-css-extract-plugin/hmr/hotModuleReplacement.js */ \"(app-pages-browser)/./node_modules/next/dist/compiled/mini-css-extract-plugin/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"/_next/\",\"esModule\":false,\"locals\":true});\n      module.hot.dispose(cssReload);\n      \n    }\n  \nmodule.exports.__checksum = \"a98a35e6aff6\"\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL2FwcC9wcm9maWxlL3Byb2ZpbGUubW9kdWxlLmNzcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBLGtCQUFrQjtBQUNsQixPQUFPLElBQVU7QUFDakI7QUFDQSxzQkFBc0IsbUJBQU8sQ0FBQyx3TUFBdUgsY0FBYyxzREFBc0Q7QUFDek4sTUFBTSxVQUFVO0FBQ2hCO0FBQ0E7QUFDQTtBQUNBLHlCQUF5QiIsInNvdXJjZXMiOlsid2VicGFjazovL19OX0UvLi9hcHAvcHJvZmlsZS9wcm9maWxlLm1vZHVsZS5jc3M/NmIxZSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbm1vZHVsZS5leHBvcnRzID0ge1wiYmdQb2x5Z29uQkxcIjpcInByb2ZpbGVfYmdQb2x5Z29uQkxfX0IyZ2dHXCIsXCJiZ1BvbHlnb25UUlwiOlwicHJvZmlsZV9iZ1BvbHlnb25UUl9fazJXd2NcIixcImJnUG9seWdvblRSMlwiOlwicHJvZmlsZV9iZ1BvbHlnb25UUjJfX1QwWkp6XCIsXCJoZWFkZXJcIjpcInByb2ZpbGVfaGVhZGVyX19hTTZWTFwiLFwicHJvZmlsZVBpY1wiOlwicHJvZmlsZV9wcm9maWxlUGljX185ZGxLRlwiLFwidGV4dGJveFwiOlwicHJvZmlsZV90ZXh0Ym94X19XcFNfYlwiLFwibmFtZVwiOlwicHJvZmlsZV9uYW1lX190YjlSeFwiLFwicG9zaXRpb25cIjpcInByb2ZpbGVfcG9zaXRpb25fX3Y4OTBXXCIsXCJkZWdyZWVzXCI6XCJwcm9maWxlX2RlZ3JlZXNfX1BtTDZ4XCIsXCJkZXNjcmlwXCI6XCJwcm9maWxlX2Rlc2NyaXBfX0tUcVF3XCIsXCJiZ0RlY2FsXCI6XCJwcm9maWxlX2JnRGVjYWxfX3pJWDQ0XCIsXCJ0ZXh0Q29udGVudFwiOlwicHJvZmlsZV90ZXh0Q29udGVudF9fc2hNUXBcIixcInRleHRib3hUZXN0XCI6XCJwcm9maWxlX3RleHRib3hUZXN0X19wOTdvbFwiLFwibmFtZVRlc3RcIjpcInByb2ZpbGVfbmFtZVRlc3RfXzVHUGt3XCIsXCJwb3NUZXN0XCI6XCJwcm9maWxlX3Bvc1Rlc3RfXzFfa2NRXCIsXCJwaWNcIjpcInByb2ZpbGVfcGljX19makVQNFwifTtcbiAgICBpZihtb2R1bGUuaG90KSB7XG4gICAgICAvLyAxNzM1MjcyNDA2MTY4XG4gICAgICB2YXIgY3NzUmVsb2FkID0gcmVxdWlyZShcIkQ6L0dpdEh1Yi9oYWlsZXktdHJhbi05LmdpdGh1Yi5pby9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2NvbXBpbGVkL21pbmktY3NzLWV4dHJhY3QtcGx1Z2luL2htci9ob3RNb2R1bGVSZXBsYWNlbWVudC5qc1wiKShtb2R1bGUuaWQsIHtcInB1YmxpY1BhdGhcIjpcIi9fbmV4dC9cIixcImVzTW9kdWxlXCI6ZmFsc2UsXCJsb2NhbHNcIjp0cnVlfSk7XG4gICAgICBtb2R1bGUuaG90LmRpc3Bvc2UoY3NzUmVsb2FkKTtcbiAgICAgIFxuICAgIH1cbiAgXG5tb2R1bGUuZXhwb3J0cy5fX2NoZWNrc3VtID0gXCJhOThhMzVlNmFmZjZcIlxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(app-pages-browser)/./app/profile/profile.module.css\n"));
+
+/***/ })
+
+});

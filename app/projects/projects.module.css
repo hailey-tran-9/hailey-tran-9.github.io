@@ -1,3 +1,57 @@
+@media (min-height: 1080px) {
+    #projectInfo {
+        margin-top: 3rem;
+    }
+
+    #projectsList {
+        height: 85vh;
+    }
+}
+
+@media (min-width: 1920px) {
+    .bgPolygon {
+        clip-path: polygon(
+            100% 0,
+            30% 0,
+            0 100%,
+            100% 100%
+        );
+    }
+
+    #projectInfo {
+        width: 65vw;
+        /* margin-top: 1rem; */
+    
+        clip-path: polygon(
+            100% 0,
+            25% 0,
+            0 100%,
+            100% 100%
+        );
+    }
+
+    #projectInfoBuffer {
+        width: 18.5vw;
+        height: 74vh;
+        margin-top: 3rem;
+        float: left;
+    
+        /* background-color: aqua; */
+        clip-path: polygon(
+            100% 0,
+            5% 100%,
+            0 0
+        );
+        shape-outside: polygon(
+            100% 0,
+            5% 100%,
+            0 0
+        );
+    
+        shape-margin: 0;
+    }
+}
+
 /* Background */
 .bgPolygon {
     position: absolute;
@@ -10,7 +64,7 @@
     background-color: white;
     clip-path: polygon(
         100% 0,
-        30% 0,
+        28% 0,
         0 100%,
         100% 100%
     );
@@ -18,7 +72,7 @@
 
 /* Project List */
 #projectsList {
-    height: 85vh;
+    height: 82.5vh;
     padding-right: 1rem;
 
     overflow-x: hidden;
@@ -68,7 +122,7 @@
 /* Project Information */
 #projectInfo {
     width: 65vw;
-    margin-top: 3rem;
+    margin-top: -1rem;
 
     clip-path: polygon(
         100% 0,
@@ -115,6 +169,10 @@
     text-decoration: none;
 }
 
+.title p {
+    padding-top: 0.5rem;
+}
+
 .roleDur {
     width: 100%;
     height: 5rem;
@@ -152,9 +210,13 @@
     font-size: 1.25em;
 }
 
+.descrip p {
+    padding-right: 0.5rem;
+}
+
 .descrip ul {
     list-style-position: inside;
-    /* direction: rtl; */
+    margin-right: 1rem;
 }
 
 /* Project Tab */

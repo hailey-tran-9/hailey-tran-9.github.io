@@ -18,10 +18,10 @@ export default function Page() {
             </div>
             <div className='row justify-content-center'>
                 <div className='fixed-bottom' id={mainMenu.whiteBg} style={{zIndex:0}}></div>
-                <div id={mainMenu.pic}>
+                {/* <div id={mainMenu.pic}>
                     <Image src='/images/desk.png' width={624} height={616} alt="Pixel art of a penguin sitting at a desk"
                     style={{width:'100%', height:'auto'}}></Image>
-                </div>
+                </div> */}
             </div>
         </div>
     </>

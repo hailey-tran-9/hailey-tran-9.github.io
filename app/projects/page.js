@@ -15,13 +15,15 @@ function ProjectInfo({ name, link, role, duration, description, tasks, subsectio
     return <>
         <div id={projects.projectInfoBuffer}></div>
         <div id={`${projects.projectInfo}`}>
-            <div className={`${projects.title} lalezarRegular`}>
-                <Link 
-                    href={link}
-                    target="_blank"
-                    className="align-middle">
-                        {name}
-                </Link>
+            <div className={`${projects.title} lalezarRegular align-middle`}>
+                {link !== "" ?
+                    <Link 
+                        href={link}
+                        target="_blank"
+                        className="align-middle">
+                            {name}
+                    </Link> : <p>{name}</p>
+                }
             </div>
             <div className={`${projects.roleDur} lalezarRegular`}>
                 <div className="d-flex" id={projects.roleDurFlex}>
@@ -32,36 +34,36 @@ function ProjectInfo({ name, link, role, duration, description, tasks, subsectio
             <div className={`${projects.descrip}`}>
 
                 <p>{description}</p>
-                <div className="d-inline-flex flex-row">
+                <div className="d-inline-flex flex-row flex-wrap">
                     <h4>Accomplishments</h4>
-                    <ul className={projects.taskList}>
+                    <ul className={`${projects.taskList} flex-wrap`}>
                         {tasks.map((task, index) => <li key={`${name}-task-${index}`}>{task}</li>)}
                     </ul>
                 </div>
                 {subsections.length > 0 ?
-                    <div>
+                    <div className="d-inline-flex flex-row gap-4">
+                        <h4>More Details</h4>
                         <div className="d-inline-flex flex-column">
-                            <h4>More Details</h4>
-                            <div className="d-inline-flex flex-row gap-5">
-                                {subsections.map((subsec, index) => 
-                                    <div className="flex-column" key={`${name}-subsec-${index}`}>
-                                        <h5>{subsec[0]}</h5>
-                                        <ul>
-                                            {subsec[1].map((ele) => 
-                                                <li key={ele}>{ele}</li>
-                                            )}
-                                        </ul>
-                                    </div>
-                                )}
-                            </div>
+                            {subsections.map((subsec, index) => 
+                                <div className="flex-column" key={`${name}-subsec-${index}`}>
+                                    <h5>{subsec[0]}</h5>
+                                    <ul>
+                                        {subsec[1].map((ele) => 
+                                            <li key={ele}>{ele}</li>
+                                        )}
+                                    </ul>
+                                </div>
+                            )}
                         </div>
                     </div> : <></>
                 }
-                <div className="flex-column">
-                    <Link href={link} target="_blank" className="align-self-end align-text-bottom">
-                        Check out the project here!
-                    </Link>
-                </div>
+                {link !== "" ?
+                    <div className="flex-column">
+                        <Link href={link} target="_blank" className="align-self-end align-text-bottom">
+                            Check out the project here!
+                        </Link>
+                    </div> : <></>
+                }
             </div>
         </div>
     </>
