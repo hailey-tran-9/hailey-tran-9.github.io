@@ -5,6 +5,7 @@ import Image from '../../node_modules/next/image';
 import Link from '../../node_modules/next/link';
 import { useState, useEffect } from 'react';
 import { Navbar } from '../navbar';
+import { Tag } from './Tag.jsx';
 
 // Load in project data
 const projectData = require('../../public/projects/data.json').projects;
@@ -69,14 +70,18 @@ function ProjectInfo({ name, link, role, duration, description, tasks, subsectio
     </>
 }
 
-function ProjectTab({proj, index, onProjectTabClick}) {
+function ProjectTab({proj, index, onProjectTabClick, tags}) {
     return (
         <div id={`${proj}` + '-tab-' + `${index}`}>
             <button type="button" 
             className={`${projects.tab} makoRegular align-items-center`}
             onClick={onProjectTabClick}>
                     <p>{proj}</p>
-                <div className={projects.tabStripe}></div>
+                <div className={`${projects.tabStripe} d-flex align-items-center`}>
+                    {tags.map((tag, index) => 
+                        <Tag tagType={tag} key={`${proj}-tag-${index}`} />
+                    )}
+                </div>
             </button>
         </div>
     )
@@ -174,6 +179,7 @@ export default function Page() {
                             <ProjectTab 
                                 proj={p.name} 
                                 index={index} 
+                                tags={p.tags}
                                 key={p.name + index.toString()}
                                 onProjectTabClick={(e) => handleClick(e, index)} />
                         )}
