@@ -1,78 +1,6 @@
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/projects/projects.module.css ***!
   \****************************************************************************************************************************************************************************************************************************************************************************/
-@media (min-height: 1080px) {
-    #projects_projectInfo__JGji1 {
-        margin-top: 3rem;
-    }
-
-    #projects_projectsList__HNtil {
-        height: 85vh;
-    }
-}
-
-@media (min-width: 1920px) {
-    .projects_bgPolygon__VwgFs {
-        -webkit-clip-path: polygon(
-            100% 0,
-            30% 0,
-            0 100%,
-            100% 100%
-        );
-                clip-path: polygon(
-            100% 0,
-            30% 0,
-            0 100%,
-            100% 100%
-        );
-    }
-
-    #projects_projectInfo__JGji1 {
-        width: 65vw;
-        /* margin-top: 1rem; */
-    
-        -webkit-clip-path: polygon(
-            100% 0,
-            25% 0,
-            0 100%,
-            100% 100%
-        );
-    
-                clip-path: polygon(
-            100% 0,
-            25% 0,
-            0 100%,
-            100% 100%
-        );
-    }
-
-    #projects_projectInfoBuffer__LImfr {
-        width: 18.5vw;
-        height: 74vh;
-        margin-top: 3rem;
-        float: left;
-    
-        /* background-color: aqua; */
-        -webkit-clip-path: polygon(
-            100% 0,
-            5% 100%,
-            0 0
-        );
-                clip-path: polygon(
-            100% 0,
-            5% 100%,
-            0 0
-        );
-        shape-outside: polygon(
-            100% 0,
-            5% 100%,
-            0 0
-        );
-    
-        shape-margin: 0;
-    }
-}
-
 /* Background */
 .projects_bgPolygon__VwgFs {
     position: absolute;
@@ -240,9 +168,6 @@
     padding: 3rem;
     padding-right: 0;
 
-    /* overflow-x: hidden;
-    overflow-y: scroll; */
-
     overflow: clip;
 
     background-color: #F1F7F4;
@@ -339,4 +264,76 @@
 
 .projects_taskList__QcUZj {
     text-wrap: wrap;
+}
+
+@media (min-height: 1080px) {
+    #projects_projectInfo__JGji1 {
+        margin-top: 3rem;
+    }
+
+    #projects_projectsList__HNtil {
+        height: 82.5vh;
+    }
+}
+
+@media (min-width: 1920px) {
+    .projects_bgPolygon__VwgFs {
+        -webkit-clip-path: polygon(
+            100% 0,
+            30% 0,
+            0 100%,
+            100% 100%
+        );
+                clip-path: polygon(
+            100% 0,
+            30% 0,
+            0 100%,
+            100% 100%
+        );
+    }
+
+    #projects_projectInfo__JGji1 {
+        width: 65vw;
+        /* margin-top: 1rem; */
+    
+        -webkit-clip-path: polygon(
+            100% 0,
+            25% 0,
+            0 100%,
+            100% 100%
+        );
+    
+                clip-path: polygon(
+            100% 0,
+            25% 0,
+            0 100%,
+            100% 100%
+        );
+    }
+
+    #projects_projectInfoBuffer__LImfr {
+        width: 18.5vw;
+        height: 74vh;
+        margin-top: 3rem;
+        float: left;
+    
+        /* background-color: aqua; */
+        -webkit-clip-path: polygon(
+            100% 0,
+            5% 100%,
+            0 0
+        );
+                clip-path: polygon(
+            100% 0,
+            5% 100%,
+            0 0
+        );
+        shape-outside: polygon(
+            100% 0,
+            5% 100%,
+            0 0
+        );
+    
+        shape-margin: 0;
+    }
 }

@@ -14,22 +14,23 @@ export default function Page() {
                 {/* <div id={skills.bgPolygon3}></div> */}
                 <Navbar name="Skills" />
 
-                <div className='d-flex' id={skills.content}>
-                    <div className="mt-5" id={skills.categoryContainer}>
+                <div className="d-flex" id={skills.content}>
+                    <div id={skills.categoryContainer}>
                         <AllLists 
                             categories={["Programming Languages", "Web Design", "Game Development"]}
                             bulletpoints={[["Python", "Java", "C#", "C++", "SQL"], ["HTML", "CSS", "Javascript", "React"], ["Unity Engine"]]} />
                     </div>
 
-                    <div className="mx-auto">
+                    <div className="mx-auto align-items-middle" id={skills.content2}>
                         <Carousel slide={false}>
                             <CarouselItem>
                                 <Image
                                     src="/images/gdd_fa23.jpg"
-                                    width={750}
-                                    height={500}
+                                    width={1000}
+                                    height={600}
                                     alt="Fall 2023 GDD Officers"
                                     priority={true}
+                                    style={{resizeMode: 'contain'}}
                                 />
                                 <CarouselCaption>
                                 <h3>GDD Officers</h3>
@@ -39,8 +40,8 @@ export default function Page() {
                             <CarouselItem>
                                 <Image
                                     src="/images/gdd_sp24.jpg"
-                                    width={750}
-                                    height={500}
+                                    width={1000}
+                                    height={600}
                                     alt="Spring 2024 GDD Officers"
                                     priority={true}
                                 />
@@ -52,8 +53,8 @@ export default function Page() {
                             <CarouselItem>
                                 <Image
                                     src="/images/gdd_tabling.jpg"
-                                    width={900}
-                                    height={500}
+                                    width={1000}
+                                    height={600}
                                     alt="Tabling for GDD at Cal Gaming Expo"
                                     priority={true}
                                 />
@@ -65,8 +66,8 @@ export default function Page() {
                             <CarouselItem>
                                 <Image
                                     src="/images/gdd_decal.jpg"
-                                    width={700}
-                                    height={500}
+                                    width={1000}
+                                    height={750}
                                     alt="Fall 2023 Faciltator Team"
                                     priority={true}
                                 />
@@ -78,8 +79,8 @@ export default function Page() {
                             <CarouselItem>
                                 <Image
                                     src="/images/cmgg_workshop.jpg"
-                                    width={700}
-                                    height={500}
+                                    width={1000}
+                                    height={650}
                                     alt="Hosting a GDDxCMGG game dev workshop!"
                                 />
                                 <CarouselCaption>

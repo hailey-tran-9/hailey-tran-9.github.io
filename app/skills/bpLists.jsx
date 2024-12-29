@@ -27,13 +27,13 @@ export function AllLists({ categories, bulletpoints }) {
         });
     }
 
-    console.log(groupsOfThree);
+    // console.log(groupsOfThree);
 
     return <>
         {categories.map((category, index) => 
             <div className={skills.category} id={`${category}-container`} key={category}>
                 <div className={`${skills.categoryHeader} lalezarRegular`}>
-                    <p>{category}</p>
+                    {category}
                 </div>
                 <div className={`${skills.categoryBody} d-flex makoRegular`}>
                     <BPList lists={groupsOfThree[index]} />
@@ -44,7 +44,7 @@ export function AllLists({ categories, bulletpoints }) {
 }
 
 function BPList({ lists }) {
-    console.log(`BPList ${lists}`);
+    // console.log(`BPList ${lists}`);
 
     return <>
         {lists.map((list, index) => 

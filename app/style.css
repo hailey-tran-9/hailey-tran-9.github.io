@@ -99,3 +99,11 @@ body {
         font-size: 2em;
     }
 }
+
+.carousel {
+    width: 38vw;
+}
+
+.carousel-item img {
+    border-radius: 0.2rem;
+}
