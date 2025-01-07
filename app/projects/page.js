@@ -89,6 +89,7 @@ function ProjectTab({proj, index, onProjectTabClick, tags}) {
 
 // ------------------------------ PROJECTS PAGE ------------------------------
 export default function Page() {
+    // Project text
     const [focusedProject, setFocusedProject] = useState(0);
     const [focusedBtn, setFocusedBtn] = useState(null);
     const [name, setName] = useState(projectData[focusedProject].name);
@@ -101,8 +102,14 @@ export default function Page() {
 
     const [testData, setTestData] = useState(null);
 
+    // Sorting and Filtering
     const [sortState, setSortState] = useState("none");
     const [sortedProjects, setSortedProjects] = useState(projectData);
+
+    const [filterState, setFilterState] = useState("none");
+    const [filteredProjects, setFilteredProjects] = useState(projectData);
+
+    const [displayedProjects, setDisplayedProjects] = useState(projectData);
 
     const sortMethods = {
         none: { method: (a, b) => null },
@@ -111,46 +118,68 @@ export default function Page() {
         // date: { method: (a, b) => (a > b ? -1 : 1) },
     };
 
-    // Load data
     useEffect(() => {
         // Code to run after component has loaded
         require("../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js");
 
-        async function test() {
+        // // Load data
+        // async function test() {
 
-            const res = await fetch("http://localhost:3000/api");
-            const data = await res.json();
+        //     const res = await fetch("http://localhost:3000/api");
+        //     const data = await res.json();
 
-            if (testData == null) {
-                console.log("DATA");
-                console.log(data);
-                setTestData(data);
-            }
+        //     if (testData == null) {
+        //         console.log("DATA");
+        //         console.log(data);
+        //         setTestData(data);
+        //     }
 
-        }
-        test();
+        // }
+        // test();
+
     }, []);
 
     // Reset the focused button
     useEffect(() => {
         // console.log("FOCUSED BTN CHANGED");
+
+        let focusInList = false;
+
         if (focusedBtn != null) {
-            for (let i = 0; i < sortedProjects.length; i++) {
-                if (name === sortedProjects[i].name) {
+            for (let i = 0; i < displayedProjects.length; i++) {
+                if (name === displayedProjects[i].name) {
                     // console.log(i);
                     setFocusedProject(i);
                     let newFocusedBtn = document.getElementById(name + "-button");
                     setFocusedBtn(newFocusedBtn);
                     SelectTab(newFocusedBtn);
+
+                    focusInList = true;
                     break;
                 }
             }
         } else {
+            setFocusedProject(0);
             let firstProjectBtn = document.querySelector(`#${projects.projectsList}`).children[0].children[0];
             setFocusedBtn(firstProjectBtn);
             SelectTab(firstProjectBtn);
+
+            updateDisplayedInfo(0);
         }
-    }, [focusedBtn, sortedProjects]);
+
+        if (!focusInList) {
+            let projList = document.querySelector(`#${projects.projectsList}`);
+            if (projList.children.length !== 0) {
+                setFocusedProject(0);
+                let firstProjectBtn = projList.children[0].children[0];
+                setFocusedBtn(firstProjectBtn);
+                SelectTab(firstProjectBtn);
+
+                updateDisplayedInfo(0);
+            }
+        }
+
+    }, [focusedBtn, displayedProjects]);
 
     function SelectTab(btn) {
         // console.log("CHANGE TAB COLOR");
@@ -170,6 +199,18 @@ export default function Page() {
         focusedBtn.style.boxShadow = "none";
         focusedBtn.children[1].style.backgroundColor = "#69A882";
     }
+
+    function updateDisplayedInfo(index) {
+        let data = displayedProjects[index];
+        setName(data.name);
+        setLink(data.link);
+        setRole(data.role);
+        setDuration(data.duration);
+        setDescription(data.description);
+        setTasks(data.tasks);
+        setSubsections(data.subsections);
+        setFocusedProject(index);
+    }
     
     function handleClick(event, index) {
         if (index !== focusedProject) {
@@ -180,27 +221,66 @@ export default function Page() {
             // Select this button
             let clickedBtn = event.target;
             SelectTab(clickedBtn);
-
-            let data = sortedProjects[index];
-            setName(data.name);
-            setLink(data.link);
-            setRole(data.role);
-            setDuration(data.duration);
-            setDescription(data.description);
-            setTasks(data.tasks);
-            setSubsections(data.subsections);
-            setFocusedProject(index);
             setFocusedBtn(clickedBtn);
+
+            updateDisplayedInfo(index);
         }
     }
 
     function sortClick(method) {
         if (sortState !== method) {
-            // Sort the projects
+            // console.log("SORT/FILTER " + sortState + " " + filterState);
             setSortState(method);
-            let newSort = projectData.slice().sort(sortMethods[method].method);
-            setSortedProjects(newSort);
+
+            if (method === "none") {
+                if (filterState === "none") {
+                    setSortedProjects(projectData);
+                    setDisplayedProjects(projectData);
+                } else {
+                    setDisplayedProjects(filteredProjects);
+                }
+            } else {
+                setSortedProjects(projectData.slice().sort(sortMethods[method].method));
+                setDisplayedProjects(displayedProjects.slice().sort(sortMethods[method].method));
+            }
         }
+    }
+
+    function filterClick(filter) {
+        if (filterState !== filter) {
+            // console.log("SORT/FILTER " + sortState + " " + filterState);
+            setFilterState(filter);
+
+            if (filter === "none") {
+                if (sortState === "none") {
+                    setFilteredProjects(projectData);
+                    setDisplayedProjects(projectData);
+                } else {
+                    setDisplayedProjects(sortedProjects);
+                }
+            } else {
+                // Filtered projects
+                let newFilteredProjs = [];
+                projectData.slice().map((proj) => {
+                    if (proj.tags[0] === filter) {
+                        newFilteredProjs.push(proj);
+                    }
+                });
+                // console.log(newFilteredProjs);
+                setFilteredProjects(newFilteredProjs);
+
+                // Displayed projects
+                let newDisplayedProjs = [];
+                displayedProjects.slice().map((proj) => {
+                    if (proj.tags[0] === filter) {
+                        newDisplayedProjs.push(proj);
+                    }
+                });
+                // console.log(newDisplayedProjs);
+                setDisplayedProjects(newDisplayedProjs);
+            }
+        }
+        
     }
 
     return <>
@@ -215,7 +295,7 @@ export default function Page() {
                     className='d-flex'
                     style={{margin:'5rem', marginTop:0, marginLeft:0, marginBottom:0, overflow:"visible"}}>
                     <div id={`${projects.projectsList}`}>
-                        {sortedProjects.map((p, index) => 
+                        {displayedProjects.map((p, index) => 
                             <ProjectTab 
                                 proj={p.name} 
                                 index={index} 
@@ -251,8 +331,11 @@ export default function Page() {
                                     Filter
                                 </button>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">SWE</a></li>
-                                    <li><a className="dropdown-item" href="#">Game</a></li>
+                                    <button className="dropdown-item" type="button" onClick={() => filterClick("none")}>None</button>
+                                    <button className="dropdown-item" type="button" onClick={() => filterClick("Game")}>Game</button>
+                                    <button className="dropdown-item" type="button" onClick={() => filterClick("Graphics")}>Graphics</button>
+                                    <button className="dropdown-item" type="button" onClick={() => filterClick("SWE")}>SWE</button>
+                                    <button className="dropdown-item" type="button" onClick={() => filterClick("Web Dev")}>Web Dev</button>
                                 </ul>
                             </div>
 
