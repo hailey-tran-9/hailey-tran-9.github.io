@@ -53,7 +53,6 @@
 }
 
 .btnGroup ul {
-    width: 100%;
     background-color: #F1F7F4;
 
     border: none;
@@ -88,11 +87,13 @@
     clip-path: polygon(
         100% 0,
         5% 100%,
+        0 100%,
         0 0
     );
     shape-outside: polygon(
         100% 0,
         5% 100%,
+        0 100%,
         0 0
     );
 
@@ -253,21 +254,24 @@
     #projectsList {
         height: 82.5vh;
     }
+
+    .descrip {
+        height: 45vh;
+    }
 }
 
 @media (min-width: 1920px) {
     .bgPolygon {
         clip-path: polygon(
             100% 0,
-            30% 0,
-            0 100%,
+            34% 0,
+            0% 100%,
             100% 100%
         );
     }
 
     #projectInfo {
-        width: 65vw;
-        /* margin-top: 1rem; */
+        width: 63vw;
     
         clip-path: polygon(
             100% 0,
@@ -287,11 +291,13 @@
         clip-path: polygon(
             100% 0,
             5% 100%,
+            0 100%,
             0 0
         );
         shape-outside: polygon(
             100% 0,
             5% 100%,
+            0 100%,
             0 0
         );
     

@@ -11969,13 +11969,6 @@ textarea.form-control-lg {
 /*!***********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/style.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************/
-@media (min-width: 1920px) {
-    .page-header {
-        width: 35vw;
-        height: 15vh;
-    }
-}
-
 body {
     /* aesthetic */
     background-color: #9CF4C1;
@@ -12067,6 +12060,14 @@ body {
     margin: 4rem;
 }
 
+.carousel {
+    width: 38vw;
+}
+
+.carousel-item img {
+    border-radius: 0.2rem;
+}
+
 @media (min-width: 500px) {
     /* escape button */
     .escButton {
@@ -12079,10 +12080,10 @@ body {
     }
 }
 
-.carousel {
-    width: 38vw;
-}
-
-.carousel-item img {
-    border-radius: 0.2rem;
+@media (min-width: 1920px) and (min-height: 1200px) {
+    .mainContent {
+        height: 60%;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
 }

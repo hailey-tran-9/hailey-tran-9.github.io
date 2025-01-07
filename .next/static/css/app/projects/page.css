@@ -62,7 +62,6 @@
 }
 
 .projects_btnGroup__IpxF_ ul {
-    width: 100%;
     background-color: #F1F7F4;
 
     border: none;
@@ -104,16 +103,19 @@
     -webkit-clip-path: polygon(
         100% 0,
         5% 100%,
+        0 100%,
         0 0
     );
             clip-path: polygon(
         100% 0,
         5% 100%,
+        0 100%,
         0 0
     );
     shape-outside: polygon(
         100% 0,
         5% 100%,
+        0 100%,
         0 0
     );
 
@@ -274,27 +276,30 @@
     #projects_projectsList__HNtil {
         height: 82.5vh;
     }
+
+    .projects_descrip__dsJht {
+        height: 45vh;
+    }
 }
 
 @media (min-width: 1920px) {
     .projects_bgPolygon__VwgFs {
         -webkit-clip-path: polygon(
             100% 0,
-            30% 0,
-            0 100%,
+            34% 0,
+            0% 100%,
             100% 100%
         );
                 clip-path: polygon(
             100% 0,
-            30% 0,
-            0 100%,
+            34% 0,
+            0% 100%,
             100% 100%
         );
     }
 
     #projects_projectInfo__JGji1 {
-        width: 65vw;
-        /* margin-top: 1rem; */
+        width: 63vw;
     
         -webkit-clip-path: polygon(
             100% 0,
@@ -321,16 +326,19 @@
         -webkit-clip-path: polygon(
             100% 0,
             5% 100%,
+            0 100%,
             0 0
         );
                 clip-path: polygon(
             100% 0,
             5% 100%,
+            0 100%,
             0 0
         );
         shape-outside: polygon(
             100% 0,
             5% 100%,
+            0 100%,
             0 0
         );
     

@@ -9,7 +9,6 @@ import { Tag } from './Tag.jsx';
 
 // Load in project data
 const projectData = require('../../public/projects/data.json').projects;
-// console.log(projectData);
 
 // ------------------------------ COMPONENTS ------------------------------
 function ProjectInfo({ name, link, role, duration, description, tasks, subsections }) {
@@ -74,7 +73,8 @@ function ProjectTab({proj, index, onProjectTabClick, tags}) {
     return (
         <div id={`${proj}` + '-tab-' + `${index}`}>
             <button type="button" 
-            className={`${projects.tab} makoRegular align-items-center`}
+            className={`${projects.tab} ${proj}-button makoRegular align-items-center`}
+            id={`${proj}-button`}
             onClick={onProjectTabClick}>
                     <p>{proj}</p>
                 <div className={`${projects.tabStripe} d-flex align-items-center`}>
@@ -101,6 +101,17 @@ export default function Page() {
 
     const [testData, setTestData] = useState(null);
 
+    const [sortState, setSortState] = useState("none");
+    const [sortedProjects, setSortedProjects] = useState(projectData);
+
+    const sortMethods = {
+        none: { method: (a, b) => null },
+        alphabetically: { method: (a, b) => (a.name > b.name ? 1 : -1) },
+        type: { method: (a, b) => (a.tags[0] > b.tags[0] ? 1 : -1) }
+        // date: { method: (a, b) => (a > b ? -1 : 1) },
+    };
+
+    // Load data
     useEffect(() => {
         // Code to run after component has loaded
         require("../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -118,15 +129,33 @@ export default function Page() {
 
         }
         test();
-        
-        if (focusedBtn == null) {
+    }, []);
+
+    // Reset the focused button
+    useEffect(() => {
+        // console.log("FOCUSED BTN CHANGED");
+        if (focusedBtn != null) {
+            for (let i = 0; i < sortedProjects.length; i++) {
+                if (name === sortedProjects[i].name) {
+                    // console.log(i);
+                    setFocusedProject(i);
+                    let newFocusedBtn = document.getElementById(name + "-button");
+                    setFocusedBtn(newFocusedBtn);
+                    SelectTab(newFocusedBtn);
+                    break;
+                }
+            }
+        } else {
             let firstProjectBtn = document.querySelector(`#${projects.projectsList}`).children[0].children[0];
             setFocusedBtn(firstProjectBtn);
             SelectTab(firstProjectBtn);
         }
-    }, []);
+    }, [focusedBtn, sortedProjects]);
 
     function SelectTab(btn) {
+        // console.log("CHANGE TAB COLOR");
+        // console.log(btn);
+
         btn.style.backgroundColor = "white";
         btn.style.color = "#404040";
         btn.style.marginTop = "15px";
@@ -144,13 +173,15 @@ export default function Page() {
     
     function handleClick(event, index) {
         if (index !== focusedProject) {
+            console.log("LOAD DIFF PROJ");
+
             // Unselect the previously selected button
             UnselectTab();
             // Select this button
             let clickedBtn = event.target;
             SelectTab(clickedBtn);
 
-            let data = projectData[index];
+            let data = sortedProjects[index];
             setName(data.name);
             setLink(data.link);
             setRole(data.role);
@@ -160,6 +191,15 @@ export default function Page() {
             setSubsections(data.subsections);
             setFocusedProject(index);
             setFocusedBtn(clickedBtn);
+        }
+    }
+
+    function sortClick(method) {
+        if (sortState !== method) {
+            // Sort the projects
+            setSortState(method);
+            let newSort = projectData.slice().sort(sortMethods[method].method);
+            setSortedProjects(newSort);
         }
     }
 
@@ -175,7 +215,7 @@ export default function Page() {
                     className='d-flex'
                     style={{margin:'5rem', marginTop:0, marginLeft:0, marginBottom:0, overflow:"visible"}}>
                     <div id={`${projects.projectsList}`}>
-                        {projectData.map((p, index) => 
+                        {sortedProjects.map((p, index) => 
                             <ProjectTab 
                                 proj={p.name} 
                                 index={index} 
@@ -197,8 +237,10 @@ export default function Page() {
                                     Sort
                                 </button>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Type</a></li>
-                                    <li><a className="dropdown-item" href="#">Date</a></li>
+                                    <button className="dropdown-item" type="button" onClick={() => sortClick("none")}>None</button>
+                                    <button className="dropdown-item" type="button" onClick={() => sortClick("alphabetically")}>Alphabetically</button>
+                                    <button className="dropdown-item" type="button" onClick={() => sortClick("type")}>Type</button>
+                                    {/* <button className="dropdown-item" type="button" onClick={() => setSortState("date")}>Date</button> */}
                                 </ul>
                             </div>
 
