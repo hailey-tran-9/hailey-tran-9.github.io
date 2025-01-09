@@ -25,7 +25,7 @@ export default function Page() {
                         <Carousel slide={false}>
                             <CarouselItem>
                                 <Image
-                                    src="/images/gdd_fa23.jpg"
+                                    src="./images/gdd_fa23.jpg"
                                     width={1000}
                                     height={600}
                                     alt="Fall 2023 GDD Officers"
@@ -40,7 +40,7 @@ export default function Page() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image
-                                    src="/images/gdd_sp24.jpg"
+                                    src="./images/gdd_sp24.jpg"
                                     width={1000}
                                     height={600}
                                     alt="Spring 2024 GDD Officers"
@@ -54,7 +54,7 @@ export default function Page() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image
-                                    src="/images/gdd_tabling.jpg"
+                                    src="./images/gdd_tabling.jpg"
                                     width={1000}
                                     height={600}
                                     alt="Tabling for GDD at Cal Gaming Expo"
@@ -68,7 +68,7 @@ export default function Page() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image
-                                    src="/images/gdd_decal.jpg"
+                                    src="./images/gdd_decal.jpg"
                                     width={1000}
                                     height={750}
                                     alt="Fall 2023 Faciltator Team"
@@ -82,7 +82,7 @@ export default function Page() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image
-                                    src="/images/cmgg_workshop.jpg"
+                                    src="./images/cmgg_workshop.jpg"
                                     width={1000}
                                     height={650}
                                     alt="Hosting a GDDxCMGG game dev workshop!"
