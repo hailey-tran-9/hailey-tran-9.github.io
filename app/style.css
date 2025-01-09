@@ -82,11 +82,30 @@ body {
 }
 
 .carousel {
-    width: 38vw;
+    width: 100%;
+    height: 50vh;
 }
 
 .carousel-item img {
+    width: auto;
+    height: 50vh;
+
     border-radius: 0.2rem;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 50vh;
+
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.carousel-control-prev {
+    padding-right: 2vw;
+}
+
+.carousel-control-next {
+    padding-left: 2vw;
 }
 
 @media (min-width: 500px) {

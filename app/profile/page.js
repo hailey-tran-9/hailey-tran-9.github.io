@@ -31,10 +31,10 @@ export default function Page() {
                             <div className="d-flex align-items-center lalezarRegular" id={profile.position}>
                                 <p>UCB Grad</p>
                             </div>
-                            <div className={`${profile.textboxTest} d-flex align-items-center makoRegular`} style={{height:"20vh"}}>
+                            <div className={`${profile.textbox} d-flex align-items-center makoRegular`}>
                                 <p>Hi! I'm Hailey, a recent UCB graduate who's interested in SWE and game dev. Thanks for visiting my website!</p>
                             </div>
-                            <div className={`${profile.textboxTest} d-flex align-items-center makoRegular`} style={{height:"15vh"}}>
+                            <div className={`${profile.textbox} d-flex align-items-center makoRegular`}>
                                 <ul>
                                     <li>
                                         Bachelor of Arts in Computer Science

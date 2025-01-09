@@ -58,6 +58,7 @@
     margin-bottom: 2rem;
 
     background-color: #F1F7F4;
+    overflow: hidden;
 }
 
 .categoryHeader {
@@ -86,7 +87,7 @@
 }
 
 #gddText {
-    width: 35vw;
+    width: 90%;
     padding: 0.5rem;
     padding-top: 1rem;
 
@@ -95,7 +96,9 @@
 }
 
 #content2 {
-    height: auto;
+    /* width: 35vw; */
+    width: 45vw;
+    height: 100%;
     padding: 1rem;
 
     background-color: aliceblue;

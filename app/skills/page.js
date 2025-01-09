@@ -31,6 +31,7 @@ export default function Page() {
                                     alt="Fall 2023 GDD Officers"
                                     priority={true}
                                     style={{resizeMode: 'contain'}}
+                                    className="mx-auto d-block"
                                 />
                                 <CarouselCaption>
                                 <h3>GDD Officers</h3>
@@ -44,6 +45,7 @@ export default function Page() {
                                     height={600}
                                     alt="Spring 2024 GDD Officers"
                                     priority={true}
+                                    className="mx-auto d-block"
                                 />
                                 <CarouselCaption>
                                 <h3>GDD Officers</h3>
@@ -57,6 +59,7 @@ export default function Page() {
                                     height={600}
                                     alt="Tabling for GDD at Cal Gaming Expo"
                                     priority={true}
+                                    className="mx-auto d-block"
                                 />
                                 <CarouselCaption>
                                 <h3>GDD Tabling</h3>
@@ -70,6 +73,7 @@ export default function Page() {
                                     height={750}
                                     alt="Fall 2023 Faciltator Team"
                                     priority={true}
+                                    className="mx-auto d-block"
                                 />
                                 <CarouselCaption>
                                 <h3>GDD Decal</h3>
@@ -82,6 +86,7 @@ export default function Page() {
                                     width={1000}
                                     height={650}
                                     alt="Hosting a GDDxCMGG game dev workshop!"
+                                    className="mx-auto d-block"
                                 />
                                 <CarouselCaption>
                                 <h3>GDDxCMGG Workshop</h3>
