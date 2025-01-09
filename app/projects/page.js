@@ -8,9 +8,9 @@ import { Navbar } from '../navbar';
 import { Tag } from './Tag.jsx';
 
 // Load in project data
-// const projectData = require('../../public/projects/data.json').projects;
+const projectData = require('../../public/projects/data.json').projects;
 
-const projectData = require('/projects/data.json').projects;
+// const projectData = require('/projects/data.json').projects;
 
 // ------------------------------ COMPONENTS ------------------------------
 function ProjectInfo({ name, link, role, duration, description, tasks, subsections }) {
