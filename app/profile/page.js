@@ -17,7 +17,7 @@ export default function Page() {
                 <div className="mainContent">
                     <div className="d-flex flex-row justify-content-center gap-5 mx-auto">
                         <Image
-                            src="./images/grad.jpg"
+                            src="/images/grad.jpg"
                             width={400}
                             height={575}
                             alt="Hailey's graduation picture"
