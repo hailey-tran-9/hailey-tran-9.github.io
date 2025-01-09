@@ -67,6 +67,28 @@
             "tags":["Web Dev"]
         },
         {
+            "name": "GDD 3D Showroom",
+            "link": "https://www.youtube.com/watch?v=z98dvMcTmUk",
+            "role": "Programmer",
+            "duration": "3 weeks",
+            "description": "3D showroom that has interactive features.",
+            "tasks": ["Implemented 3D-object interactivity using React Three Fiber, UI functionality, keyboard controls/remapping", "Created the settings menu, a dialogue tree, pop ups, and overlays"],
+            "subsections":[["Three.js", ["This was the first time I worked with React and Three.js! It was a fun learning experience."]]],
+            "tags":["Web Dev"]
+        },
+        {
+            "name": "No Rest For the Liquid",
+            "link": "https://cal-cs184-student.github.io/hw-webpages-sp24-hailey-tran-9/final_proj_final_report/index.html",
+            "role": "Programmer",
+            "duration": "3-4 weeks",
+            "description": "A short video game that with physically rendered water that will react to various forces over time. The player will be able to interact with objects that manipulates the water's flow.",
+            "tasks": ["Created the custom 3D models and animations (gate mechanic/static platform)", "Created bounding boxes for containers to handle collisions", "Added support for nested obstacle game objects"],
+            "subsections":[
+                ["Bounding Boxes", ["Fun (or not so fun) fact: I got stuck on this for quite a while! The logic and code that determined whether not water particles were outside of the bounding boxes worked properly, but didn't behave as expected. I tried debugging this for hours until I had a sudden realization that the bug was occurring because the water particles were being compared against ALL bounding boxes instead of ONE."]]
+            ],
+            "tags":["Graphics"]
+        },
+        {
             "name": "Physics-Based Rendering",
             "link": "https://cal-cs184-student.github.io/hw-webpages-sp24-hailey-tran-9/hw3/index.html",
             "role": "Programmer",
@@ -110,6 +132,31 @@
             "description": "A version-control system inspired by Git.",
             "tasks": ["Implemented committing, branching, merging, and file manipulation features", "Implemented a SHA-1 hashing system to organize/identify unique commits/branches"],
             "subsections":[["Objects", ["Blobs: saved file contents", "Trees: maps names to references to blobs/other trees", "Commits: metadata (date, time, commit id), log messages, a reference to a tree/parent commit"]]],
+            "tags":["SWE"]
+        },
+        {
+            "name": "Multi-Agent Search",
+            "link": "",
+            "role": "Programmer",
+            "duration": "2-3 weeks",
+            "description": "A simplified game of Pacman.",
+            "tasks": ["Designed queries and utility/cost functions to create search algorithms and produce an optimal plan for Pacman given multiple adversaries", "Created evaluation functions to improve the algorithms' decision making under different constraints"],
+            "subsections":[
+                ["Query Determinants", ["Number of ghosts within a certain radius", "Number of pellets", "Whether not Pacman is or isn't in hungry mode"]],
+                ["Minimax Tree", ["Created a minimax tree to choose the best course of action by evaluating possible gamestates"]]
+            ],
+            "tags":["SWE"]
+        },
+        {
+            "name": "An End-to-End Encrypted File Sharing System",
+            "link": "",
+            "role": "Programmer",
+            "duration": "3-4 weeks",
+            "description": "A secure file system.",
+            "tasks": ["Designed the complete file system using custom data structures", "Ensured security using symmetric key encryption, HMACs, and random key generation", "Implemented user authentication, file storage/retrieval, file sharing, file revocation, and efficient writes"],
+            "subsections":[
+                ["Design", ["Used a lot of wrapper classes to encase sensitive information"]]
+            ],
             "tags":["SWE"]
         }
     ]

@@ -201,6 +201,7 @@
     color: white;
     font-size: 2em;
     text-align: left;
+    overflow: hidden;
 
     border: none;
 }
@@ -208,6 +209,8 @@
 .projects_tab__WoCsW p {
     padding-left: 1rem;
     pointer-events: none;
+
+    white-space: nowrap;
 }
 
 .projects_tab__WoCsW:active {

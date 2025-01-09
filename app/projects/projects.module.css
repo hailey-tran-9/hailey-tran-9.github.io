@@ -179,6 +179,7 @@
     color: white;
     font-size: 2em;
     text-align: left;
+    overflow: hidden;
 
     border: none;
 }
@@ -186,6 +187,8 @@
 .tab p {
     padding-left: 1rem;
     pointer-events: none;
+
+    white-space: nowrap;
 }
 
 .tab:active {
