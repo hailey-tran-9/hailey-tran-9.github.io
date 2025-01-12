@@ -1,11 +1,21 @@
 /*!*******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/mainMenu.module.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************/
+#mainMenu_mainButtonGroup__K3aoB {
+    height: 80vh;
+    padding-top: 3rem;
+}
+
+#mainMenu_whiteBg__rQHLn {
+    width: 100vw;
+    height: 20vh;
+
+    background-color: white;
+}
+
 .mainMenu_mainButton__ysIrf {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    width: 70vw;
+    padding: 2rem;
 
     color: white;
     background-color: #404040;
@@ -19,37 +29,50 @@
 }
 
 .mainMenu_mainButtonName___yY1C {
-    height: 3rem;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 0.25rem;
-
-    font-size: 3rem;
+    height: 4rem;
+    margin-bottom: 0.75rem;
+    font-size: 4rem;
 }
 
 .mainMenu_mainButtonDescrip__6ymuA {
-    padding: 0;
-    margin: 0;
-
-    font-size: 1.25rem;
+    font-size: 1.75rem;
 }
 
-#mainMenu_mainButtonGroup__K3aoB {
-    height: 80vh;
-    padding-top: 3rem;
-}
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) {}
 
-#mainMenu_whiteBg__rQHLn {
-    width: 100vw;
-    height: 20vh;
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) {}
 
-    background-color: white;
-}
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) {}
 
-/* Medium Breakpoint */
-@media (max-width: 768px) {
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) {}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1399.98px) {
     .mainMenu_mainButton__ysIrf {
-        width: 70vw;
-        padding: 2rem;
+        width: 22.5vw;
+        height: 55vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    .mainMenu_mainButtonName___yY1C {
+        height: 4.5rem;
+        font-size: 4.5rem;
+    }
+}
+
+/* XX-Large devices (larger desktops) */
+@media (min-width: 1999.98px) {
+    .mainMenu_mainButtonName___yY1C {
+        height: 6rem;
+        font-size: 6rem;
+    }
+    
+    .mainMenu_mainButtonDescrip__6ymuA {
+        font-size: 2rem;
     }
 }
