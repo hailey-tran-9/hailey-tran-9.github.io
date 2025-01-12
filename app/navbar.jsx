@@ -26,7 +26,7 @@ export function Navbar({ name }) {
     return (
         <>
             <div className="navbar">
-                <div className='d-flex flex-lg-col flex-row flex-wrap' style={{width: "100%"}}>
+                <div className="d-inline-flex flex-column flex-sm-row" style={{width: "100vw"}}>
                     <Header name={name} />
                     <ESC />
                 </div>
