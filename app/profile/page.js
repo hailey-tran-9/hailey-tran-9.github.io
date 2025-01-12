@@ -4,7 +4,7 @@ import { Navbar } from '../navbar';
 
 export default function Page() {
     return <>
-        <div className='d-flex' style={{width:'100vw', height:'100vh'}}>
+        <div className='d-flex' style={{height:'100%'}}>
 
             <div id={profile.bgPolygonBL}></div>
             <div id={profile.bgPolygonTR}></div>
@@ -17,7 +17,7 @@ export default function Page() {
                 <div className="mainContent">
                     <div className="d-flex flex-row justify-content-center gap-5 mx-auto">
                         <Image
-                            src="./images/grad.jpg"
+                            src="/images/grad.jpg"
                             width={400}
                             height={575}
                             alt="Hailey's graduation picture"

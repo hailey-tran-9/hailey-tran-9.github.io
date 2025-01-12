@@ -11970,6 +11970,13 @@ textarea.form-control-lg {
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/style.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************/
 body {
+    /* style={{width: "100%", minHeight: "100%"}} */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    
+    min-height: 100%;
+
     /* aesthetic */
     background-color: #9CF4C1;
 }
@@ -12038,7 +12045,7 @@ body {
 
 .page-header h1 {
     margin-left: 4rem;
-    font-size: 5rem;
+    font-size: 3.5rem;
     letter-spacing: 1.5rem;
 }
 
@@ -12096,6 +12103,12 @@ body {
         margin: 2rem;
         margin-bottom: 0;
         font-size: 2em;
+    }
+}
+
+@media (min-width: 1920px) {
+    .page-header h1 {
+        font-size: 5rem;
     }
 }
 

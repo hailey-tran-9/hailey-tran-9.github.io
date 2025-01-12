@@ -3,7 +3,7 @@
 import projects from './projects.module.css';
 import Image from '../../node_modules/next/image';
 import Link from '../../node_modules/next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, createRef } from 'react';
 import { Navbar } from '../navbar';
 import { Tag } from './Tag.jsx';
 
@@ -89,6 +89,19 @@ function ProjectTab({proj, index, onProjectTabClick, tags}) {
     )
 }
 
+function ProjectList({ displayedProjects }) {
+    return <div id={`${projects.projectsList}`}>
+        {displayedProjects.map((p, index) => 
+            <ProjectTab 
+                proj={p.name} 
+                index={index} 
+                tags={p.tags}
+                key={p.name + index.toString()}
+                onProjectTabClick={(e) => handleClick(e, index)} />
+        )}
+    </div>;
+}
+
 // ------------------------------ PROJECTS PAGE ------------------------------
 export default function Page() {
     // Project text
@@ -112,6 +125,9 @@ export default function Page() {
     const [filteredProjects, setFilteredProjects] = useState(projectData);
 
     const [displayedProjects, setDisplayedProjects] = useState(projectData);
+
+    // REFS
+    const bgPolyRef = useRef(null);
 
     const sortMethods = {
         none: { method: (a, b) => null },
@@ -139,7 +155,32 @@ export default function Page() {
         // }
         // test();
 
+        // TESTING
+        function setProjectListHeight() {
+            let bgPoly = document.querySelector(`.${projects.bgPolygon}`);
+            // console.log(bgPoly);
+            let pgHeader = document.querySelector(".page-header");
+            // console.log(pgHeader);
+
+            // console.log("BG POLY REF");
+            // console.log(bgPolyRef.current);
+            // console.log(window.getComputedStyle(bgPolyRef.current).height);
+
+            let bgPolyInt = parseInt(window.getComputedStyle(bgPoly).height.split("px")[0]);
+            console.log(bgPolyInt);
+
+            let diff = window.getComputedStyle(bgPoly).height - window.getComputedStyle(pgHeader).height;
+            let projList = document.querySelector(`#${projects.projectsList}`);
+            console.log(diff);
+            projList.style.height = diff;
+        }
+
+        setProjectListHeight();
     }, []);
+
+    // useEffect(() => {
+
+    // }, []);
 
     // Reset the focused button
     useEffect(() => {
@@ -180,7 +221,6 @@ export default function Page() {
                 updateDisplayedInfo(0);
             }
         }
-
     }, [focusedBtn, displayedProjects]);
 
     function SelectTab(btn) {
@@ -286,17 +326,16 @@ export default function Page() {
     }
 
     return <>
-        <div className='d-flex' style={{width:'100vw', height:'100vh'}}>
-            <div className='flex-column' style={{width:'100vw', height:'100vh'}}>
-
-                <div className={projects.bgPolygon}></div>
+        <div className={projects.bgPolygon} ref={bgPolyRef}></div>
+        <div className='d-flex' style={{width:'100%', height:'auto'}}>
+            <div className='flex-column' style={{width:'100%', height:'auto'}}>
 
                 <Navbar name="Projects" />
 
                 <div 
                     className='d-flex'
                     style={{margin:'5rem', marginTop:0, marginLeft:0, marginBottom:0, overflow:"visible"}}>
-                    <div id={`${projects.projectsList}`}>
+                    {/* <div id={`${projects.projectsList}`}>
                         {displayedProjects.map((p, index) => 
                             <ProjectTab 
                                 proj={p.name} 
@@ -305,7 +344,9 @@ export default function Page() {
                                 key={p.name + index.toString()}
                                 onProjectTabClick={(e) => handleClick(e, index)} />
                         )}
-                    </div>
+                    </div> */}
+
+                    <ProjectList displayedProjects={displayedProjects} />
                     
                     <div className="flex-column me-auto ms-5">
                         <div className="row">
