@@ -1,9 +1,9 @@
+/* -------------------- Web Page -------------------- */
 html {
     height: 100%;
 }
 
 body {
-    /* style={{width: "100%", minHeight: "100%"}} */
     display: flex;
     position: relative;
     justify-content: center;
@@ -13,7 +13,7 @@ body {
     background-color: #9CF4C1;
 }
 
-/* fonts */
+/* -------------------- Fonts -------------------- */
 .lalezarRegular {
     font-family: "Lalezar", system-ui;
     font-weight: 400;
@@ -50,6 +50,7 @@ body {
     font-style: normal;
 }
 
+/* -------------------- Header -------------------- */
 .page-header {
     width: 100vw;
     height: 10vh;
@@ -73,7 +74,6 @@ body {
     letter-spacing: 1.25rem;
 }
 
-/* escape button */
 .escButton {
     float: right;
     width: 6rem;
@@ -88,25 +88,35 @@ body {
     padding: 0;
 }
 
+/* -------------------- All Pages -------------------- */
+.bgPolygon {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* -------------------- Skills Page -------------------- */
 .mainContent {
     margin: 4rem;
 }
 
 .carousel {
     width: 100%;
-    height: 50vh;
+    height: 25vh;
 }
 
 .carousel-item img {
     width: auto;
-    height: 50vh;
+    height: 25vh;
 
     border-radius: 0.2rem;
 }
 
 .carousel-item {
     width: 100%;
-    height: 50vh;
+    height: 25vh;
 
     background-color: rgba(0, 0, 0, 0.65);
 }
@@ -159,6 +169,33 @@ body {
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 991.98px) {
+    .carousel {
+        width: 100%;
+        height: 45vh;
+    }
+    
+    .carousel-item img {
+        width: auto;
+        height: 45vh;
+    
+        border-radius: 0.2rem;
+    }
+    
+    .carousel-item {
+        width: 100%;
+        height: 45vh;
+    
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+    
+    .carousel-control-prev {
+        padding-right: 2vw;
+    }
+    
+    .carousel-control-next {
+        padding-left: 2vw;
+    }
+
     .page-header {
         width: 40vw;
         min-width: 600px;

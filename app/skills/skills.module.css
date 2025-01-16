@@ -1,61 +1,11 @@
+/* -------------------- Background -------------------- */
 #bgPolygon {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-
-    background-color: white;
-    clip-path: polygon(
-        0 0,
-        42.5% 0,
-        42.5% 100%,
-        0 100%
-    );
+    visibility: hidden;
 }
 
-#bgPolygon2 {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-
-    background-color: #9CF4C1;
-    clip-path: polygon(
-        39% 0,
-        40.5% 0,
-        40.5% 100%,
-        39% 100%
-    );
-}
-
-#bgPolygon3 {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-
-    background-color: #9CF4C1;
-    clip-path: polygon(
-        41.5% 0,
-        42% 0,
-        42% 100%,
-        41.5% 100%
-    );
-}
-
-#categoryContainer {
-    width: 32.5vw;
-    margin-top: 3rem;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
+/* -------------------- Categories -------------------- */
 .category {
-    width: 30vw;
-    margin-bottom: 2rem;
+    width: 85vw;
 
     background-color: #F1F7F4;
     overflow: hidden;
@@ -86,24 +36,92 @@
     margin-bottom: 0;
 }
 
+/* -------------------- GDD -------------------- */
 #gddText {
-    width: 90%;
+    width: 75%;
     padding: 0.5rem;
     padding-top: 1rem;
+    margin-bottom: 2rem;
 
     background-color: white;
     border-radius: 0.2rem;
 }
 
-#content2 {
-    /* width: 35vw; */
-    width: 45vw;
+.test {
+    width: 100vw;
+}
+
+#carouselContent {
+    width: 90%;
     height: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
 
     background-color: aliceblue;
     border-radius: 0.25rem;
 }
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) {}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) {
+    #bgPolygon {
+        visibility: visible;
+        background-color: white;
+        clip-path: polygon(
+            0 0,
+            50% 0,
+            50% 100%,
+            0 100%
+        );
+    }
+
+    .category {
+        width: 35vw;
+    
+        background-color: #F1F7F4;
+        overflow: hidden;
+    }
+
+    .test {
+        width: 50vw;
+    }
+
+    #gddText {
+        width: 50%;
+        padding: 0.5rem;
+        padding-top: 1rem;
+        margin-bottom: 0;
+    
+        background-color: white;
+        border-radius: 0.2rem;
+    }
+
+    #carouselContent {
+        width: 70%;
+        height: 100%;
+        padding: 1rem;
+    
+        background-color: aliceblue;
+        border-radius: 0.25rem;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) {}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1399.98px) {}
+
+/* XX-Large devices (larger desktops) */
+@media (min-width: 1999.98px) {}
+
+
 
 @media (min-height: 1080px) {
     .categoryHeader {

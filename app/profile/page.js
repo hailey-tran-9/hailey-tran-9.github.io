@@ -6,9 +6,9 @@ export default function Page() {
     return <>
         <div className="d-flex flex-column">
 
-            <div className={profile.bgPolygon} id={profile.bgPolygonBL}></div>
-            <div className={profile.bgPolygon} id={profile.bgPolygonTR}></div>
-            <div className={profile.bgPolygon} id={profile.bgPolygonTR2}></div>
+            <div className="bgPolygon" id={profile.bgPolygonBL}></div>
+            <div className="bgPolygon" id={profile.bgPolygonTR}></div>
+            <div className="bgPolygon" id={profile.bgPolygonTR2}></div>
 
             <Navbar name="Profile" />
 
