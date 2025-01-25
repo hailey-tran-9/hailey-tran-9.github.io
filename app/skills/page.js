@@ -4,15 +4,21 @@ import { AllLists } from './bpLists';
 import Image from 'next/image';
 import { Carousel, CarouselCaption, CarouselItem } from 'react-bootstrap';
 
+import CMGG from '../../public/images/cmgg_workshop.jpg';
+import Decal from '../../public/images/gdd_decal.jpg';
+import Fa23 from '../../public/images/gdd_fa23.jpg';
+import Sp24 from '../../public/images/gdd_sp24.jpg';
+import Tabling from '../../public/images/gdd_tabling.jpg';
+
 export default function Page() {
     return <>
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column gap-3">
 
             <div className="bgPolygon" id={skills.bgPolygon}></div>
             <Navbar name="Skills" />
 
             <div className="d-flex flex-column-reverse flex-xxl-row flex-fill align-items-center">
-                <div className={`d-flex flex-column justify-content-center gap-4 ${skills.test}`}>
+                <div className={`d-flex flex-column justify-content-center gap-4 mb-5 ${skills.test}`}>
                     <AllLists 
                         categories={["Programming Languages", "Web Design", "Game Development"]}
                         bulletpoints={[["Python", "Java", "C#", "C++", "SQL"], ["HTML", "CSS", "Javascript", "React"], ["Unity Engine"]]} />
@@ -22,7 +28,7 @@ export default function Page() {
                     <Carousel slide={false} className="mx-auto" id={skills.carouselContent}>
                         <CarouselItem>
                             <Image
-                                src="/images/gdd_fa23.jpg"
+                                src={Fa23}
                                 width={1000}
                                 height={600}
                                 alt="Fall 2023 GDD Officers"
@@ -36,7 +42,7 @@ export default function Page() {
                         </CarouselItem>
                         <CarouselItem>
                             <Image
-                                src="/images/gdd_sp24.jpg"
+                                src={Sp24}
                                 width={1000}
                                 height={600}
                                 alt="Spring 2024 GDD Officers"
@@ -50,7 +56,7 @@ export default function Page() {
                         </CarouselItem>
                         <CarouselItem>
                             <Image
-                                src="/images/gdd_tabling.jpg"
+                                src={Tabling}
                                 width={1000}
                                 height={600}
                                 alt="Tabling for GDD at Cal Gaming Expo"
@@ -64,7 +70,7 @@ export default function Page() {
                         </CarouselItem>
                         <CarouselItem>
                             <Image
-                                src="/images/gdd_decal.jpg"
+                                src={Decal}
                                 width={1000}
                                 height={750}
                                 alt="Fall 2023 Faciltator Team"
@@ -78,7 +84,7 @@ export default function Page() {
                         </CarouselItem>
                         <CarouselItem>
                             <Image
-                                src="/images/cmgg_workshop.jpg"
+                                src={CMGG}
                                 width={1000}
                                 height={650}
                                 alt="Hosting a GDDxCMGG game dev workshop!"

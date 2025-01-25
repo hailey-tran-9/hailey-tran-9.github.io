@@ -1,6 +1,7 @@
 import profile from './profile.module.css'
 import Image from '../../node_modules/next/image'
 import { Navbar } from '../navbar'
+import ProfilePic from '../../public/images/grad.jpg'
 
 export default function Page() {
     return <>
@@ -14,7 +15,7 @@ export default function Page() {
 
             <div className="d-flex flex-column flex-xxl-row flex-fill justify-content-center align-items-center gap-5 py-5">
                 <Image
-                    src="/images/grad.jpg"
+                    src={ProfilePic}
                     width={400}
                     height={575}
                     alt="Hailey's graduation picture"
