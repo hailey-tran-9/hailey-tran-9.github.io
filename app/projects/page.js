@@ -6,10 +6,10 @@ import { useState, useEffect, useRef } from "react";
 import { Navbar } from "../navbar";
 import { Tag } from "./Tag.jsx";
 
-// Load in project data
-// const projectData = require("../../public/projects/data.json").projects;
+import data from "../../public/projects/data.json";
 
-const projectData = require('./projects/data.json').projects;
+// Load in project data
+const projectData = data.projects;
 
 // ------------------------------ COMPONENTS ------------------------------
 function ProjectInfo({
