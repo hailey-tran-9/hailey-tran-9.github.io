@@ -31,7 +31,7 @@ export function AllLists({ categories, bulletpoints }) {
 
     return <>
         {categories.map((category, index) => 
-            <div className={skills.category} id={`${category}-container`} key={category}>
+            <div className={`${skills.category} mx-auto`} id={`${category}-container`} key={category}>
                 <div className={`${skills.categoryHeader} lalezarRegular`}>
                     {category}
                 </div>

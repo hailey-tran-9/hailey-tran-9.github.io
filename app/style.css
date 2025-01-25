@@ -1,60 +1,64 @@
-body {
-    /* aesthetic */
-    background-color: #9CF4C1;
+/* -------------------- Web Page -------------------- */
+html {
+  height: 100%;
 }
 
-/* fonts */
+body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  min-height: 100%;
+
+  /* aesthetic */
+  background-color: #9cf4c1;
+}
+
+/* -------------------- Fonts -------------------- */
 .lalezarRegular {
-    font-family: "Lalezar", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}  
+  font-family: "Lalezar", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .makoRegular {
-    font-family: "Mako", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Mako", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .palanquin-dark-regular {
-    font-family: "Palanquin Dark", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-  
+
 .palanquin-dark-medium {
-    font-family: "Palanquin Dark", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
-  
+
 .palanquin-dark-semibold {
-    font-family: "Palanquin Dark", sans-serif;
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
-  
+
 .palanquin-dark-bold {
-    font-family: "Palanquin Dark", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
+/* -------------------- Header -------------------- */
 .page-header {
-    width: 40vw;
-    height: 17.5vh;
+  width: 100vw;
+  height: 10vh;
 
-    background-color: #404040;
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        98% 45%,
-        87.5% 47.5%,
-        77.5% 100%,
-        0 100%
-    );
+  background-color: #404040;
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 90% 55%, 84% 100%, 0 100%);
 
-    color: white;
+  color: white;
 }
 
 .page-header h1 {
@@ -63,67 +67,165 @@ body {
     letter-spacing: 1.5rem;
 }
 
-/* escape button */
 .escButton {
-    width: 5rem;
-    height: 2.5rem;
+  float: right;
+  width: 6rem;
+  height: 3rem;
 
-    margin: 1.5rem;
-    margin-bottom: 0;
-    font-size: 1.25em;
+  margin: 1.5rem;
+  margin-bottom: 0;
+  font-size: 1.25em;
 }
 
 .navbar {
-    padding: 0;
+  padding: 0;
 }
 
+/* -------------------- All Pages -------------------- */
+.bgPolygon {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* -------------------- Skills Page -------------------- */
 .mainContent {
-    margin: 4rem;
+  margin: 4rem;
 }
 
 .carousel {
-    width: 100%;
-    height: 50vh;
+  width: 100%;
+  height: 25vh;
 }
 
 .carousel-item img {
-    width: auto;
-    height: 50vh;
+  width: auto;
+  height: 25vh;
 
-    border-radius: 0.2rem;
+  border-radius: 0.2rem;
 }
 
 .carousel-item {
-    width: 100%;
-    height: 50vh;
+  width: 100%;
+  height: 25vh;
 
-    background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 .carousel-control-prev {
-    padding-right: 2vw;
+  padding-right: 2vw;
 }
 
 .carousel-control-next {
+  padding-left: 2vw;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) {
+  .page-header {
+    width: 40vw;
+    min-width: 575.98px;
+    height: 17.5vh;
+
+    clip-path: polygon(0 0, 100% 0, 98% 45%, 87.5% 47.5%, 77.5% 100%, 0 100%);
+  }
+
+  .page-header h1 {
+    margin-left: 4rem;
+    font-size: 3.5rem;
+    letter-spacing: 1.5rem;
+  }
+
+  .escButton {
+    width: 10rem;
+    height: 5rem;
+
+    margin: 2rem;
+    margin-bottom: 0;
+    font-size: 2em;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) {
+  .carousel {
+    width: 100%;
+    height: 45vh;
+  }
+
+  .carousel-item img {
+    width: auto;
+    height: 45vh;
+
+    border-radius: 0.2rem;
+  }
+
+  .carousel-item {
+    width: 100%;
+    height: 45vh;
+
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .carousel-control-prev {
+    padding-right: 2vw;
+  }
+
+  .carousel-control-next {
     padding-left: 2vw;
+  }
+
+  .page-header {
+    width: 40vw;
+    min-width: 600px;
+    height: 17.5vh;
+
+    background-color: #404040;
+    clip-path: polygon(0 0, 100% 0, 98% 45%, 87.5% 47.5%, 77.5% 100%, 0 100%);
+
+    color: white;
+  }
+
+  .page-header h1 {
+    margin-left: 4rem;
+    font-size: 3.5rem;
+    letter-spacing: 1.5rem;
+  }
+
+  #pfp {
+    width: 470px;
+    height: 675px;
+
+    border-radius: 0.05rem;
+    box-shadow: 0 0 0 0.5rem white;
+  }
 }
 
-@media (min-width: 500px) {
-    /* escape button */
-    .escButton {
-        width: 10rem;
-        height: 5rem;
-
-        margin: 2rem;
-        margin-bottom: 0;
-        font-size: 2em;
-    }
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) {
 }
 
-@media (min-width: 1920px) and (min-height: 1200px) {
-    .mainContent {
-        height: 60%;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-    }
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1399.98px) {
+  .page-header h1 {
+    font-size: 5rem;
+  }
+}
+
+/* XX-Large devices (larger desktops) */
+@media (min-width: 1999.98px) {
+}
+
+@media (min-height: 1199.98px) {
+  .mainContent {
+    height: 60%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
 }

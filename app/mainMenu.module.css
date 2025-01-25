@@ -1,199 +1,111 @@
-/* X-Small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
+#mainButtonGroup {
+    height: 80vh;
+    padding-top: 3rem;
+}
+
+#whiteBg {
+    width: 100vw;
+    height: 20vh;
+
+    background-color: white;
+    z-index: -1;
+}
 
 .mainButton {
-    /* standard */
-    /* aesthetic */
+    width: 70vw;
+    padding: 2rem;
+
     color: white;
     background-color: #404040;
     border: None;
-
-    /* edits */
-    /* shape */
-    width: 80vw;
-    height: 13vh;
-    /* aesthetic */
     box-shadow: 0px 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
-    /* spacing */
-    margin: 0.8rem;
+
+    overflow: hidden;
 }
 
 .mainButton:hover {
-    /* aesthetic */
     background-color: #F1F7F4;
     color: #395D47;
 }
 
 .mainButtonName {
-    /* standard */
-    /* spacing */
-    padding: 0;
-    margin: 0;
-
-    /* edits */
-    /* shape */
-    height: 3rem;
-    /* text */
-    font-size: 3rem;
-    /* spacing */
-    margin-bottom: 0.25rem;
+    height: 4rem;
+    margin-bottom: 0.75rem;
+    font-size: 4rem;
 }
 
 .mainButtonDescrip {
-    /* standard */
-    /* spacing */
-    padding: 0;
-    margin: 0;
-
-    /* edits */
-    /* text */
-    font-size: 1.25rem;
-}
-
-#mainButtonGroup {
-    /* spacing */
-    padding-top: 3rem;
-}
-
-#whiteBg {
-    /* standard */
-    /* aesthetic */
-    background-color: white;
-
-    /* edits */
-    /* shape */
-    height: 25vh;
-}
-
-#pic {
-    /* standard */
-    /* shape */
-    position: fixed;
-    z-index: 1;
-    /* interactivity */
-    pointer-events: none;
-
-    /* edits */
-    /* shape */
-    bottom: 2rem;
-    width: 374.4px;
-    height: 369.6px;
+    font-size: 1.75rem;
 }
 
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) {}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) {}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1399.98px) {
     .mainButton {
-        /* shape */
-        width: 80vw;
-        height: 13vh;
-        /* aesthetic */
-        box-shadow: 0px 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
-        /* spacing */
-        margin: 0.8rem;
+        width: 22.5vw;
+        height: 55vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
     }
 
     .mainButtonName {
-        /* shape */
-        height: 3rem;
-        /* text */
-        font-size: 3rem;
-        /* spacing */
-        margin-bottom: 0.25rem;
+        height: 4.5rem;
+        font-size: 4.5rem;
     }
+}
 
-    .mainButtonDescrip {
-        /* text */
-        font-size: 1.25rem;
+/* XX-Large devices (larger desktops) */
+@media (min-width: 1999.98px) {
+    .mainButtonName {
+        height: 6rem;
+        font-size: 6rem;
     }
     
-    #mainButtonGroup {
-        /* spacing */
-        padding-top: 2rem;
-    }
-
-    #whiteBg {
-        /* shape */
-        height: 25vh;
-    }
-
-    #pic {
-        /* shape */
-        bottom: 4rem;
-        width: 526.5px;
-        height: 519.75px;
+    .mainButtonDescrip {
+        font-size: 2rem;
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
-/* @media (min-width: 768px) { ... } */
 
-/* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) { ... } */
 
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+
+@media (max-width: 1399.98px) and (max-height: 699.98px) {
     .mainButton {
-        /* shape */
-        width: 100%;
-        height: 50vh;
-        /* aesthetic */
-        box-shadow: 0px 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
+        width: 60vw;
+        padding: 1rem;
     }
 
     .mainButtonName {
-        /* shape */
-        height: 4rem;
-        /* text */
-        font-size: 4rem;
-        /* spacing */
-        margin-bottom: 1.25rem;
+        height: 2.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 2.5rem;
     }
-
+    
     .mainButtonDescrip {
-        /* text */
         font-size: 1.25rem;
     }
-
-    #mainButtonGroup {
-        /* spacing */
-        padding-top: 15vh;
-    }
-
-    #whiteBg {
-        /* shape */
-        height: 20vh;
-    }
-
-    #pic {
-        /* shape */
-        bottom: 6rem;
-        max-width: 624px;
-        max-height: 616px;
-        width: 624px;
-        height: 616px;
-    }
 }
 
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
+@media (min-width: 1399.98px) and (max-height: 699.98px) {
     .mainButtonName {
-        /* shape */
-        height: 5rem;
-        /* text */
-        font-size: 5rem;
-        /* spacing */
-        margin-bottom: 1.5rem;
+        height: 4rem;
+        font-size: 4rem;
     }
-
+    
     .mainButtonDescrip {
-        /* text */
-        font-size: 1.5rem;
-    }
-
-    #mainButtonGroup {
-        /* spacing */
-        padding-top: 15vh;
+        font-size: 1.25rem;
     }
 }

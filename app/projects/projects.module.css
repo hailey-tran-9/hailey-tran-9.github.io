@@ -1,311 +1,273 @@
-/* Background */
-.bgPolygon {
-    position: absolute;
-    right: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    width: 75vw;
-    height: 100vh;
-    background-color: white;
-    clip-path: polygon(
-        100% 0,
-        28% 0,
-        0 100%,
-        100% 100%
-    );
+/* -------------------- Background -------------------- */
+#bgPolygon {
+  background-color: white;
+  clip-path: polygon(100% 0, 50% 0, 25% 100%, 100% 100%);
 }
 
-/* Project List */
+/* -------------------- Project List -------------------- */
 #projectsList {
-    height: 82.5vh;
-    padding-right: 1rem;
+  padding-right: 1rem;
 
-    overflow-x: hidden;
-    overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-    scrollbar-color: #FFFFFF #395D47;
-    scrollbar-width: auto;
+  scrollbar-color: #ffffff #395d47;
+  scrollbar-width: auto;
 
-    background-color: #8f8f8f8c;
+  background-color: #8f8f8f8c;
 }
 
-/* Sorting/Filtering */
+/* -------------------- Sort/Filter -------------------- */
 .btnGroup button {
-    width: 15rem;
+  width: 15rem;
 
-    background-color: #F1F7F4;
-    color: #404040;
-    border: none;
-    border-radius: 2px;
+  background-color: #f1f7f4;
+  color: #404040;
+  border: none;
+  border-radius: 2px;
 }
 
 .btnGroup button:hover {
-    background-color: #d1d3d2;
+  background-color: #d1d3d2;
 }
 
 .btnGroup button:active {
-    background-color: #d1d3d2;
+  background-color: #d1d3d2;
 }
 
 .btnGroup button:focus {
-    background-color: #d1d3d2;
+  background-color: #d1d3d2;
 }
 
 .btnGroup ul {
-    background-color: #F1F7F4;
+  background-color: #f1f7f4;
 
-    border: none;
-    border-radius: 2px;
+  border: none;
+  border-radius: 2px;
 }
 
 #sortBy {
-    margin-top: 5rem;
-    margin-bottom: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 
-/* Project Information */
+/* -------------------- Project Info -------------------- */
 #projectInfo {
-    width: 65vw;
-    margin-top: -1rem;
+  width: 65vw;
 
-    clip-path: polygon(
-        100% 0,
-        25% 0,
-        0 100%,
-        100% 100%
-    );
+  clip-path: polygon(100% 0, 25% 0, 0 100%, 100% 100%);
 }
 
 #projectInfoBuffer {
-    width: 18.5vw;
-    height: 74vh;
-    margin-top: 3rem;
-    float: left;
+  width: 18.5vw;
+  height: 74vh;
+  margin-top: 3rem;
+  float: left;
 
-    /* background-color: aqua; */
-    clip-path: polygon(
-        100% 0,
-        5% 100%,
-        0 100%,
-        0 0
-    );
-    shape-outside: polygon(
-        100% 0,
-        5% 100%,
-        0 100%,
-        0 0
-    );
+  /* background-color: aqua; */
+  clip-path: polygon(100% 0, 5% 100%, 0 100%, 0 0);
+  shape-outside: polygon(100% 0, 5% 100%, 0 100%, 0 0);
 
-    shape-margin: 0;
+  shape-margin: 0;
 }
 
 .title {
-    width: 100%;
-    height: 7rem;
-    padding-top: 0.5rem;
-    margin-bottom: 0.5rem;
+  width: 100%;
+  height: 7rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
 
-    background-color: #404040;
-    color: white;
-    font-size: 3.5em;
-    overflow: clip;
+  background-color: #404040;
+  color: white;
+  font-size: 3.5em;
+  overflow: clip;
 }
 
 .title a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .title p {
-    padding-top: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .roleDur {
-    width: 100%;
-    height: 5rem;
-    padding-right: 3rem;
-    margin-bottom: 1.5rem;
+  width: 100%;
+  height: 5rem;
+  padding-right: 3rem;
+  margin-bottom: 1.5rem;
 
-    background-color: #395D47;
-    color: white;
-    font-size: 2.5em;
-    overflow: clip;
+  background-color: #395d47;
+  color: white;
+  font-size: 2.5em;
+  overflow: clip;
 }
 
 .roleDur p {
-    padding-left: 3rem;
-    padding-top: 1rem;
-    padding-bottom: auto;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: auto;
 }
 
 #roleDurFlex {
-    position: relative;
-    left: -7rem;
+  position: relative;
+  left: -7rem;
 }
 
 .descrip {
-    width: 100%;
-    height: 55vh;
-    padding: 2rem;
+  width: 100%;
+  height: 55vh;
+  padding: 2rem;
+  margin-bottom: 2rem;
 
-    overflow: clip;
+  overflow: clip;
 
-    background-color: #F1F7F4;
-    font-size: 1.25em;
+  background-color: #f1f7f4;
+  font-size: 1.25em;
 }
 
 .descrip p {
-    padding-right: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .descrip ul {
-    max-width: 40vw;
-    list-style-position: inside;
-    /* margin-right: 1rem; */
+  max-width: 37.5vw;
+  list-style-position: inside;
 }
 
-/* Project Tab */
+/* -------------------- Project Tab -------------------- */
 .tab {
-    width: 25rem;
-    height: 8rem;
-    padding: 0;
-    margin-bottom: 0.5rem;
+  width: 25rem;
+  height: 8rem;
+  padding: 0;
+  margin-bottom: 0.5rem;
 
-    border-radius: 2px;
-    border-bottom-left-radius: 0;
+  border-radius: 2px;
+  border-bottom-left-radius: 0;
 
-    background-color: #395D47;
-    color: white;
-    font-size: 2em;
-    text-align: left;
-    overflow: hidden;
+  background-color: #395d47;
+  color: white;
+  font-size: 2em;
+  text-align: left;
+  overflow: hidden;
 
-    border: none;
+  border: none;
 }
 
 .tab p {
-    padding-left: 1rem;
-    pointer-events: none;
+  padding-left: 1rem;
+  pointer-events: none;
 
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .tab:active {
-    box-shadow: -15px -15px #EFEFEF;
-    background-color: white;
-    color: #404040;
+  box-shadow: -15px -15px #efefef;
+  background-color: white;
+  color: #404040;
 }
 
 .tabName {
-    margin-bottom: 0.2rem;
-    padding: 0.25rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0;
-    padding-bottom: 0.75rem;
+  margin-bottom: 0.2rem;
+  padding: 0.25rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0;
+  padding-bottom: 0.75rem;
 
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .tabStripe {
-    width: 100%;
-    height: 2.25rem;
+  width: 100%;
+  height: 2.25rem;
 
-    background-color: #69A882;
+  background-color: #69a882;
 
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .tab:active .tabStripe {
-    background-color: #404040;
+  background-color: #404040;
 }
 
 .tag {
-    width: auto;
-    height: 1.75rem;
-    margin-left: 1rem;
+  width: auto;
+  height: 1.75rem;
+  margin-left: 1rem;
 
-    border-radius: 0.1rem;
-    color: #404040;
-    font-size: 0.5em;
+  border-radius: 0.1rem;
+  color: #404040;
+  font-size: 0.5em;
 }
 
 .sweTag {
-    background-color: lightskyblue;
+  background-color: lightskyblue;
 }
 
 .webTag {
-    background-color: lightsalmon;
+  background-color: lightsalmon;
 }
 
 .gameTag {
-    background-color: lightcoral;
+  background-color: lightcoral;
 }
 
 .graphicsTag {
-    background-color: lightgoldenrodyellow;
+  background-color: lightgoldenrodyellow;
 }
 
 .taskList {
-    text-wrap: wrap;
+  text-wrap: wrap;
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1399.98px) {
+  .bgPolygon {
+    clip-path: polygon(100% 0, 34% 0, 0% 100%, 100% 100%);
+  }
+
+  #projectInfo {
+    width: 63vw;
+
+    clip-path: polygon(100% 0, 25% 0, 0 100%, 100% 100%);
+  }
+
+  #projectInfoBuffer {
+    width: 18.5vw;
+    height: 74vh;
+    float: left;
+
+    /* background-color: aqua; */
+    clip-path: polygon(100% 0, 5% 100%, 0 100%, 0 0);
+    shape-outside: polygon(100% 0, 5% 100%, 0 100%, 0 0);
+
+    shape-margin: 0;
+  }
+}
+
+/* XX-Large devices (larger desktops) */
+@media (min-width: 1999.98px) {
+  #bgPolygon {
+    clip-path: polygon(100% 0, 45% 0, 19% 100%, 100% 100%);
+  }
+
+  .descrip ul {
+    max-width: 40vw;
+  }
 }
 
 @media (min-height: 1080px) {
-    #projectInfo {
-        margin-top: 3rem;
-    }
+  #projectInfo {
+    margin-top: 3rem;
+  }
 
-    #projectsList {
-        height: 82.5vh;
-    }
+  #projectsList {
+    height: 82.5vh;
+  }
 
-    .descrip {
-        height: 45vh;
-    }
-}
-
-@media (min-width: 1920px) {
-    .bgPolygon {
-        clip-path: polygon(
-            100% 0,
-            34% 0,
-            0% 100%,
-            100% 100%
-        );
-    }
-
-    #projectInfo {
-        width: 63vw;
-    
-        clip-path: polygon(
-            100% 0,
-            25% 0,
-            0 100%,
-            100% 100%
-        );
-    }
-
-    #projectInfoBuffer {
-        width: 18.5vw;
-        height: 74vh;
-        margin-top: 3rem;
-        float: left;
-    
-        /* background-color: aqua; */
-        clip-path: polygon(
-            100% 0,
-            5% 100%,
-            0 100%,
-            0 0
-        );
-        shape-outside: polygon(
-            100% 0,
-            5% 100%,
-            0 100%,
-            0 0
-        );
-    
-        shape-margin: 0;
-    }
+  .descrip {
+    height: 45vh;
+  }
 }
