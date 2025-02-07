@@ -11979,9 +11979,10 @@ body {
   position: relative;
   justify-content: center;
   min-height: 100%;
+}
 
-  /* aesthetic */
-  background-color: #9cf4c1;
+section {
+  padding-bottom: 20vh;
 }
 
 /* -------------------- Fonts -------------------- */
@@ -12021,187 +12022,234 @@ body {
   font-style: normal;
 }
 
+.kadwa-regular {
+  font-family: "Kadwa", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kadwa-bold {
+  font-family: "Kadwa", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* -------------------- Header -------------------- */
-.page-header {
-  width: 100vw;
-  height: 10vh;
-
-  background-color: #404040;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 55%, 90% 55%, 84% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 55%, 90% 55%, 84% 100%, 0 100%);
-
-  color: white;
+h1 {
+  color: #395D47;
+  font-family: "Kadwa", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.page-header h1 {
-  margin-left: 2.5rem;
-  font-size: 2.5rem;
-  letter-spacing: 1.25rem;
+h3 {
+  color: #395D47;
+  font-family: "Kadwa", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.escButton {
-  float: right;
-  width: 6rem;
-  height: 3rem;
+h5 {
+  color: #69A882;
+  font-family: "Kadwa", serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
-  margin: 1.5rem;
+h6 {
+  font-family: "Kadwa", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#header h1 {
   margin-bottom: 0;
-  font-size: 1.25em;
 }
 
-.navbar {
+#anchors h3 {
+  color: #CFCFCF;
+  margin-bottom: 0;
+}
+
+#anchors a {
+  text-decoration: inherit;
+  cursor: auto;
+}
+
+#anchors h3:hover {
+  color: #69A882;
+}
+
+hr.solid {
+  border-top: 2px solid black;
+}
+
+/* -------------------- Projects Section -------------------- */
+#projectInfo {
+  width: 75vw;
+  background-color: #e6f3ec;
+}
+
+#projectInfo h5 {
+  color: black;
+}
+
+#projectStats h5 {
+  margin-bottom: 0;
+}
+
+#projectsList {
+  height: 75vh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  scrollbar-color: #ffffff #395d47;
+  scrollbar-width: auto;
+
+  background-color: #8f8f8f8c;
+}
+
+#projectsList button {
+  border-radius: 0;
+}
+
+.tag {
+  width: auto;
+  height: 1.75rem;
+  margin-left: 1rem;
+
+  border-radius: 0.1rem;
+  color: #404040;
+  font-size: 0.5em;
+}
+
+.sweTag {
+  background-color: lightskyblue;
+}
+
+.webTag {
+  background-color: lightsalmon;
+}
+
+.gameTag {
+  background-color: lightcoral;
+}
+
+.graphicsTag {
+  background-color: lightgoldenrodyellow;
+}
+
+/* -------------------- Sort/Filter -------------------- */
+.dropdownBtn button {
+  background-color: #e6f3ec;
+  border-color: #e6f3ec;
+  color: black
+}
+
+.dropdownBtn button:hover {
+  background-color: #cde3d8;
+  border-color: #cde3d8;
+  color: black;
+}
+
+.dropdownBtn button:first-child:active {
+  background-color: #cde3d8;
+  border-color: #cde3d8;
+  color: black;
+}
+
+.dropdownBtn button:active {
+  background-color: #cde3d8;
+  border-color: #cde3d8;
+  color: black;
+}
+
+.dropdownBtn button:focus {
+  background-color: #cde3d8;
+  border-color: #cde3d8;
+  color: black;
+}
+
+.dropdownBtn button::selection {
+  background-color: #cde3d8;
+  border-color: #cde3d8;
+  color: black;
+}
+
+.dropdownBtn button:disabled {
+  background-color: #cde3d8;
+  border-color: #cde3d8;
+  color: black;
+}
+
+.dropdownBtn button:not(:hover) {
+  background-color: #e6f3ec;
+  border-color: #e6f3ec;
+  color: black;
+}
+
+/* -------------------- Skills Section -------------------- */
+.skillsBox {
+  background-color: #e6f3ec;
+}
+
+.skillsBox ul {
+  list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-/* -------------------- All Pages -------------------- */
-.bgPolygon {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
+#skillBoxes {
+  margin-top: 5vh;
 }
 
-/* -------------------- Skills Page -------------------- */
-.mainContent {
-  margin: 4rem;
-}
-
+/* -------------------- Experiences Section -------------------- */
 .carousel {
-  width: 100%;
-  height: 25vh;
+  height: 50vh;
 }
 
 .carousel-item img {
   width: auto;
-  height: 25vh;
-
-  border-radius: 0.2rem;
+  height: 50vh;
 }
 
 .carousel-item {
-  width: 100%;
-  height: 25vh;
-
-  background-color: rgba(0, 0, 0, 0.65);
+  height: 50vh;
 }
 
-.carousel-control-prev {
-  padding-right: 2vw;
+.carousel-caption h5, p {
+  margin: 0;
 }
 
-.carousel-control-next {
-  padding-left: 2vw;
+.carousel h5 {
+  color: white;
+}
+
+#experiencesSec1 {
+  margin-bottom: 10vh;
+}
+
+#gamesMentored a {
+  text-decoration: none;
+  color: black;
+  cursor: auto;
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 575.98px) {
-  .page-header {
-    width: 40vw;
-    min-width: 575.98px;
-    height: 17.5vh;
-
-    -webkit-clip-path: polygon(0 0, 100% 0, 98% 45%, 87.5% 47.5%, 77.5% 100%, 0 100%);
-
-            clip-path: polygon(0 0, 100% 0, 98% 45%, 87.5% 47.5%, 77.5% 100%, 0 100%);
-  }
-
-  .page-header h1 {
-    margin-left: 4rem;
-    font-size: 3.5rem;
-    letter-spacing: 1.5rem;
-  }
-
-  .escButton {
-    width: 10rem;
-    height: 5rem;
-
-    margin: 2rem;
-    margin-bottom: 0;
-    font-size: 2em;
-  }
-}
+@media (min-width: 575.98px) {}
 
 /* Small devices (landscape phones, less than 768px) */
-@media (min-width: 767.98px) {
-}
+@media (min-width: 767.98px) {}
 
 /* Medium devices (tablets, less than 992px) */
-@media (min-width: 991.98px) {
-  .carousel {
-    width: 100%;
-    height: 45vh;
-  }
-
-  .carousel-item img {
-    width: auto;
-    height: 45vh;
-
-    border-radius: 0.2rem;
-  }
-
-  .carousel-item {
-    width: 100%;
-    height: 45vh;
-
-    background-color: rgba(0, 0, 0, 0.65);
-  }
-
-  .carousel-control-prev {
-    padding-right: 2vw;
-  }
-
-  .carousel-control-next {
-    padding-left: 2vw;
-  }
-
-  .page-header {
-    width: 40vw;
-    min-width: 600px;
-    height: 17.5vh;
-
-    background-color: #404040;
-    -webkit-clip-path: polygon(0 0, 100% 0, 98% 45%, 87.5% 47.5%, 77.5% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 98% 45%, 87.5% 47.5%, 77.5% 100%, 0 100%);
-
-    color: white;
-  }
-
-  .page-header h1 {
-    margin-left: 4rem;
-    font-size: 3.5rem;
-    letter-spacing: 1.5rem;
-  }
-
-  #pfp {
-    width: 470px;
-    height: 675px;
-
-    border-radius: 0.05rem;
-    box-shadow: 0 0 0 0.5rem white;
-  }
-}
+@media (min-width: 991.98px) {}
 
 /* Large devices (desktops, less than 1200px) */
-@media (min-width: 1199.98px) {
-}
+@media (min-width: 1199.98px) {}
 
 /* X-Large devices (large desktops, less than 1400px) */
-@media (min-width: 1399.98px) {
-  .page-header h1 {
-    font-size: 5rem;
-  }
-}
+@media (min-width: 1399.98px) {}
 
 /* XX-Large devices (larger desktops) */
-@media (min-width: 1999.98px) {
-}
-
-@media (min-height: 1199.98px) {
-  .mainContent {
-    height: 60%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-  }
-}
-
+@media (min-width: 1999.98px) {}
