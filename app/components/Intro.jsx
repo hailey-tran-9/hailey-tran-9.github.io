@@ -10,6 +10,7 @@ export default function Intro() {
             alt="Hailey's Graduation Image"
             priority={true}
             className="rounded"
+            id="pfp"
         />
         <div className="d-flex flex-column justify-content-center text-center w-50 gap-3">
             <p>Hi! I'm Hailey, a recent computer science graduate from the University of California-- Berkeley. I'm interested in software engineering and game development. Thanks for visiting my website!</p>

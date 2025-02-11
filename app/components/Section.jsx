@@ -3,20 +3,20 @@ export default function Section({ title, children }) {
     let space = "";
     if (title === "INTRO") {
         sectionId = "introSection";
-        space = "0";
+        space = "introSpace";
     } else if (title === "PROJECTS") {
         sectionId = "projectsSection";
-        space = "5vh";
+        space = "projectsSpace";
     } else if (title === "SKILLS") {
         sectionId = "skillsSection";
-        space = "5vh";
+        space = "skillsSpace";
     } else if (title === "EXPERIENCES") {
         sectionId = "experiencesSection";
-        space = "5vh";
+        space = "experiencesSpace";
     }
 
     return sectionId !== "" ? <section id={sectionId}>
-        <h3 style={{marginBottom:space}}>{title === "INTRO" ? "" : title}</h3>
+        <h3 id={space}>{title === "INTRO" ? "" : title}</h3>
         {children}
     </section> : <></>;
 }

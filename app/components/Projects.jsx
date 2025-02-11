@@ -3,6 +3,7 @@
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Button from "react-bootstrap/Button";
+import Tag from "../components/Tag.jsx";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -14,7 +15,6 @@ export default function Projects() {
 
     // Project Info
     const [focusedProject, setFocusedProject] = useState(0);
-    const [focusedBtn, setFocusedBtn] = useState(null);
     const [name, setName] = useState(projectData[focusedProject].name);
     const [link, setLink] = useState(projectData[focusedProject].link);
     const [role, setRole] = useState(projectData[focusedProject].role);
@@ -28,6 +28,7 @@ export default function Projects() {
     const [subsections, setSubsections] = useState(
         projectData[focusedProject].subsections
     );
+    const [tags, setTags] = useState(projectData[focusedProject].tags);
     
     // Sorting and Filtering
     const [sortState, setSortState] = useState("none");
@@ -45,8 +46,7 @@ export default function Projects() {
 
     function handleClick(event, index) {
         if (index !== focusedProject) {
-            console.log("LOAD DIFF PROJ");
-            setFocusedBtn(event.target);
+            // console.log("LOAD DIFF PROJ");
             updateDisplayedInfo(index);
         }
     }
@@ -59,6 +59,7 @@ export default function Projects() {
         setDuration(data.duration);
         setDescription(data.description);
         setTasks(data.tasks);
+        setTags(data.tags);
         setSubsections(data.subsections);
         setFocusedProject(index);
     }
@@ -78,6 +79,18 @@ export default function Projects() {
             } else {
                 setSortedProjects(projectData.slice().sort(sortMethods[method].method));
                 setDisplayedProjects(displayedProjects.slice().sort(sortMethods[method].method));
+            }
+
+            let prevProjectInNewDisplayedList = false;
+            displayedProjects.map((project, index) => {
+                if (project.name === name) {
+                    setFocusedProject(index);
+                    prevProjectInNewDisplayedList = true;
+                }
+            });
+
+            if (!prevProjectInNewDisplayedList) {
+                setFocusedProject(-1);
             }
         }
     }
@@ -142,13 +155,16 @@ export default function Projects() {
             </div>
         </div>
 
-        <ProjectInfo name={name} link={link} role={role} duration={duration} description={description} tasks={tasks} subsections={subsections} />
+        <ProjectInfo name={name} link={link} role={role} duration={duration} description={description} tasks={tasks} tags={tags} subsections={subsections} />
     </div>;
 }
 
-function ProjectInfo({name, link, role, duration, description, tasks, subsections}) {
+function ProjectInfo({name, link, role, duration, description, tasks, tags, subsections}) {
     return <div className="flex-fill rounded px-5 py-4" id="projectInfo">
-        <h2 className="kadwa-bold">{name}</h2>
+        <div className="d-flex flex-row align-items-center gap-3 mb-2">
+            {tags.map((tag, index) => <Tag tagType={tag} key={`${name}Tag${index}`} />)}
+            <h2 className="kadwa-bold projectTitle">{name}</h2>
+        </div>
         <div className="d-flex flex-row" id="projectStats">
             <h5 className="flex-fill">Role: {role}</h5>
             <h5 className="flex-fill">Duration: {duration}</h5>
