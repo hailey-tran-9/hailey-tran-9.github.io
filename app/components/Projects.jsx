@@ -5,7 +5,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Button from "react-bootstrap/Button";
 import Tag from "../components/Tag.jsx";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 
 const projectData = require("../../public/projects/data.json").projects;
 
@@ -29,6 +29,7 @@ export default function Projects() {
         projectData[focusedProject].subsections
     );
     const [tags, setTags] = useState(projectData[focusedProject].tags);
+    const [teamSize, setTeamSize] = useState(projectData[focusedProject].size);
     
     // Sorting and Filtering
     const [sortState, setSortState] = useState("none");
@@ -60,6 +61,7 @@ export default function Projects() {
         setDescription(data.description);
         setTasks(data.tasks);
         setTags(data.tags);
+        setTeamSize(data.size);
         setSubsections(data.subsections);
         setFocusedProject(index);
     }
@@ -131,15 +133,15 @@ export default function Projects() {
         }
     }
 
-    return <div className="d-flex flex-row gap-3">
+    return <div className="d-flex flex-column flex-lg-row gap-3 gap-xxl-5 align-items-center">
         <div className="d-flex flex-column gap-3">
             <div className="d-flex flex-row gap-2">
-                <DropdownButton className="dropdownBtn" title="Sort" size="sm">
+                <DropdownButton className="dropdownBtn projectButton" title="Sort" size="sm">
                     <Dropdown.Item href="#/action-1" onClick={() => sortClick("none")}>None</Dropdown.Item>
                     <Dropdown.Item href="#/action-2" onClick={() => sortClick("type")}>Type</Dropdown.Item>
                     <Dropdown.Item href="#/action-3" onClick={() => sortClick("alphabetically")}>Alphabetically</Dropdown.Item>
                 </DropdownButton>
-                <DropdownButton className="dropdownBtn" title="Filter" size="sm">
+                <DropdownButton className="dropdownBtn projectButton" title="Filter" size="sm">
                     <Dropdown.Item href="#/action-1" onClick={() => filterClick("none")}>None</Dropdown.Item>
                     <Dropdown.Item href="#/action-2" onClick={() => filterClick("Game")}>Game</Dropdown.Item>
                     <Dropdown.Item href="#/action-3" onClick={() => filterClick("Graphics")}>Graphics</Dropdown.Item>
@@ -150,25 +152,25 @@ export default function Projects() {
 
             <div className="d-flex flex-column rounded" id={"projectsList"}>
                 {displayedProjects.map((p, index) => (
-                    <Button variant="light" key={`proj${index}`} onClick={(e) => handleClick(e, index)}>{p.name}</Button>
+                    <Button variant="light" className="projectButton" key={`proj${index}`} onClick={(e) => handleClick(e, index)}>{p.name}</Button>
                 ))}
             </div>
         </div>
 
-        <ProjectInfo name={name} link={link} role={role} duration={duration} description={description} tasks={tasks} tags={tags} subsections={subsections} />
+        <ProjectInfo name={name} link={link} role={role} duration={duration} description={description} tasks={tasks} tags={tags} teamSize={teamSize} subsections={subsections} />
     </div>;
 }
 
-function ProjectInfo({name, link, role, duration, description, tasks, tags, subsections}) {
-    return <div className="flex-fill rounded px-5 py-4" id="projectInfo">
+function ProjectInfo({name, link, role, duration, description, tasks, tags, teamSize, subsections}) {
+    return <div className="flex-fill rounded px-5 py-4 py-xxl-5" id="projectInfo">
         <div className="d-flex flex-row align-items-center gap-3 mb-2">
             {tags.map((tag, index) => <Tag tagType={tag} key={`${name}Tag${index}`} />)}
             <h2 className="kadwa-bold projectTitle">{name}</h2>
         </div>
-        <div className="d-flex flex-row" id="projectStats">
+        <div className="d-flex flex-column flex-lg-row" id="projectStats">
             <h5 className="flex-fill">Role: {role}</h5>
             <h5 className="flex-fill">Duration: {duration}</h5>
-            <h5 className="flex-fill">Team Size:</h5>
+            <h5 className="flex-fill">Team Size: {teamSize}</h5>
         </div>
         <a href={link} target="_blank">{link}</a>
         <p className="py-3">{description}</p>

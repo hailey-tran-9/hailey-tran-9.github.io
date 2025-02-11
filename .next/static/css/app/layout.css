@@ -11982,7 +11982,7 @@ body {
 }
 
 section {
-  padding-bottom: 20vh;
+  padding-bottom: 15vh;
 }
 
 /* -------------------- Fonts -------------------- */
@@ -12062,10 +12062,6 @@ h6 {
   font-style: normal;
 }
 
-#header h1 {
-  margin-bottom: 0;
-}
-
 #anchors h3 {
   color: #CFCFCF;
   margin-bottom: 0;
@@ -12089,14 +12085,19 @@ hr.solid {
   margin-bottom: 0;
 }
 
+#introInfo {
+  width: 100%;
+}
+
 /* -------------------- Projects Section -------------------- */
 #projectsSpace {
-  margin-bottom: 5vh;
+  margin-bottom: 2.5vh;
 }
 
 #projectInfo {
   width: 75vw;
   background-color: #f8f9fa;
+  overflow: hidden;
 }
 
 #projectInfo h5 {
@@ -12108,6 +12109,8 @@ hr.solid {
 }
 
 #projectsList {
+  height: 25vh;
+
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -12199,11 +12202,12 @@ hr.solid {
 
 /* -------------------- Skills Section -------------------- */
 #skillsSpace {
-  margin-bottom: 5vh;
+  margin-bottom: 2.5vh;
 }
 
 .skillsBox {
   background-color: #e6f3ec;
+  overflow: hidden;
 }
 
 .skillsBox ul {
@@ -12214,20 +12218,24 @@ hr.solid {
 
 /* -------------------- Experiences Section -------------------- */
 #experiencesSpace {
-  margin-bottom: 5vh;
+  margin-bottom: 2.5vh;
 }
 
 .carousel {
-  height: 50vh;
+  height: 27.5vh;
 }
 
 .carousel-item img {
   width: auto;
-  height: 50vh;
+  height: 27.5vh;
 }
 
 .carousel-item {
-  height: 50vh;
+  height: 27.5vh;
+}
+
+.carousel-inner {
+  border-radius: 0.375rem;
 }
 
 .carousel-caption h5, p {
@@ -12248,17 +12256,94 @@ hr.solid {
   cursor: auto;
 }
 
+.carouselImage {
+  width: 500px;
+  height: 300px;
+}
+
+.carouselImage2 {
+  width: 500px;
+  height: 350px;
+}
+
 /* X-Small devices (portrait phones, less than 576px) */
 @media (min-width: 575.98px) {}
 
 /* Small devices (landscape phones, less than 768px) */
-@media (min-width: 767.98px) {}
+@media (min-width: 767.98px) {
+  #header h1 {
+    margin-bottom: 0;
+  }
+}
 
 /* Medium devices (tablets, less than 992px) */
-@media (min-width: 991.98px) {}
+@media (min-width: 991.98px) {
+  section {
+    padding-bottom: 7.5vh;
+  }
+
+  #introInfo {
+    width: 50%;
+  }
+
+  #projectsSpace {
+    margin-bottom: 1.5vh;
+  }
+
+  #projectsList {
+    height: auto;
+  }
+
+  #skillsSpace {
+    margin-bottom: 1.5vh;
+  }
+
+  #experiencesSpace {
+    margin-bottom: 1.5vh;
+  }
+
+  #experiencesSec1 {
+    margin-bottom: 6vh;
+  }
+
+  .carousel {
+    height: 50vh;
+  }
+  
+  .carousel-item img {
+    width: auto;
+    height: 50vh;
+  }
+  
+  .carousel-item {
+    height: 50vh;
+  }
+
+  .carouselImage {
+    width: 1000px;
+    height: 600px;
+  }
+  
+  .carouselImage2 {
+    width: 1000px;
+    height: 750px;
+  }
+}
 
 /* Large devices (desktops, less than 1200px) */
-@media (min-width: 1199.98px) {}
+@media (min-width: 1199.98px) {
+  #projectsSpace {
+    margin-bottom: 5vh;
+  }
+
+  #skillsSpace {
+    margin-bottom: 5vh;
+  }
+
+  #experiencesSpace {
+    margin-bottom: 5vh;
+  }
+}
 
 /* X-Large devices (large desktops, less than 1400px) */
 @media (min-width: 1399.98px) {
@@ -12318,3 +12403,67 @@ hr.solid {
 
 /* XX-Large devices (larger desktops) */
 @media (min-width: 1999.98px) {}
+
+@media (min-width: 2999.98px) {
+  body {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 2.25rem;
+  }
+
+  ul {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 4.25rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+  }
+
+  h6 {
+    font-size: 2rem;
+  }
+
+  a {
+    font-size: 2rem;
+  }
+
+  #pfp {
+    width: 15%;
+    height: 35%;
+  }
+
+  .projectButton {
+    font-size: 2rem;
+  }
+
+  .projectButton button {
+    font-size: 2rem;
+  }
+
+  #experiencesSec1 {
+    margin-bottom: 7.5vh;
+  }
+
+  #gamesMentored {
+    margin-top: 3vh;
+  }
+
+  .mentoredGames {
+    width: 400px;
+    height: 400px;
+  }
+}

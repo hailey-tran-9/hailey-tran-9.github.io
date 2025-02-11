@@ -12,6 +12,27 @@ module.exports = {
         remotePatterns: [
             {
                 protocol: 'https',
+                hostname: 'linkedin.com',
+                port: '',
+                pathname: '/in/hhytt/',
+                search: '',
+            },
+            {
+                protocol: 'https',
+                hostname: 'github.com',
+                port: '',
+                pathname: '/hailey-tran-9',
+                search: '',
+            },
+            {
+                protocol: 'https',
+                hostname: 'penguinies.itch.io',
+                port: '',
+                pathname: '/',
+                search: '',
+            },
+            {
+                protocol: 'https',
                 hostname: 'img.itch.zone',
                 port: '',
                 pathname: '/aW1nLzE1OTUyNTY1LnBuZw==/315x250%23c/TdVGW7.png',

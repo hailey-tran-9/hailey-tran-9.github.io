@@ -10,7 +10,7 @@ import Tabling from "../../public/images/gdd_tabling.jpg";
 export default function Experiences() {
     return <div className="d-flex flex-column">
         <div className="d-flex flex-column" id="experiencesSec1">
-            <Carousel slide={false} className="w-50 mx-auto rounded">
+            <Carousel slide={false} className="w-100 w-lg-50 mx-auto rounded">
                 <CarouselItem>
                     <Image
                         src={Fa23}
@@ -18,7 +18,7 @@ export default function Experiences() {
                         height={600}
                         alt="Fall 2023 GDD Officers"
                         priority={true}
-                        className="mx-auto d-block rounded"
+                        className="mx-auto d-block rounded carouselImage"
                     />
                     <CarouselCaption>
                     <h5>GDD Officers</h5>
@@ -32,7 +32,7 @@ export default function Experiences() {
                         height={600}
                         alt="Spring 2024 GDD Officers"
                         priority={true}
-                        className="mx-auto d-block rounded"
+                        className="mx-auto d-block rounded carouselImage"
                     />
                     <CarouselCaption>
                     <h5>GDD Officers</h5>
@@ -46,7 +46,7 @@ export default function Experiences() {
                         height={600}
                         alt="Tabling for GDD at Cal Gaming Expo"
                         priority={true}
-                        className="mx-auto d-block rounded"
+                        className="mx-auto d-block rounded carouselImage"
                     />
                     <CarouselCaption>
                     <h5>GDD Tabling</h5>
@@ -60,7 +60,7 @@ export default function Experiences() {
                         height={750}
                         alt="Fall 2023 Faciltator Team"
                         priority={true}
-                        className="mx-auto d-block rounded"
+                        className="mx-auto d-block rounded carouselImage2"
                     />
                     <CarouselCaption>
                     <h5>GDD Decal</h5>
@@ -73,7 +73,7 @@ export default function Experiences() {
                         width={1000}
                         height={650}
                         alt="Hosting a GDDxCMGG game dev workshop!"
-                        className="mx-auto d-block rounded"
+                        className="mx-auto d-block rounded carouselImage"
                     />
                     <CarouselCaption>
                     <h5>GDDxCMGG Workshop</h5>
@@ -93,28 +93,28 @@ export default function Experiences() {
             <h5>Programming Facilitator | May 2023 - 2024</h5>
             <p>As a Programming facilitator of the Decal, I mentored a group of 5-6 students for 2 months as they developed their first video game in Unity Engine. I also assisted 40+ students with any technical questions during labs and held mini-lectures on different game design topics.</p>
             <div id="gamesMentored">
-                <h6 className="text-center my-3">Games I Mentored</h6>
-                <div className="d-flex flex-row justify-content-center gap-5">
+                <h6 className="text-center mt-4 my-lg-3">Games I Mentored</h6>
+                <div className="d-flex flex-column flex-lg-row justify-content-center gap-2 gap-lg-5">
                     <a href="https://samhitag3.itch.io/operation-aptitude" target="_blank">
-                        <div className="d-flex flex-column">
+                        <div className="d-flex flex-column align-items-center">
                             <Image 
                                 src={"https://img.itch.zone/aW1nLzE1OTUyNTY1LnBuZw==/315x250%23c/TdVGW7.png"}
                                 width={200}
                                 height={200}
                                 alt="Operation Aptitude"
-                                className="rounded"
+                                className="rounded mentoredGames"
                             />
                             <p className="text-center">Operation Aptitude</p>
                         </div>
                     </a>
                     <a href="https://pragma-twice.itch.io/homeforanderson" target="_blank">
-                        <div className="d-flex flex-column">
+                        <div className="d-flex flex-column align-items-center">
                             <Image 
                                 src={"https://img.itch.zone/aW1nLzE0MTU5NTE4LnBuZw==/315x250%23c/BUzHWL.png"}
                                 width={200}
                                 height={200}
                                 alt="Home for Anderson"
-                                className="rounded"
+                                className="rounded mentoredGames"
                             />
                             <p className="text-center">Home for Anderson</p>
                         </div>
