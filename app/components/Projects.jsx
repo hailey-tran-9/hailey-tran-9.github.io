@@ -133,7 +133,7 @@ export default function Projects() {
         }
     }
 
-    return <div className="d-flex flex-column flex-lg-row gap-3 gap-xxl-5 align-items-center">
+    return <div className="d-flex flex-column flex-lg-row gap-3 gap-xxl-5 align-items-center align-items-lg-start">
         <div className="d-flex flex-column gap-3">
             <div className="d-flex flex-row gap-2">
                 <DropdownButton className="dropdownBtn projectButton" title="Sort" size="sm">
