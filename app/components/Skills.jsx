@@ -1,5 +1,5 @@
 export default function Skills() {
-    return <div className="d-flex flex-column flex-lg-row gap-4 justify-content-center mx-5" id="skillBoxes">
+    return <div className="d-flex flex-column flex-lg-row gap-4 justify-content-center align-items-center align-items-md-stretch mx-5" id="skillBoxes">
         <SkillBox id="programmingLanguages" elements={["Python", "Java", "C#", "C++"]} />
         <SkillBox id="webDev" elements={["HTML", "CSS", "React", "Three.js"]} />
         <SkillBox id="gameDev" elements={["Unity Engine", "Unreal Engine"]} />
