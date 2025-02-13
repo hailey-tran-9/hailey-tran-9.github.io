@@ -303,6 +303,38 @@ hr.solid {
   #header h1 {
     margin-bottom: 0;
   }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  ul {
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 2.25rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 1.15rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+  }
+
+  button {
+    font-size: 1.25rem;
+  }
 }
 
 /* Medium devices (tablets, less than 992px) */
